@@ -1,3 +1,4 @@
+
 //
 //  ViewController.m
 //  SciHub-ios
@@ -6,15 +7,9 @@
 //  Copyright (c) 2011 .t. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@implementation ViewController
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
+@implementation MainViewController
 
 #pragma mark - View lifecycle
 
@@ -26,6 +21,7 @@
 
 - (void)viewDidUnload
 {
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -61,4 +57,18 @@
     }
 }
 
+
+- (IBAction)showCamera:(id)sender {
+    
+ 
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
+        pickerController.delegate = self;
+
+        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        pickerController.showsCameraControls = YES;
+    
+        [self presentModalViewController:pickerController animated:YES];
+    
+    
+}
 @end
