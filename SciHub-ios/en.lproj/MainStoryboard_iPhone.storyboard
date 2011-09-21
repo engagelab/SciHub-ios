@@ -17,7 +17,7 @@
                                 <rect key="frame" x="81" y="105" width="158" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" image="ichat1.png">
+                                <state key="normal" image="ichat black.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,12 +41,17 @@
                                 <segue destination="v5G-6g-4rJ" kind="modal" modalTransitionStyle="coverVertical" id="OH5-tk-KNG"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="upload white icon.png" id="EGJ-2y-eoC">
+                            <connections>
+                                <action selector="showVideoList:" destination="UYE-Q7-bTJ" id="biJ-QE-CBJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                 </viewController>
                 <swipeGestureRecognizer direction="up" id="Nh6-mi-CaV">
                     <connections>
-                        <segue destination="rlL-ZJ-O44" kind="modal" id="uGd-BS-9LI"/>
+                        <segue destination="rlL-ZJ-O44" kind="modal" modalTransitionStyle="crossDissolve" id="uGd-BS-9LI"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -116,33 +121,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are You Sure You want to upload?" lineBreakMode="tailTruncation" minimumFontSize="10" id="lOh-u1-rzZ">
-                                <rect key="frame" x="28" y="174" width="264" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe up to upload to video wall." lineBreakMode="tailTruncation" minimumFontSize="11" id="tQm-Fl-pi2">
+                                <rect key="frame" x="42" y="303" width="236" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe up to upload to video wall" lineBreakMode="tailTruncation" minimumFontSize="10" id="tQm-Fl-pi2">
-                                <rect key="frame" x="28" y="219" width="264" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe down to cancel." lineBreakMode="tailTruncation" minimumFontSize="10" id="YMI-Eb-6mV">
-                                <rect key="frame" x="28" y="248" width="264" height="21"/>
+                                <rect key="frame" x="112" y="332" width="264" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow-up.png" id="U7n-PK-A6O">
-                                <rect key="frame" x="110" y="38" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow-down.png" id="dLW-BN-Xy5">
-                                <rect key="frame" x="110" y="308" width="100" height="100"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="swipe gesture.png" id="sEZ-3f-YsB">
+                                <rect key="frame" x="80" y="117" width="160" height="166"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -186,9 +180,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-down.png" width="100" height="100"/>
-        <image name="arrow-up.png" width="100" height="100"/>
-        <image name="ichat1.png" width="200" height="200"/>
+        <image name="ichat black.png" width="200" height="200"/>
+        <image name="swipe gesture.png" width="160" height="166"/>
+        <image name="upload white icon.png" width="24" height="18"/>
     </resources>
     <classes>
         <class className="LoginViewController" superclassName="UIViewController">
@@ -201,6 +195,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
                 <relationship kind="action" name="showCamera:"/>
+                <relationship kind="action" name="showVideoList:"/>
             </relationships>
         </class>
         <class className="UploadViewController" superclassName="UIViewController">

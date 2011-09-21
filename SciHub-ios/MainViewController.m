@@ -8,6 +8,7 @@
 //
 
 #import "MainViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @implementation MainViewController
 
@@ -62,13 +63,26 @@
     
  
         UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
+        pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
         pickerController.delegate = self;
 
-        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        pickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
         pickerController.showsCameraControls = YES;
     
         [self presentModalViewController:pickerController animated:YES];
     
     
+}
+
+- (IBAction)showVideoList:(id)sender {
+    
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
+    pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
+    pickerController.delegate = self;
+    
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+   // pickerController.showsCameraControls = YES;
+    
+    [self presentModalViewController:pickerController animated:YES];
 }
 @end

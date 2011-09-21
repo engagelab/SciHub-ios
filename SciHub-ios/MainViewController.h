@@ -14,5 +14,6 @@
 }
 
 - (IBAction)showCamera:(id)sender;
+- (IBAction)showVideoList:(id)sender;
 
 @end

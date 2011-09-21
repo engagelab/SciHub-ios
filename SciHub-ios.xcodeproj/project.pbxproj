@@ -11,8 +11,7 @@
 		AE83A48614277FE800EB7010 /* arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83A48414277FE800EB7010 /* arrow-up.png */; };
 		AE9821831427841D00AE3760 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821821427841D00AE3760 /* UploadViewController.m */; };
 		AE9821861427884000AE3760 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821851427884000AE3760 /* LoginViewController.m */; };
-		AE98218B14289F5900AE3760 /* iChat - NanoPlastic (1).png in Resources */ = {isa = PBXBuildFile; fileRef = AE98218914289F5900AE3760 /* iChat - NanoPlastic (1).png */; };
-		AE98218D1428A06300AE3760 /* ichat1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE98218C1428A06300AE3760 /* ichat1.png */; };
+		AE98218D1428A06300AE3760 /* ichat black.png in Resources */ = {isa = PBXBuildFile; fileRef = AE98218C1428A06300AE3760 /* ichat black.png */; };
 		AEC5C5F01428A62C00B92BED /* atom_icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC5C5EF1428A62C00B92BED /* atom_icon57.png */; };
 		AEC5C5F31428A75D00B92BED /* atom_icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC5C5F21428A75D00B92BED /* atom_icon114.png */; };
 		AEE0CCCF1419577B0085DA61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCCE1419577B0085DA61 /* UIKit.framework */; };
@@ -33,6 +32,9 @@
 		AEE0CCFF141958D70085DA61 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF6141958D70085DA61 /* CoreData.framework */; };
 		AEE0CD00141958D70085DA61 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF7141958D70085DA61 /* CoreLocation.framework */; };
 		AEE0CD01141958D70085DA61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF8141958D70085DA61 /* SystemConfiguration.framework */; };
+		AEE7F5A91428D97D006FEBCC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */; };
+		AEFF77BE1429D8B80097DDD7 /* upload white icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFF77BD1429D8B80097DDD7 /* upload white icon.png */; };
+		AEFF77C01429DAA00097DDD7 /* swipe gesture.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +44,9 @@
 		AE9821821427841D00AE3760 /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 		AE9821841427884000AE3760 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		AE9821851427884000AE3760 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		AE98218914289F5900AE3760 /* iChat - NanoPlastic (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iChat - NanoPlastic (1).png"; sourceTree = "<group>"; };
-		AE98218C1428A06300AE3760 /* ichat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ichat1.png; sourceTree = "<group>"; };
+		AE98218C1428A06300AE3760 /* ichat black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ichat black.png"; sourceTree = "<group>"; };
 		AEC5C5EF1428A62C00B92BED /* atom_icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atom_icon57.png; path = ../atom_icon57.png; sourceTree = "<group>"; };
-		AEC5C5F21428A75D00B92BED /* atom_icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atom_icon114.png; sourceTree = "<group>"; };
+		AEC5C5F21428A75D00B92BED /* atom_icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atom_icon114.png; path = ../atom_icon114.png; sourceTree = "<group>"; };
 		AEE0CCCA1419577B0085DA61 /* SciHub-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SciHub-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE0CCCE1419577B0085DA61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AEE0CCD01419577B0085DA61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +70,9 @@
 		AEE0CCF6141958D70085DA61 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AEE0CCF7141958D70085DA61 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AEE0CCF8141958D70085DA61 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AEFF77BD1429D8B80097DDD7 /* upload white icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload white icon.png"; sourceTree = "<group>"; };
+		AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe gesture.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE7F5A91428D97D006FEBCC /* MobileCoreServices.framework in Frameworks */,
 				AEE0CCCF1419577B0085DA61 /* UIKit.framework in Frameworks */,
 				AEE0CCD11419577B0085DA61 /* Foundation.framework in Frameworks */,
 				AEE0CCD31419577B0085DA61 /* CoreGraphics.framework in Frameworks */,
@@ -97,9 +102,11 @@
 		AE98218714278E2900AE3760 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */,
+				AEFF77BD1429D8B80097DDD7 /* upload white icon.png */,
 				AEC5C5EF1428A62C00B92BED /* atom_icon57.png */,
-				AE98218914289F5900AE3760 /* iChat - NanoPlastic (1).png */,
-				AE98218C1428A06300AE3760 /* ichat1.png */,
+				AEC5C5F21428A75D00B92BED /* atom_icon114.png */,
+				AE98218C1428A06300AE3760 /* ichat black.png */,
 				AE83A48314277FE800EB7010 /* arrow-down.png */,
 				AE83A48414277FE800EB7010 /* arrow-up.png */,
 			);
@@ -109,7 +116,6 @@
 		AEE0CCBF1419577B0085DA61 = {
 			isa = PBXGroup;
 			children = (
-				AEC5C5F21428A75D00B92BED /* atom_icon114.png */,
 				AEE0CCD41419577B0085DA61 /* SciHub-ios */,
 				AEE0CCCD1419577B0085DA61 /* Frameworks */,
 				AEE0CCCB1419577B0085DA61 /* Products */,
@@ -127,6 +133,7 @@
 		AEE0CCCD1419577B0085DA61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */,
 				AEE0CCF0141958D70085DA61 /* UIKit.framework */,
 				AEE0CCF1141958D70085DA61 /* Foundation.framework */,
 				AEE0CCF2141958D70085DA61 /* CoreGraphics.framework */,
@@ -229,10 +236,11 @@
 				AEE0CCE51419577C0085DA61 /* MainStoryboard_iPad.storyboard in Resources */,
 				AE83A48514277FE800EB7010 /* arrow-down.png in Resources */,
 				AE83A48614277FE800EB7010 /* arrow-up.png in Resources */,
-				AE98218B14289F5900AE3760 /* iChat - NanoPlastic (1).png in Resources */,
-				AE98218D1428A06300AE3760 /* ichat1.png in Resources */,
+				AE98218D1428A06300AE3760 /* ichat black.png in Resources */,
 				AEC5C5F01428A62C00B92BED /* atom_icon57.png in Resources */,
 				AEC5C5F31428A75D00B92BED /* atom_icon114.png in Resources */,
+				AEFF77BE1429D8B80097DDD7 /* upload white icon.png in Resources */,
+				AEFF77C01429DAA00097DDD7 /* swipe gesture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
