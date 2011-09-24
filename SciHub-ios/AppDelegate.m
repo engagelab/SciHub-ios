@@ -20,15 +20,15 @@
 @synthesize xmppRosterStorage;
 @synthesize xmppCapabilities;
 @synthesize xmppCapabilitiesStorage;
+@synthesize xmppRoom;
 @synthesize sciHubMessageDelegate;
 @synthesize sciHubOnlineDelegate;
 
 @synthesize window = _window;
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark UIApplicationDelegate
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+NSString * const serverName = @"imediamac28.uio.no";
 
+#pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -93,12 +93,7 @@
      */
 }
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark XMPP delegates 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+#pragma mark - XMPP delegates 
 
 - (void)xmppStreamDidConnect:(XMPPStream *)sender {
 	
@@ -168,6 +163,7 @@
             DDLogVerbose(t);
 			
             [sciHubOnlineDelegate isAvailable:YES];
+            [self joinChatRoom];
 			//[_chatDelegate newBuddyOnline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"jerry.local"]];
 			
 		} else if ([presenceType isEqualToString:@"unavailable"]) {
@@ -184,11 +180,28 @@
 	
 }
 
+#pragma mark - XMPP Room Delegate
+
+- (void)xmppRoomDidCreate:(XMPPRoom *)sender {
+    DDLogVerbose(@"xmpp room did create");
+
+}
+- (void)xmppRoomDidEnter:(XMPPRoom *)sender {
+        DDLogVerbose(@"xmpp room did enter");
+}
+- (void)xmppRoomDidLeave:(XMPPRoom *)sender {
+        DDLogVerbose(@"xmpp room did leave");
+}
+- (void)xmppRoom:(XMPPRoom *)sender didReceiveMessage:(XMPPMessage *)message fromNick:(NSString *)nick {
+        DDLogVerbose(@"xmpp room did receiveMessage");
+}
+- (void)xmppRoom:(XMPPRoom *)sender didChangeOccupants:(NSDictionary *)occupants {
+    DDLogVerbose(@"xmpp room did receiveMessage");
+}
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark Private
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Private
 
 - (void)setupStream {
 	NSAssert(xmppStream == nil, @"Method setupStream invoked multiple times");
@@ -223,6 +236,9 @@
 	// There's a bunch more information in the XMPPReconnect header file.
 	
 	xmppReconnect = [[XMPPReconnect alloc] init];
+   
+    
+    
 	
 	// Setup roster
 	// 
@@ -280,6 +296,7 @@
 	// Activate xmpp modules
     
 	[xmppReconnect         activate:xmppStream];
+   // [xmppRoom              activate:xmppStream];
 	//[xmppRoster            activate:xmppStream];
 	//[xmppvCardTempModule   activate:xmppStream];
 	//[xmppvCardAvatarModule activate:xmppStream];
@@ -301,7 +318,7 @@
 	// 
 	// If you don't specify a hostPort, then the default (5222) will be used.
 	
-    [xmppStream setHostName:@"imediamac28.uio.no"];
+    [xmppStream setHostName:serverName];
     [xmppStream setHostPort:5222];	
 	
     
@@ -310,23 +327,48 @@
 	allowSSLHostNameMismatch = NO;
 }
 
+- (void)sendMessage:(NSDictionary *)messageInfo {
+	
+	NSString *bodyString = [messageInfo objectForKey:@"body"];
+    NSString *to = [messageInfo objectForKey:@"sender"];
+    if(bodyString != nil && to != nil) {
+		
+        NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
+        [body setStringValue:bodyString];
+		
+        NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
+        [message addAttributeWithName:@"type" stringValue:@"chat"];
+        [message addAttributeWithName:@"to" stringValue:to];
+        [message addChild:body];
+		
+        [self.xmppStream sendElement:message];
+		
+    }
+	
+	
+}
+
 - (void)teardownStream {
 	[xmppStream removeDelegate:self];
-	[xmppRoster removeDelegate:self];
+    [xmppRoom removeDelegate:self];
+//	[xmppRoster removeDelegate:self];
 	
 	[xmppReconnect         deactivate];
-	[xmppRoster            deactivate];
-    [xmppCapabilities      deactivate];
+    [xmppRoom deactivate];
+//	[xmppRoster            deactivate];
+//    [xmppCapabilities      deactivate];
 	
 	[xmppStream disconnect];
 	
 	
 	xmppStream = nil;
-	xmppReconnect = nil;
+    
+//	xmppReconnect = nil;
     xmppRoster = nil;
-	xmppRosterStorage = nil;
-	xmppCapabilities = nil;
-	xmppCapabilitiesStorage = nil;
+    xmppRoom = nil;
+//	xmppRosterStorage = nil;
+//	xmppCapabilities = nil;
+//	xmppCapabilitiesStorage = nil;
 }
 
 - (void)goOnline {
@@ -341,9 +383,27 @@
 	[[self xmppStream] sendElement:presence];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark Connect/disconnect
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)joinChatRoom {
+    
+    if( xmppRoom.isJoined == NO ) {
+        
+        
+        
+        NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
+        NSString* username = [[myJID componentsSeparatedByString:@"@"] objectAtIndex:0];
+        
+        
+        NSString *roomName = [NSString stringWithFormat:@"%@%@", @"scihub@conference.", serverName];
+        
+        xmppRoom = [[XMPPRoom alloc] initWithRoomName:roomName nickName:username];
+        [xmppRoom activate:xmppStream];
+        [xmppRoom createOrJoinRoom];
+    }
+
+}
+
+
+#pragma mark - Connect/disconnect
 
 - (BOOL)connect
 {
@@ -390,6 +450,8 @@
 		return NO;
 	}
     
+    
+    
 	return YES;
 }
 
@@ -399,9 +461,7 @@
     [xmppStream disconnect];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark Alert view delegate
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Alert view delegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     

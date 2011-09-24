@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SciHubMessageDelegate.h"
 
-@interface MessageViewController : UIViewController <SciHubMessageDelegate> {
+@interface MessageViewController : UIViewController<UITextViewDelegate> {
 
+    NSString *from;
 }
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) NSString *from;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)reply:(id)sender;

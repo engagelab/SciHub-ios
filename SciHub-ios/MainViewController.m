@@ -12,6 +12,7 @@
 #import "MainViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVAudioPlayer.h>
+#import "MessageViewController.h"
 
 @implementation MainViewController
 @synthesize loginButton;
@@ -103,20 +104,14 @@
 
 - (IBAction)showVideoList:(id)sender {
     
-    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil]; 
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
+    pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
+    pickerController.delegate = self;
     
-    MessageViewController *messageController = [storyb instantiateViewControllerWithIdentifier:@"messageController"];
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+   // pickerController.showsCameraControls = YES;
     
-    [self presentModalViewController:messageController animated:YES];
-    
-//    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
-//    pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
-//    pickerController.delegate = self;
-//    
-//    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//   // pickerController.showsCameraControls = YES;
-//    
-//    [self presentModalViewController:pickerController animated:YES];
+    [self presentModalViewController:pickerController animated:YES];
 }
 
 #pragma mark - Audio delegate methods
@@ -134,7 +129,14 @@
 
 - (void)replyMessageTo:(NSString *)from {
     
-    DDLogVerbose(from);
+    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil]; 
+    
+    MessageViewController *messageController = [storyb instantiateViewControllerWithIdentifier:@"messageController"];
+    
+    messageController.from = from;
+    
+    [self presentModalViewController:messageController animated:YES];
+    
 }
 
 #pragma mark - sciHubOnlineDelegate delegate methods

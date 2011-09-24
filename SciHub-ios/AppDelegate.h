@@ -12,13 +12,14 @@
 #import "XMPPRosterCoreDataStorage.h"
 #import "XMPPCapabilities.h"
 #import "XMPPCapabilitiesCoreDataStorage.h"
+#import "XMPPRoom.h"
 #import <CoreData/CoreData.h>
 #import "SciHubMessageDelegate.h"
 #import "SciHubOnlineDelegate.h"
 
 @class MainViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, XMPPRosterDelegate, UIAlertViewDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, XMPPRosterDelegate, XMPPRoomDelegate, UIAlertViewDelegate> {
     
     XMPPStream *xmppStream;
     XMPPReconnect *xmppReconnect;
@@ -27,6 +28,8 @@
     XMPPCapabilities *xmppCapabilities;
 	XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 	
+    XMPPRoom *xmppRoom;
+    
     BOOL allowSelfSignedCertificates;
 	BOOL allowSSLHostNameMismatch;
 
@@ -48,6 +51,7 @@
 @property (nonatomic, readonly) XMPPRosterCoreDataStorage *xmppRosterStorage;
 @property (nonatomic, readonly) XMPPCapabilities *xmppCapabilities;
 @property (nonatomic, readonly) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
+@property (nonatomic, readonly) XMPPRoom *xmppRoom;
 @property (nonatomic, weak) id <SciHubMessageDelegate> sciHubMessageDelegate;
 @property (nonatomic, weak) id <SciHubOnlineDelegate> sciHubOnlineDelegate;
 
@@ -55,8 +59,8 @@
 - (BOOL)connect;
 - (void)disconnect;
 - (void)setupStream;
-
+- (void)sendMessage:(NSDictionary *)messageInfo;
 - (void)goOnline;
 - (void)goOffline;
-
+- (void)joinChatRoom;
 @end

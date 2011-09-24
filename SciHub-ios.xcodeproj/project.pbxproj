@@ -190,7 +190,6 @@
 			children = (
 				AEE0CCDD1419577B0085DA61 /* AppDelegate.h */,
 				AEE0CCDE1419577B0085DA61 /* AppDelegate.m */,
-				AE7CD474142CBA5100B6BF5C /* delegates */,
 				AEE0CCE01419577C0085DA61 /* MainStoryboard_iPhone.storyboard */,
 				AE7CD483142D2C3A00B6BF5C /* MessageViewController.h */,
 				AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */,
@@ -200,6 +199,7 @@
 				AE9821821427841D00AE3760 /* UploadViewController.m */,
 				AE9821841427884000AE3760 /* LoginViewController.h */,
 				AE9821851427884000AE3760 /* LoginViewController.m */,
+				AE7CD474142CBA5100B6BF5C /* delegates */,
 				AEE0CCD51419577B0085DA61 /* Supporting Files */,
 			);
 			path = "SciHub-ios";
