@@ -7,13 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
+#import "SciHubMessageDelegate.h"
+#import "SciHubOnlineDelegate.h"
+#import "MessageViewController.h"
 
-@interface MainViewController : UIViewController<UIImagePickerControllerDelegate>{
-
+@interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate>{
     
+    AVAudioPlayer *player;
+    
+    IBOutlet MessageViewController *messageController;
 }
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
 
 - (IBAction)showCamera:(id)sender;
 - (IBAction)showVideoList:(id)sender;
+
+- (AppDelegate *)appDelegate;
+
+
 
 @end

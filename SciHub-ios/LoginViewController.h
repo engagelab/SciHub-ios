@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController {
+   
+    
+}
+
+@property (strong, nonatomic) IBOutlet UITextField *loginField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
+@property (strong, nonatomic) IBOutlet UILabel *errorLabel;
+@property (strong, nonatomic) IBOutlet UIView *overlay;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+
+
 - (IBAction)closeWindow:(id)sender;
+
+- (IBAction)doLogin:(id)sender;
 
 @end

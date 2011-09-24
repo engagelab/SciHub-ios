@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE46EA9E142B66800034788B /* icon-status-available.png in Resources */ = {isa = PBXBuildFile; fileRef = AE46EA9C142B66800034788B /* icon-status-available.png */; };
+		AE46EA9F142B66800034788B /* icon-status-cancelled.png in Resources */ = {isa = PBXBuildFile; fileRef = AE46EA9D142B66800034788B /* icon-status-cancelled.png */; };
+		AE46EAA1142BB3200034788B /* On.aif in Resources */ = {isa = PBXBuildFile; fileRef = AE46EAA0142BB3200034788B /* On.aif */; };
+		AE46EAA3142BB3800034788B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE46EAA2142BB3800034788B /* AVFoundation.framework */; };
+		AE7CD485142D2C3A00B6BF5C /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */; };
 		AE83A48514277FE800EB7010 /* arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83A48314277FE800EB7010 /* arrow-down.png */; };
 		AE83A48614277FE800EB7010 /* arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83A48414277FE800EB7010 /* arrow-up.png */; };
 		AE9821831427841D00AE3760 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821821427841D00AE3760 /* UploadViewController.m */; };
@@ -35,9 +40,20 @@
 		AEE7F5A91428D97D006FEBCC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */; };
 		AEFF77BE1429D8B80097DDD7 /* upload white icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFF77BD1429D8B80097DDD7 /* upload white icon.png */; };
 		AEFF77C01429DAA00097DDD7 /* swipe gesture.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */; };
+		AEFF77C2142A1DCD0097DDD7 /* libxmpp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFF77C1142A1DCD0097DDD7 /* libxmpp-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE46EA9C142B66800034788B /* icon-status-available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-available.png"; sourceTree = "<group>"; };
+		AE46EA9D142B66800034788B /* icon-status-cancelled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-cancelled.png"; sourceTree = "<group>"; };
+		AE46EAA0142BB3200034788B /* On.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = On.aif; sourceTree = "<group>"; };
+		AE46EAA2142BB3800034788B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE46EAA4142BBF7C0034788B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		AE46EAA6142BBFB80034788B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		AE4DE079142C81D800ACE1AE /* SciHubMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SciHubMessageDelegate.h; sourceTree = "<group>"; };
+		AE7CD476142CC02C00B6BF5C /* SciHubOnlineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SciHubOnlineDelegate.h; sourceTree = "<group>"; };
+		AE7CD483142D2C3A00B6BF5C /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		AE83A48314277FE800EB7010 /* arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down.png"; sourceTree = "<group>"; };
 		AE83A48414277FE800EB7010 /* arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up.png"; sourceTree = "<group>"; };
 		AE9821811427841D00AE3760 /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
@@ -73,6 +89,7 @@
 		AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AEFF77BD1429D8B80097DDD7 /* upload white icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload white icon.png"; sourceTree = "<group>"; };
 		AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe gesture.png"; sourceTree = "<group>"; };
+		AEFF77C1142A1DCD0097DDD7 /* libxmpp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libxmpp-ios.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos/libxmpp-ios.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE46EAA3142BB3800034788B /* AVFoundation.framework in Frameworks */,
 				AEE7F5A91428D97D006FEBCC /* MobileCoreServices.framework in Frameworks */,
 				AEE0CCCF1419577B0085DA61 /* UIKit.framework in Frameworks */,
 				AEE0CCD11419577B0085DA61 /* Foundation.framework in Frameworks */,
@@ -93,15 +111,28 @@
 				AEE0CCFF141958D70085DA61 /* CoreData.framework in Frameworks */,
 				AEE0CD00141958D70085DA61 /* CoreLocation.framework in Frameworks */,
 				AEE0CD01141958D70085DA61 /* SystemConfiguration.framework in Frameworks */,
+				AEFF77C2142A1DCD0097DDD7 /* libxmpp-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE7CD474142CBA5100B6BF5C /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AE4DE079142C81D800ACE1AE /* SciHubMessageDelegate.h */,
+				AE7CD476142CC02C00B6BF5C /* SciHubOnlineDelegate.h */,
+			);
+			name = delegates;
+			sourceTree = "<group>";
+		};
 		AE98218714278E2900AE3760 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				AE46EAA0142BB3200034788B /* On.aif */,
+				AE46EA9C142B66800034788B /* icon-status-available.png */,
+				AE46EA9D142B66800034788B /* icon-status-cancelled.png */,
 				AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */,
 				AEFF77BD1429D8B80097DDD7 /* upload white icon.png */,
 				AEC5C5EF1428A62C00B92BED /* atom_icon57.png */,
@@ -133,13 +164,17 @@
 		AEE0CCCD1419577B0085DA61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF77C1142A1DCD0097DDD7 /* libxmpp-ios.a */,
+				AEE0CCF3141958D70085DA61 /* libxml2.dylib */,
+				AEE0CCF5141958D70085DA61 /* libresolv.dylib */,
+				AE46EAA6142BBFB80034788B /* CoreAudio.framework */,
+				AE46EAA4142BBF7C0034788B /* CoreFoundation.framework */,
+				AE46EAA2142BB3800034788B /* AVFoundation.framework */,
 				AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */,
 				AEE0CCF0141958D70085DA61 /* UIKit.framework */,
 				AEE0CCF1141958D70085DA61 /* Foundation.framework */,
 				AEE0CCF2141958D70085DA61 /* CoreGraphics.framework */,
-				AEE0CCF3141958D70085DA61 /* libxml2.dylib */,
 				AEE0CCF4141958D70085DA61 /* CFNetwork.framework */,
-				AEE0CCF5141958D70085DA61 /* libresolv.dylib */,
 				AEE0CCF6141958D70085DA61 /* CoreData.framework */,
 				AEE0CCF7141958D70085DA61 /* CoreLocation.framework */,
 				AEE0CCF8141958D70085DA61 /* SystemConfiguration.framework */,
@@ -155,14 +190,17 @@
 			children = (
 				AEE0CCDD1419577B0085DA61 /* AppDelegate.h */,
 				AEE0CCDE1419577B0085DA61 /* AppDelegate.m */,
+				AE7CD474142CBA5100B6BF5C /* delegates */,
 				AEE0CCE01419577C0085DA61 /* MainStoryboard_iPhone.storyboard */,
+				AE7CD483142D2C3A00B6BF5C /* MessageViewController.h */,
+				AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */,
 				AEE0CCE61419577C0085DA61 /* MainViewController.h */,
 				AEE0CCE71419577C0085DA61 /* MainViewController.m */,
 				AE9821811427841D00AE3760 /* UploadViewController.h */,
 				AE9821821427841D00AE3760 /* UploadViewController.m */,
-				AEE0CCD51419577B0085DA61 /* Supporting Files */,
 				AE9821841427884000AE3760 /* LoginViewController.h */,
 				AE9821851427884000AE3760 /* LoginViewController.m */,
+				AEE0CCD51419577B0085DA61 /* Supporting Files */,
 			);
 			path = "SciHub-ios";
 			sourceTree = "<group>";
@@ -241,6 +279,9 @@
 				AEC5C5F31428A75D00B92BED /* atom_icon114.png in Resources */,
 				AEFF77BE1429D8B80097DDD7 /* upload white icon.png in Resources */,
 				AEFF77C01429DAA00097DDD7 /* swipe gesture.png in Resources */,
+				AE46EA9E142B66800034788B /* icon-status-available.png in Resources */,
+				AE46EA9F142B66800034788B /* icon-status-cancelled.png in Resources */,
+				AE46EAA1142BB3200034788B /* On.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +297,7 @@
 				AEE0CCE81419577C0085DA61 /* MainViewController.m in Sources */,
 				AE9821831427841D00AE3760 /* UploadViewController.m in Sources */,
 				AE9821861427884000AE3760 /* LoginViewController.m in Sources */,
+				AE7CD485142D2C3A00B6BF5C /* MessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +400,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
 				INFOPLIST_FILE = "SciHub-ios/SciHub-ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -369,6 +415,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
 				INFOPLIST_FILE = "SciHub-ios/SciHub-ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
