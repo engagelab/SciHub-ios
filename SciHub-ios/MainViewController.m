@@ -114,6 +114,14 @@
     [self presentModalViewController:pickerController animated:YES];
 }
 
+- (IBAction)testAgent:(id)sender {
+    
+    NSString *event = @"{'eventType':'hello', 'payload': {}, 'origin':'obama'}";
+    
+    [[[self appDelegate] xmppRoom ]sendMessage:event];
+    
+}
+
 #pragma mark - Audio delegate methods
 
 
@@ -161,5 +169,11 @@
     loginButton.image = image;
 }
 
+- (void)newGroupMessageReceived:(NSDictionary *)messageContent {
+    
+    NSString *message = [messageContent objectForKey:@"body"];
+    NSString *sender = [messageContent objectForKey:@"sender"];
+    DDLogVerbose(@"message %@,%@", message, sender);
+}
 
 @end

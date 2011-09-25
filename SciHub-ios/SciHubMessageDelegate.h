@@ -10,6 +10,8 @@
 
 @protocol SciHubMessageDelegate
 
+- (void)newGroupMessageReceived:(NSDictionary *)messageContent;
+
 - (void)newMessageReceived:(NSDictionary *)messageContent;
 
 - (void)replyMessageTo:(NSString *)from;

@@ -193,7 +193,14 @@ NSString * const serverName = @"imediamac28.uio.no";
         DDLogVerbose(@"xmpp room did leave");
 }
 - (void)xmppRoom:(XMPPRoom *)sender didReceiveMessage:(XMPPMessage *)message fromNick:(NSString *)nick {
-        DDLogVerbose(@"xmpp room did receiveMessage");
+    
+    NSString *msg = [[message elementForName:@"body"] stringValue];
+    
+    NSMutableDictionary *messageDictionary = [[NSMutableDictionary alloc] init];
+    [messageDictionary setObject:msg forKey:@"body"];
+    [messageDictionary setObject:nick forKey:@"sender"];
+    [sciHubMessageDelegate newGroupMessageReceived:messageDictionary];
+    DDLogVerbose(@"xmpp room did receiveMessage");
 }
 - (void)xmppRoom:(XMPPRoom *)sender didChangeOccupants:(NSDictionary *)occupants {
     DDLogVerbose(@"xmpp room did receiveMessage");
@@ -397,6 +404,7 @@ NSString * const serverName = @"imediamac28.uio.no";
         
         xmppRoom = [[XMPPRoom alloc] initWithRoomName:roomName nickName:username];
         [xmppRoom activate:xmppStream];
+        [xmppRoom addDelegate:self delegateQueue:dispatch_get_main_queue()];
         [xmppRoom createOrJoinRoom];
     }
 
@@ -414,7 +422,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
 	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPassword"];
 //    
-    //NSString *myJID = @"obama@imediamac28.uio.no";
+    //NSString *myJID = @"obama@ime.mo";
 	//NSString *myPassword = @"obama";
     
 	//
