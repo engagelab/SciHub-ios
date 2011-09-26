@@ -14,6 +14,13 @@
 #import <AVFoundation/AVAudioPlayer.h>
 #import "MessageViewController.h"
 
+/**
+#import "GDataServiceGoogleYouTube.h"
+#import "GDataEntryPhotoAlbum.h"
+#import "GDataEntryPhoto.h"
+#import "GDataFeedPhoto.h"
+#import "GDataEntryYouTubeUpload.h"
+**/
 @implementation MainViewController
 @synthesize loginButton;
 
@@ -86,6 +93,15 @@
     
 }
 
+- (void)doYouTube {
+//    
+//    GDataServiceGoogleYouTube service = [[GDataServiceGoogleYouTube alloc] init];
+//
+//    [service setUserCredentialsWithUsername:@"encoresignup@gmail.com"
+//                                   password:@"enc0relab"]; 
+    //[service setD
+    
+}
 
 - (IBAction)showCamera:(id)sender {
     
@@ -175,5 +191,33 @@
     NSString *sender = [messageContent objectForKey:@"sender"];
     DDLogVerbose(@"message %@,%@", message, sender);
 }
+
+#pragma mark - UIImagePickerControllerDelegate delegate methods
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    // Access the uncropped image from info dictionary
+    
+    NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
+    UISaveVideoAtPathToSavedPhotosAlbum(videoURL.absoluteString, self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
+    
+
+    
+}
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo
+{
+    if (!videoPath && error)
+    {
+        NSLog(@"Error saving video to saved photos roll: %@, %@", error, [error userInfo]);
+        // Handle error;
+        return;
+    }
+    
+    // Video was saved properly. UI may need to be updated here.
+}
+
 
 @end

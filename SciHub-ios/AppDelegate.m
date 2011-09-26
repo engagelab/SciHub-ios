@@ -32,6 +32,12 @@ NSString * const serverName = @"imediamac28.uio.no";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //temp
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     // Configure logging framework
 	
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
@@ -399,7 +405,6 @@ NSString * const serverName = @"imediamac28.uio.no";
         NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
         NSString* username = [[myJID componentsSeparatedByString:@"@"] objectAtIndex:0];
         
-        
         NSString *roomName = [NSString stringWithFormat:@"%@%@", @"scihub@conference.", serverName];
         
         xmppRoom = [[XMPPRoom alloc] initWithRoomName:roomName nickName:username];
@@ -421,6 +426,7 @@ NSString * const serverName = @"imediamac28.uio.no";
     
 	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
 	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPassword"];
+    
 //    
     //NSString *myJID = @"obama@ime.mo";
 	//NSString *myPassword = @"obama";

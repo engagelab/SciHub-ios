@@ -7,6 +7,7 @@
 //
 
 #import "UploadViewController.h"
+#import "AppDelegate.h"
 
 @implementation UploadViewController
 
@@ -25,11 +26,32 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (AppDelegate *)appDelegate {
+	return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 -(IBAction)closeWindow:(id)sender {
      [self dismissModalViewControllerAnimated:YES];
 }
 
 -(IBAction)uploadVideo:(id)sender{
+    
+    /**
+    { eventType: 'video_upload_requested', payload: {}, origin: 'mzukowski'
+    }
+    **/
+    NSString *payload = @"payload:{}";
+    NSString *eventType = @"eventType: 'video_upload_requested'"; 
+    
+    NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+
+
+    NSString *event = [[NSString alloc] initWithFormat:@"{ %@, %@, origin:'%@'}",eventType, payload, username]; 
+    
+    
+    [[[self appDelegate] xmppRoom ]sendMessage:event];
+ 
+    
     [self dismissModalViewControllerAnimated:YES];
 }
 

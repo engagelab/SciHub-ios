@@ -52,6 +52,12 @@
     } else {
         [[NSUserDefaults standardUserDefaults] setObject:loginField.text forKey:@"userID"];
         [[NSUserDefaults standardUserDefaults] setObject:passwordField.text forKey:@"userPassword"];
+        
+        NSString* username = [[loginField.text componentsSeparatedByString:@"@"] objectAtIndex:0];
+
+        [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"username"];
+
+        
         [[NSUserDefaults standardUserDefaults] synchronize];
         BOOL connected = [[self appDelegate] connect]; 
         
