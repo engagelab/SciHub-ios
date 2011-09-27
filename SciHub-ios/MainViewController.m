@@ -28,6 +28,10 @@
 **/
 @implementation MainViewController
 @synthesize loginButton;
+@synthesize baseSheet;
+
+NSString *const uploadProgressTitleStart = @"Upload Progress";
+NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
 
 -(id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle {
@@ -99,8 +103,10 @@
 }
 
 
+
 - (IBAction)doYouTube:(id)sender {
 //    
+    [self createProgressView];
     [GTMHTTPFetcher setLoggingEnabled:YES];
     
     GDataServiceGoogleYouTube *service = [[GDataServiceGoogleYouTube alloc] init];
@@ -157,15 +163,20 @@
                                         delegate:self
                                didFinishSelector:@selector(uploadTicket:finishedWithEntry:error:)];
     
-    //[self setUploadTicket:ticket];
+    [uploadProgress setProgress: 0.0];
 }
 - (void)ticket:(GDataServiceTicket *)ticket
 hasDeliveredByteCount:(unsigned long long)numberOfBytesRead 
 ofTotalByteCount:(unsigned long long)dataLength {
     
-     DDLogVerbose(@"progress %d",(double)numberOfBytesRead / (double)dataLength);
+    double p = (double)numberOfBytesRead / (double)dataLength;
+     DDLogVerbose(@"progress %d",p);
     
-    //[mProgressView setProgress:(double)numberOfBytesRead / (double)dataLength];
+    [uploadProgress setProgress:p animated:YES];
+    
+    if( p == 0 ) {
+        baseSheet.title = uploadProgressTitleEnd; 
+    }
 }
 
 
@@ -173,16 +184,20 @@ ofTotalByteCount:(unsigned long long)dataLength {
 - (void)uploadTicket:(GDataServiceTicket *)ticket
    finishedWithEntry:(GDataEntryYouTubeVideo *)videoEntry
                error:(NSError *)error {
+    
+    [uploadProgress setProgress: 0.0];
+    [baseSheet setTitle:uploadProgressTitleStart];
+    [baseSheet dismissWithClickedButtonIndex:0 animated:YES]; 
     if (error == nil) {
         // tell the user that the add worked
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uploaded!"
-                                                        message:[NSString stringWithFormat:@"%@ succesfully uploaded"]
-                                                                                     
-                                                       delegate:nil 
-                                              cancelButtonTitle:@"Ok" 
-                                              otherButtonTitles:nil];
-        
-        [alert show];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uploaded!"
+//                                                        message:[NSString stringWithFormat:@"%@ succesfully uploaded"]
+//                                                                                     
+//                                                       delegate:nil 
+//                                              cancelButtonTitle:@"Ok" 
+//                                              otherButtonTitles:nil];
+//        
+//        [alert show];
         
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
@@ -195,6 +210,10 @@ ofTotalByteCount:(unsigned long long)dataLength {
         [alert show];
   
     }
+    
+   
+    
+    
   
 }
 
@@ -204,6 +223,37 @@ ofTotalByteCount:(unsigned long long)dataLength {
     DDLogVerbose(@"UPLOADED MOTHER FUCKERRRRRRRRRR");
 
 }
+
+- (void)createProgressView {
+    if (!self.baseSheet) {
+		baseSheet = [[UIActionSheet alloc] 
+					 initWithTitle:uploadProgressTitleStart
+					 delegate:self 
+					 cancelButtonTitle:nil 
+					 destructiveButtonTitle: nil
+					 otherButtonTitles: nil];
+        uploadProgress = [[UIProgressView alloc] initWithFrame:CGRectMake(50.0f, 40.0, 220.0f, 45.0f)];
+        uploadProgress.trackTintColor = [UIColor grayColor];
+        [uploadProgress setProgressViewStyle: UIProgressViewStyleBar];
+        baseSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+        [baseSheet addSubview:uploadProgress];
+        
+		[baseSheet showInView:self.view]; 
+        [baseSheet setBounds:CGRectMake(0,0,320, 100)];
+	} else {
+        [baseSheet showInView:self.view]; 
+        [baseSheet setBounds:CGRectMake(0,0,320, 100)];
+    }
+	
+    //	UIProgressView *progbar = (UIProgressView *)[self.view viewWithTag:PROGRESS_BAR];
+    //	[progbar setProgress:(amountDone = 0.0f)];
+    //    [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(incrementBar:) userInfo: nil repeats: YES];
+}
+
+- (IBAction)showSheet:(id)sender {
+
+}
+
 - (IBAction)showCamera:(id)sender {
     
  

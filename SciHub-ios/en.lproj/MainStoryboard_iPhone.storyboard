@@ -43,7 +43,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="upload white icon.png" id="EGJ-2y-eoC">
                             <connections>
-                                <action selector="doYouTube:" destination="UYE-Q7-bTJ" id="um1-EF-Mk6"/>
+                                <action selector="doYouTube:" destination="UYE-Q7-bTJ" id="p0v-PM-EqA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -284,6 +284,7 @@
             <relationships>
                 <relationship kind="action" name="doYouTube:"/>
                 <relationship kind="action" name="showCamera:"/>
+                <relationship kind="action" name="showSheet:"/>
                 <relationship kind="action" name="showVideoList:"/>
                 <relationship kind="action" name="testAgent:"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIBarButtonItem"/>
