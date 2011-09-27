@@ -11,7 +11,7 @@
 #import "SciHubMessageDelegate.h"
 #import "SciHubOnlineDelegate.h"
 
-@interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate, UIActionSheetDelegate>{
+@interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate>{
     
     AVAudioPlayer *player;
     UIActionSheet *baseSheet;
@@ -22,15 +22,15 @@
 @property (nonatomic, retain)	UIActionSheet *baseSheet;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
 
-- (IBAction)showSheet:(id)sender;
-
+//camera methods
 - (IBAction)showCamera:(id)sender;
 - (IBAction)showVideoList:(id)sender;
-- (IBAction)testAgent:(id)sender;
-- (IBAction)doYouTube:(id)sender;
 
-- (void)didFinish:(id)sender;
-- (void)createProgressView;
+- (IBAction)testAgent:(id)sender;
+
+//upload methods
+- (IBAction)doYouTube:(id)sender;
+- (void)showProgressSheet;
 
 - (AppDelegate *)appDelegate;
 

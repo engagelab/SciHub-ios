@@ -102,11 +102,11 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     
 }
 
-
+#pragma mark - YouTube uploader methods
 
 - (IBAction)doYouTube:(id)sender {
-//    
-    [self createProgressView];
+
+    [self showProgressSheet];
     [GTMHTTPFetcher setLoggingEnabled:YES];
     
     GDataServiceGoogleYouTube *service = [[GDataServiceGoogleYouTube alloc] init];
@@ -179,8 +179,6 @@ ofTotalByteCount:(unsigned long long)dataLength {
     }
 }
 
-
-// upload callback
 - (void)uploadTicket:(GDataServiceTicket *)ticket
    finishedWithEntry:(GDataEntryYouTubeVideo *)videoEntry
                error:(NSError *)error {
@@ -188,16 +186,12 @@ ofTotalByteCount:(unsigned long long)dataLength {
     [uploadProgress setProgress: 0.0];
     [baseSheet setTitle:uploadProgressTitleStart];
     [baseSheet dismissWithClickedButtonIndex:0 animated:YES]; 
+    
+   
+    
     if (error == nil) {
-        // tell the user that the add worked
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uploaded!"
-//                                                        message:[NSString stringWithFormat:@"%@ succesfully uploaded"]
-//                                                                                     
-//                                                       delegate:nil 
-//                                              cancelButtonTitle:@"Ok" 
-//                                              otherButtonTitles:nil];
-//        
-//        [alert show];
+
+         DDLogVerbose(@"WE WON!!!!");
         
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
@@ -217,14 +211,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
   
 }
 
-
-
--(void) didFinish:(id)sender  {
-    DDLogVerbose(@"UPLOADED MOTHER FUCKERRRRRRRRRR");
-
-}
-
-- (void)createProgressView {
+- (void)showProgressSheet {
     if (!self.baseSheet) {
 		baseSheet = [[UIActionSheet alloc] 
 					 initWithTitle:uploadProgressTitleStart
@@ -244,30 +231,20 @@ ofTotalByteCount:(unsigned long long)dataLength {
         [baseSheet showInView:self.view]; 
         [baseSheet setBounds:CGRectMake(0,0,320, 100)];
     }
-	
-    //	UIProgressView *progbar = (UIProgressView *)[self.view viewWithTag:PROGRESS_BAR];
-    //	[progbar setProgress:(amountDone = 0.0f)];
-    //    [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(incrementBar:) userInfo: nil repeats: YES];
 }
 
-- (IBAction)showSheet:(id)sender {
+#pragma mark - Agent methods
 
+- (IBAction)testAgent:(id)sender {
+    
+    NSString *event = @"{'eventType':'hello', 'payload': {}, 'origin':'obama'}";
+    
+    [[[self appDelegate] xmppRoom ]sendMessage:event];
+    
 }
 
-- (IBAction)showCamera:(id)sender {
-    
- 
-        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
-        pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
-        pickerController.delegate = self;
 
-        pickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
-        pickerController.showsCameraControls = YES;
-    
-        [self presentModalViewController:pickerController animated:YES];
-    
-    
-}
+#pragma mark - Camera methods
 
 - (IBAction)showVideoList:(id)sender {
     
@@ -281,19 +258,49 @@ ofTotalByteCount:(unsigned long long)dataLength {
     [self presentModalViewController:pickerController animated:YES];
 }
 
-- (IBAction)testAgent:(id)sender {
+- (IBAction)showCamera:(id)sender {
+
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
+    pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
+    pickerController.delegate = self;
+    pickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
+    pickerController.showsCameraControls = YES;
+    [self presentModalViewController:pickerController animated:YES];
     
-    NSString *event = @"{'eventType':'hello', 'payload': {}, 'origin':'obama'}";
-    
-    [[[self appDelegate] xmppRoom ]sendMessage:event];
     
 }
+
+#pragma mark - Image delegate methods
+
 
 #pragma mark - Audio delegate methods
 
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
       DDLogVerbose(@"did finish playing sound");
+}
+
+#pragma mark - UIImagePickerControllerDelegate delegate methods
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    // Access the uncropped image from info dictionary
+    
+    NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
+    UISaveVideoAtPathToSavedPhotosAlbum(videoURL.absoluteString, self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
+    
+    
+    
+}
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo {
+    
+    if (!videoPath && error) {
+        NSLog(@"Error saving video to saved photos roll: %@, %@", error, [error userInfo]);
+        // Handle error;
+        return;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:videoPath forKey:@"videoPath"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark - sciHubMessageDelegate delegate methods
@@ -343,32 +350,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
     DDLogVerbose(@"message %@,%@", message, sender);
 }
 
-#pragma mark - UIImagePickerControllerDelegate delegate methods
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
-}
-
-- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    // Access the uncropped image from info dictionary
-    
-    NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-    UISaveVideoAtPathToSavedPhotosAlbum(videoURL.absoluteString, self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
-    
-
-    
-}
-- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo
-{
-    if (!videoPath && error)
-    {
-        NSLog(@"Error saving video to saved photos roll: %@, %@", error, [error userInfo]);
-        // Handle error;
-        return;
-    }
-    
-    // Video was saved properly. UI may need to be updated here.
-}
 
 
 @end

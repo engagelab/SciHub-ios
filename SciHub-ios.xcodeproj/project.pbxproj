@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE45C4BB14320D9A00E17ADB /* VideoMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE45C4BA14320D9A00E17ADB /* VideoMessageViewController.m */; };
 		AE46EA9E142B66800034788B /* icon-status-available.png in Resources */ = {isa = PBXBuildFile; fileRef = AE46EA9C142B66800034788B /* icon-status-available.png */; };
 		AE46EA9F142B66800034788B /* icon-status-cancelled.png in Resources */ = {isa = PBXBuildFile; fileRef = AE46EA9D142B66800034788B /* icon-status-cancelled.png */; };
 		AE46EAA1142BB3200034788B /* On.aif in Resources */ = {isa = PBXBuildFile; fileRef = AE46EAA0142BB3200034788B /* On.aif */; };
@@ -47,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE45C4B914320D9A00E17ADB /* VideoMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMessageViewController.h; sourceTree = "<group>"; };
+		AE45C4BA14320D9A00E17ADB /* VideoMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMessageViewController.m; sourceTree = "<group>"; };
 		AE46EA9C142B66800034788B /* icon-status-available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-available.png"; sourceTree = "<group>"; };
 		AE46EA9D142B66800034788B /* icon-status-cancelled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-cancelled.png"; sourceTree = "<group>"; };
 		AE46EAA0142BB3200034788B /* On.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = On.aif; sourceTree = "<group>"; };
@@ -806,6 +809,17 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		AEDA6F1A14320A6A0090D0BE /* popups */ = {
+			isa = PBXGroup;
+			children = (
+				AE7CD483142D2C3A00B6BF5C /* MessageViewController.h */,
+				AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */,
+				AE45C4B914320D9A00E17ADB /* VideoMessageViewController.h */,
+				AE45C4BA14320D9A00E17ADB /* VideoMessageViewController.m */,
+			);
+			name = popups;
+			sourceTree = "<group>";
+		};
 		AEE0CCBF1419577B0085DA61 = {
 			isa = PBXGroup;
 			children = (
@@ -855,8 +869,7 @@
 				AEE0CCDD1419577B0085DA61 /* AppDelegate.h */,
 				AEE0CCDE1419577B0085DA61 /* AppDelegate.m */,
 				AEE0CCE01419577C0085DA61 /* MainStoryboard_iPhone.storyboard */,
-				AE7CD483142D2C3A00B6BF5C /* MessageViewController.h */,
-				AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */,
+				AEDA6F1A14320A6A0090D0BE /* popups */,
 				AEE0CCE61419577C0085DA61 /* MainViewController.h */,
 				AEE0CCE71419577C0085DA61 /* MainViewController.m */,
 				AE9821811427841D00AE3760 /* UploadViewController.h */,
@@ -964,6 +977,7 @@
 				AE9821831427841D00AE3760 /* UploadViewController.m in Sources */,
 				AE9821861427884000AE3760 /* LoginViewController.m in Sources */,
 				AE7CD485142D2C3A00B6BF5C /* MessageViewController.m in Sources */,
+				AE45C4BB14320D9A00E17ADB /* VideoMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
