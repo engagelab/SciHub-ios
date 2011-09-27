@@ -161,7 +161,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 	NSString *myUsername = [[sender myJID] user];
 	NSString *presenceFromUser = [[presence from] user];
 	
-	if (![presenceFromUser isEqualToString:myUsername]) {
+	if ([presenceFromUser isEqualToString:myUsername]) {
 		
 		if ([presenceType isEqualToString:@"available"]) {
             

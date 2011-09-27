@@ -43,7 +43,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="upload white icon.png" id="EGJ-2y-eoC">
                             <connections>
-                                <action selector="testAgent:" destination="UYE-Q7-bTJ" id="8eF-vV-CTn"/>
+                                <action selector="doYouTube:" destination="UYE-Q7-bTJ" id="um1-EF-Mk6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -282,6 +282,7 @@
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doYouTube:"/>
                 <relationship kind="action" name="showCamera:"/>
                 <relationship kind="action" name="showVideoList:"/>
                 <relationship kind="action" name="testAgent:"/>

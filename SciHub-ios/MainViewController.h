@@ -22,6 +22,8 @@
 - (IBAction)showCamera:(id)sender;
 - (IBAction)showVideoList:(id)sender;
 - (IBAction)testAgent:(id)sender;
+- (IBAction)doYouTube:(id)sender;
+-(void) didFinish:(id)sender;
 
 - (AppDelegate *)appDelegate;
 
