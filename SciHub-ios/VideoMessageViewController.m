@@ -57,6 +57,21 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    // Any new character added is passed in as the "text" parameter
+    if ([text isEqualToString:@"\n"]) {
+        // Be sure to test for equality using the "isEqualToString" message
+        
+        DDLogVerbose(@"replying.....");
+        [self reply:nil];
+        [self dismissModalViewControllerAnimated:YES];
+        // Return FALSE so that the final '\n' character doesn't get added
+        return FALSE;
+    }
+    // For any other character return TRUE so that the text gets added to the view
+    return TRUE;
+}
+
 - (IBAction)reply:(id)sender {
     
     DDLogVerbose(@"messaging.....");

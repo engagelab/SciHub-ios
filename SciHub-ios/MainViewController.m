@@ -13,6 +13,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVAudioPlayer.h>
 #import "MessageViewController.h"
+#import "VideoMessageViewController.h"
 
 
 #import "GDataServiceGoogleYouTube.h"
@@ -52,6 +53,9 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
    
     self.appDelegate.sciHubMessageDelegate = self;
     self.appDelegate.sciHubOnlineDelegate = self;
+    
+    videoPickerController = [[UIImagePickerController alloc] init ];
+
 }
 
 - (void)viewDidUnload
@@ -105,7 +109,13 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 #pragma mark - YouTube uploader methods
 
 - (IBAction)doYouTube:(id)sender {
+    
 
+
+    NSString *videoTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"videoTitle"];
+    NSString *videoPath = [[NSUserDefaults standardUserDefaults] objectForKey:@"videoPath"];
+    
+    
     [self showProgressSheet];
     [GTMHTTPFetcher setLoggingEnabled:YES];
     
@@ -121,13 +131,17 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
     
     // load the file data
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"YouTubeTest" ofType:@"m4v"]; 
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSString *filename = [path lastPathComponent];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"YouTubeTest" ofType:@"m4v"]; 
+    NSData *data = [NSData dataWithContentsOfFile:videoPath];
+    NSString *filename = [videoPath lastPathComponent];
     
     // gather all the metadata needed for the mediaGroup
-    NSString *titleStr = @"new viddddo";
-    GDataMediaTitle *title = [GDataMediaTitle textConstructWithString:titleStr];
+    
+    if( videoTitle == nil ) {
+        videoTitle = @"untitled video";
+    }
+
+    GDataMediaTitle *title = [GDataMediaTitle textConstructWithString:videoTitle];
     
 
     GDataMediaCategory *category = [GDataMediaCategory mediaCategoryWithString:@"Entertainment"];
@@ -146,8 +160,8 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     [mediaGroup setMediaKeywords:keywords];
     [mediaGroup setIsPrivate:NO];
 
-    NSString *mimeType = [GDataUtilities MIMETypeForFileAtPath:path
-                                               defaultMIMEType:@"video/mp4"];
+    NSString *mimeType = [GDataUtilities MIMETypeForFileAtPath:videoPath
+                                               defaultMIMEType:@"video/quicktime"];
     
     // create the upload entry with the mediaGroup and the file
     GDataEntryYouTubeUpload *entry = [GDataEntryYouTubeUpload uploadEntryWithMediaGroup:mediaGroup
@@ -233,6 +247,8 @@ ofTotalByteCount:(unsigned long long)dataLength {
     }
 }
 
+
+
 #pragma mark - Agent methods
 
 - (IBAction)testAgent:(id)sender {
@@ -248,30 +264,32 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 - (IBAction)showVideoList:(id)sender {
     
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
-    pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
-    pickerController.delegate = self;
+    if( videoPickerController == nil ) {
+        videoPickerController = [[UIImagePickerController alloc] init ];
+    }
     
-    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-   // pickerController.showsCameraControls = YES;
+    videoPickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
+    videoPickerController.delegate = self;
+    videoPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    [self presentModalViewController:pickerController animated:YES];
+    [self presentModalViewController:videoPickerController animated:YES];
 }
 
 - (IBAction)showCamera:(id)sender {
 
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init ];
-    pickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
-    pickerController.delegate = self;
-    pickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
-    pickerController.showsCameraControls = YES;
-    [self presentModalViewController:pickerController animated:YES];
+    if( videoPickerController == nil ) {
+        videoPickerController = [[UIImagePickerController alloc] init ];
+    }
+
+        videoPickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
+        videoPickerController.delegate = self;
+        videoPickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
+        videoPickerController.showsCameraControls = YES;
+        [self presentModalViewController:videoPickerController animated:YES];
+    
     
     
 }
-
-#pragma mark - Image delegate methods
-
 
 #pragma mark - Audio delegate methods
 
@@ -286,7 +304,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
     // Access the uncropped image from info dictionary
     
     NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-    UISaveVideoAtPathToSavedPhotosAlbum(videoURL.absoluteString, self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
+    UISaveVideoAtPathToSavedPhotosAlbum([videoURL path], self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
     
     
     
@@ -301,6 +319,20 @@ ofTotalByteCount:(unsigned long long)dataLength {
     
     [[NSUserDefaults standardUserDefaults] setObject:videoPath forKey:@"videoPath"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [videoPickerController dismissModalViewControllerAnimated:YES];
+    //[self showVideoTitleModal];
+    
+}
+
+- (IBAction)showVideoTitleModal:(id)sender {
+
+    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:[NSBundle mainBundle]]; 
+    
+    VideoMessageViewController *videoMessageController = [storyb instantiateViewControllerWithIdentifier:@"videoMessageController"];
+    
+    
+    [self presentModalViewController:videoMessageController animated:YES];
 }
 
 #pragma mark - sciHubMessageDelegate delegate methods
@@ -311,14 +343,14 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 - (void)replyMessageTo:(NSString *)from {
     
-    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil]; 
+    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:[NSBundle mainBundle]]; 
     
     MessageViewController *messageController = [storyb instantiateViewControllerWithIdentifier:@"messageController"];
     
     messageController.from = from;
     
     [self presentModalViewController:messageController animated:YES];
-    
+  
 }
 
 #pragma mark - sciHubOnlineDelegate delegate methods
@@ -342,6 +374,9 @@ ofTotalByteCount:(unsigned long long)dataLength {
     
     loginButton.image = image;
 }
+
+
+
 
 - (void)newGroupMessageReceived:(NSDictionary *)messageContent {
     

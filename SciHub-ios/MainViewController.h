@@ -16,6 +16,8 @@
     AVAudioPlayer *player;
     UIActionSheet *baseSheet;
     UIProgressView *uploadProgress;
+    UIImagePickerController *videoPickerController;
+    NSString *savedVideoPath;
     
 }
 
@@ -26,6 +28,10 @@
 - (IBAction)showCamera:(id)sender;
 - (IBAction)showVideoList:(id)sender;
 
+//video message
+- (IBAction)showVideoTitleModal:(id)sender;
+
+//agent methods
 - (IBAction)testAgent:(id)sender;
 
 //upload methods

@@ -8,6 +8,12 @@
 
 #import "MessageViewController.h"
 
-@interface VideoMessageViewController : MessageViewController
+@interface VideoMessageViewController : MessageViewController {
+    
+}
+
+ - (void)showVideoTitleModal;
 
 @end
+
+
