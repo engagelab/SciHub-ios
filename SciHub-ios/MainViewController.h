@@ -10,6 +10,7 @@
 #import <AVFoundation/AVAudioPlayer.h>
 #import "SciHubMessageDelegate.h"
 #import "SciHubOnlineDelegate.h"
+#import "AppDelegate.h"
 
 @interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate>{
     
@@ -18,11 +19,15 @@
     UIProgressView *uploadProgress;
     UIImagePickerController *videoPickerController;
     NSString *savedVideoPath;
-    
+    NSString *savedTitle;
+    IBOutlet UIView *swipeView;
 }
+- (IBAction)hideSwipeView:(id)sender;
 
-@property (nonatomic, retain)	UIActionSheet *baseSheet;
+@property (nonatomic, retain) UIActionSheet *baseSheet;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
+@property (nonatomic, retain) NSString *savedTitle;
+
 
 //camera methods
 - (IBAction)showCamera:(id)sender;
@@ -33,6 +38,7 @@
 
 //agent methods
 - (IBAction)testAgent:(id)sender;
+- (void)sendGroupMessageWith:(NSString *)event;
 
 //upload methods
 - (IBAction)doYouTube:(id)sender;

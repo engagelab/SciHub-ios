@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
 
 @interface UploadViewController : UIViewController <UIGestureRecognizerDelegate> {
 
+    MainViewController *mainViewController;
     
 }
 
--(IBAction)closeWindow:(id)sender; 
+@property (strong, nonatomic) MainViewController *mainViewController;
 
+-(IBAction)closeWindow:(id)sender; 
 -(IBAction)uploadVideo:(id)sender; 
 
 @end

@@ -14,22 +14,20 @@
 #import <AVFoundation/AVAudioPlayer.h>
 #import "MessageViewController.h"
 #import "VideoMessageViewController.h"
-
+#import "UploadViewController.h"
 
 #import "GDataServiceGoogleYouTube.h"
 #import "GDataMediaCategory.h"
 #import "GDataMediaGroup.h"
 #import "GDataEntryYouTubeUpload.h"
 #import "GTMHTTPFetcher.h"
-/**
-#import "GDataEntryPhotoAlbum.h"
-#import "GDataEntryPhoto.h"
-#import "GDataFeedPhoto.h"
 
-**/
+#import "URLParser.h"
+
 @implementation MainViewController
 @synthesize loginButton;
 @synthesize baseSheet;
+@synthesize savedTitle;
 
 NSString *const uploadProgressTitleStart = @"Upload Progress";
 NSString *const uploadProgressTitleEnd = @"Upload Done!";
@@ -56,12 +54,14 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     
     videoPickerController = [[UIImagePickerController alloc] init ];
 
+    [GTMHTTPFetcher setLoggingEnabled:YES];
 }
 
 - (void)viewDidUnload
 {
 
     [self setLoginButton:nil];
+    swipeView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -102,6 +102,8 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
         //targetViewController.delegate = self;
         
        
+    } else if([[segue identifier] isEqualToString:@"loginSegue"]) {
+        
     }
     
 }
@@ -117,7 +119,7 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     
     
     [self showProgressSheet];
-    [GTMHTTPFetcher setLoggingEnabled:YES];
+    
     
     GDataServiceGoogleYouTube *service = [[GDataServiceGoogleYouTube alloc] init];
     [service setUserAgent:@"iOS uploader"]; 
@@ -138,7 +140,9 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     // gather all the metadata needed for the mediaGroup
     
     if( videoTitle == nil ) {
-        videoTitle = @"untitled video";
+        
+        int value = (arc4random() % 600);
+        videoTitle = [[NSString alloc] initWithFormat:@"Vidoe %d",value];
     }
 
     GDataMediaTitle *title = [GDataMediaTitle textConstructWithString:videoTitle];
@@ -168,6 +172,9 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
                                                     data:data
                                                       MIMEType:mimeType
                                                           slug:filename];
+    
+
+    
     SEL progressSel = @selector(ticket:hasDeliveredByteCount:ofTotalByteCount:);
     [service setServiceUploadProgressSelector:progressSel];
     
@@ -176,6 +183,7 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
                                       forFeedURL:url
                                         delegate:self
                                didFinishSelector:@selector(uploadTicket:finishedWithEntry:error:)];
+ 
     
     [uploadProgress setProgress: 0.0];
 }
@@ -194,18 +202,62 @@ ofTotalByteCount:(unsigned long long)dataLength {
 }
 
 - (void)uploadTicket:(GDataServiceTicket *)ticket
-   finishedWithEntry:(GDataEntryYouTubeVideo *)videoEntry
+   finishedWithEntry:(GDataEntryYouTubeUpload *)videoEntry
                error:(NSError *)error {
     
     [uploadProgress setProgress: 0.0];
     [baseSheet setTitle:uploadProgressTitleStart];
     [baseSheet dismissWithClickedButtonIndex:0 animated:YES]; 
     
-   
+    [self hideSwipeView:nil];
+     
     
     if (error == nil) {
+     
+        NSString *videoUrl;
+        // Code to get the URL of uploaded videos 
+        NSArray *mediaPlayers = [[videoEntry mediaGroup] 
+                                 mediaPlayers]; 
 
+        if([mediaPlayers count] > 0) 
+        { 
+             videoUrl = [[mediaPlayers objectAtIndex: 0] URLString]; 
+            
+        } 
+        
+        //{ eventType: 'video_ready', payload: { url: 'http://youtube.com/lakjsdflkjsdfklj'}, origin: 'bob' }
+
+         NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+        
+              
+        NSString *eventType = @"eventType: 'video_ready'"; 
+        
+        URLParser *parser = [[URLParser alloc] initWithURLString:videoUrl];
+
+        NSString *v = [parser valueForVariable:@"v"];
+        
+        NSString *yurl = [[NSString alloc] initWithFormat:@"url:'http://www.youtube.com/v/%@'",v];
+        
+        NSString *event = [[NSString alloc] initWithFormat:@"{ %@, payload: { %@ }, origin:'%@'}",eventType, yurl, username]; 
+
+         
+        
+        DDLogVerbose(event);
+        
+        [self sendGroupMessageWith: event];
+        
+        //[videoEntry 
+        
          DDLogVerbose(@"WE WON!!!!");
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!"
+                                                        message:@"Video Successfully Uploaded"
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"Ok" 
+                                              otherButtonTitles:nil];
+        
+        [alert show];
+
         
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
@@ -257,6 +309,11 @@ ofTotalByteCount:(unsigned long long)dataLength {
     
     [[[self appDelegate] xmppRoom ]sendMessage:event];
     
+}
+
+- (void)sendGroupMessageWith:(NSString *)event {
+    if( event != nil )
+        [[[self appDelegate] xmppRoom ]sendMessage:event];
 }
 
 
@@ -321,18 +378,28 @@ ofTotalByteCount:(unsigned long long)dataLength {
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [videoPickerController dismissModalViewControllerAnimated:YES];
+    
+    swipeView.hidden = NO;
+    
+//    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil]; 
+//    //    
+//    UploadViewController *videoMessageController = [storyb instantiateViewControllerWithIdentifier:@"uploadViewController"];
+//    
+//    
+//    [self presentModalViewController:videoMessageController animated:YES];
+
     //[self showVideoTitleModal];
     
 }
 
 - (IBAction)showVideoTitleModal:(id)sender {
 
-    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:[NSBundle mainBundle]]; 
+//    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:[NSBundle mainBundle]]; 
+//    
+//    VideoMessageViewController *videoMessageController = [storyb instantiateViewControllerWithIdentifier:@"videoMessageController"];
     
-    VideoMessageViewController *videoMessageController = [storyb instantiateViewControllerWithIdentifier:@"videoMessageController"];
     
-    
-    [self presentModalViewController:videoMessageController animated:YES];
+   // [self presentModalViewController:videoMessageController animated:YES];
 }
 
 #pragma mark - sciHubMessageDelegate delegate methods
@@ -343,13 +410,13 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 - (void)replyMessageTo:(NSString *)from {
     
-    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:[NSBundle mainBundle]]; 
-    
-    MessageViewController *messageController = [storyb instantiateViewControllerWithIdentifier:@"messageController"];
-    
-    messageController.from = from;
-    
-    [self presentModalViewController:messageController animated:YES];
+//    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:[NSBundle mainBundle]]; 
+//    
+//    MessageViewController *messageController = [storyb instantiateViewControllerWithIdentifier:@"messageController"];
+//    
+//    messageController.from = from;
+//    
+//    [self presentModalViewController:messageController animated:YES];
   
 }
 
@@ -388,4 +455,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 
 
+- (IBAction)hideSwipeView:(id)sender {
+    swipeView.hidden = YES;
+}
 @end

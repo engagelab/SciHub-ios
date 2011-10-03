@@ -28,42 +28,40 @@
                                     <action selector="showCamera:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="wZq-c6-j8k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="at6-sF-8nH">
-                                <rect key="frame" x="39" y="315" width="83" height="37"/>
+                            <view hidden="YES" contentMode="scaleToFill" id="HIU-CJ-y1r">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="add title">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="swipe gesture.png" id="sEZ-3f-YsB">
+                                        <rect key="frame" x="82" y="82" width="160" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe up to upload to video wall." lineBreakMode="tailTruncation" minimumFontSize="11" id="tQm-Fl-pi2">
+                                        <rect key="frame" x="50" y="269" width="236" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe down to cancel." lineBreakMode="tailTruncation" minimumFontSize="9" id="YMI-Eb-6mV">
+                                        <rect key="frame" x="118" y="298" width="264" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="Rga-9N-aal" kind="modal" id="KHv-ae-2az"/>
+                                    <outletCollection property="gestureRecognizers" destination="5pu-wD-dD3" appends="YES" id="5VS-de-kIZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="5pu-wD-dD3" appends="YES" id="j8b-i9-dvP"/>
+                                    <outletCollection property="gestureRecognizers" destination="Aod-Ed-jMu" appends="YES" id="eg7-dD-BGF"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hq9-V4-D5X">
-                                <rect key="frame" x="160" y="315" width="117" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="upload video">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doYouTube:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="LFq-e7-0bx"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Nh6-mi-CaV" appends="YES" id="2kR-Ow-tyP"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="SciHub" id="KLj-67-kYT">
                         <barButtonItem key="leftBarButtonItem" image="icon-status-cancelled.png" id="inl-Ot-ZaM">
@@ -80,15 +78,21 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
                         <outlet property="loginButton" destination="inl-Ot-ZaM" id="u6a-72-Mng"/>
+                        <outlet property="swipeView" destination="HIU-CJ-y1r" id="Fm5-J5-vIh"/>
                     </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="up" id="Nh6-mi-CaV">
+                <swipeGestureRecognizer direction="down" id="5pu-wD-dD3">
                     <connections>
-                        <segue destination="rlL-ZJ-O44" kind="modal" modalTransitionStyle="crossDissolve" id="uGd-BS-9LI"/>
+                        <action selector="hideSwipeView:" destination="UYE-Q7-bTJ" id="zTc-h6-36n"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Aod-Ed-jMu">
+                    <connections>
+                        <action selector="doYouTube:" destination="UYE-Q7-bTJ" id="4l6-7J-tK1"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-98" y="177"/>
+            <point key="canvasLocation" x="-45" y="203"/>
         </scene>
         <scene sceneID="eN7-Aw-BOl">
             <objects>
@@ -139,7 +143,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="293" y="-408"/>
+            <point key="canvasLocation" x="863" y="192"/>
         </scene>
         <scene sceneID="tA2-GZ-nci">
             <objects>
@@ -222,55 +226,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="685" y="203"/>
-        </scene>
-        <scene sceneID="WsS-YK-LZ6">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jb5-WZ-3Gg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="rlL-ZJ-O44" customClass="UploadViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="398-Ad-6UO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe up to upload to video wall." lineBreakMode="tailTruncation" minimumFontSize="11" id="tQm-Fl-pi2">
-                                <rect key="frame" x="42" y="303" width="236" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe down to cancel." lineBreakMode="tailTruncation" minimumFontSize="9" id="YMI-Eb-6mV">
-                                <rect key="frame" x="112" y="332" width="264" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="swipe gesture.png" id="sEZ-3f-YsB">
-                                <rect key="frame" x="80" y="117" width="160" height="166"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="NDT-fh-Mi2" appends="YES" id="08s-vf-ucl"/>
-                            <outletCollection property="gestureRecognizers" destination="qTP-IB-UeE" appends="YES" id="C3b-OQ-Dwu"/>
-                        </connections>
-                    </view>
-                </viewController>
-                <swipeGestureRecognizer direction="down" id="NDT-fh-Mi2">
-                    <connections>
-                        <action selector="closeWindow:" destination="rlL-ZJ-O44" id="w3a-SG-7We"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="up" id="qTP-IB-UeE">
-                    <connections>
-                        <action selector="uploadVideo:" destination="rlL-ZJ-O44" id="PUX-zb-cmh"/>
-                    </connections>
-                </swipeGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="331" y="585"/>
+            <point key="canvasLocation" x="399" y="213"/>
         </scene>
         <scene sceneID="qWF-qQ-tnK">
             <objects>
@@ -287,7 +243,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-497" y="355"/>
+            <point key="canvasLocation" x="-479" y="203"/>
         </scene>
         <scene sceneID="8nj-Eg-uHH">
             <objects>
@@ -338,7 +294,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-98" y="-401"/>
+            <point key="canvasLocation" x="858" y="-379"/>
         </scene>
     </scenes>
     <resources>
@@ -347,6 +303,44 @@
         <image name="swipe gesture.png" width="160" height="166"/>
         <image name="upload white icon.png" width="24" height="18"/>
     </resources>
+    <classes>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeWindow:"/>
+                <relationship kind="action" name="doLogin:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="overlay" candidateClass="UIView"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doYouTube:"/>
+                <relationship kind="action" name="hideSwipeView:"/>
+                <relationship kind="action" name="showCamera:"/>
+                <relationship kind="action" name="showVideoList:"/>
+                <relationship kind="action" name="showVideoTitleModal:"/>
+                <relationship kind="action" name="testAgent:"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="swipeView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MessageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MessageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="reply:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="VideoMessageViewController" superclassName="MessageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoMessageViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

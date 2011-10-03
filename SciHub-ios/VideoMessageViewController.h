@@ -10,6 +10,7 @@
 
 @interface VideoMessageViewController : MessageViewController {
     
+    
 }
 
  - (void)showVideoTitleModal;

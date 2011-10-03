@@ -7,6 +7,7 @@
 //
 
 #import "VideoMessageViewController.h"
+#import "UploadViewController.h"
 
 @implementation VideoMessageViewController
 
@@ -74,6 +75,8 @@
 
 - (IBAction)reply:(id)sender {
     
+        
+    
     DDLogVerbose(@"messaging.....");
     
     NSString *videoTitle = self.textView.text;
@@ -86,6 +89,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self dismissModalViewControllerAnimated:YES];
+
 }
 
 @end
