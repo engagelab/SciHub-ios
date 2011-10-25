@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SciHubOnlineDelegate.h"
 
-@interface LoginViewController : UIViewController {
+@interface LoginViewController : UIViewController <SciHubOnlineDelegate>{
    
     
 }

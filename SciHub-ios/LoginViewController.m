@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 #import "AppDelegate.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "CJSONDeserializer.h"
 
 @implementation LoginViewController
 
@@ -28,6 +31,17 @@
 
 - (AppDelegate *)appDelegate {
 	return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+}
+
+- (void)isAvailable:(BOOL)available {
+    
 }
 
 - (IBAction)closeWindow:(id)sender {
@@ -51,7 +65,7 @@
         errorLabel.text = @"username or password is blank.";
     } else {
         [[NSUserDefaults standardUserDefaults] setObject:loginField.text forKey:@"userID"];
-        [[NSUserDefaults standardUserDefaults] setObject:passwordField.text forKey:@"userPassword"];
+        [[NSUserDefaults standardUserDefaults] setObject:passwordField.text forKey:@"rollcallPassword"];
         
         NSString* username = [[loginField.text componentsSeparatedByString:@"@"] objectAtIndex:0];
 
@@ -59,6 +73,57 @@
 
         
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
+        NSURL *url = [NSURL URLWithString:@"http://rollcall.proto.encorelab.org/login.json"];
+        __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        [request addPostValue:username forKey:@"session[login]"];
+        [request addPostValue:passwordField.text forKey:@"session[password]"];
+        [request setCompletionBlock:^{
+            // Use when fetching text data
+            NSString *responseString = [request responseString];
+            
+            // Use when fetching binary data
+            NSData *responseData = [request responseData];
+            
+            NSError *error = nil;
+            NSDictionary *dictionary = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
+            NSDictionary *session = [dictionary objectForKey:@"session"];
+            
+            NSString *token = [session objectForKey:@"token"];
+            NSNumber *sessionId = [session objectForKey:@"id"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"token"];
+            [[NSUserDefaults standardUserDefaults] setObject:sessionId forKey:@"sessionId"];
+            
+            NSDictionary *account = [session objectForKey:@"account"];
+            NSString *ePassword = [account objectForKey:@"encrypted_password"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:ePassword forKey:@"ePassword"];
+            [[NSUserDefaults standardUserDefaults] setObject:ePassword forKey:@"userPassword"];
+
+            [[NSUserDefaults standardUserDefaults] synchronize];
+
+            BOOL connected = [[self appDelegate] connect]; 
+            
+            if( connected ) {
+                [[self appDelegate] goOnline]; 
+            }
+            
+            
+            [activityIndicator stopAnimating];
+            overlay.hidden = YES;
+        }];
+        [request setFailedBlock:^{
+            NSError *error = [request error];
+            [activityIndicator stopAnimating];
+        }];
+        [activityIndicator startAnimating];
+        [request startAsynchronous];
+        
+        [self dismissModalViewControllerAnimated:YES];
+        
+/*        
         BOOL connected = [[self appDelegate] connect]; 
         
         
@@ -78,6 +143,7 @@
             
         }
         [self dismissModalViewControllerAnimated:YES];
+ */
 //        overlay.hidden = YES;
 //        [activityIndicator stopAnimating];
 //        [self dismissModalViewControllerAnimated:YES];

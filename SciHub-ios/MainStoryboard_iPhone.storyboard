@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1934" systemVersion="11C26" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="T0V-Tm-i2i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C26" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="T0V-Tm-i2i">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="931"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
         <scene sceneID="d6B-gk-8Hq">
@@ -164,7 +164,7 @@
                                                 <action selector="closeWindow:" destination="v5G-6g-4rJ" id="UKG-Be-oUo"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="Xjx-Jy-Jct">
+                                        <barButtonItem key="rightBarButtonItem" title="Login" id="Xjx-Jy-Jct">
                                             <connections>
                                                 <action selector="doLogin:" destination="v5G-6g-4rJ" id="jjz-97-XEw"/>
                                             </connections>
@@ -206,8 +206,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="H6Z-a4-Z3g">
-                                <rect key="frame" x="142" y="182" width="37" height="37"/>
+                                <rect key="frame" x="143" y="181" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <view hidden="YES" opaque="NO" contentMode="scaleToFill" id="9QX-Kw-9jP">
                                 <rect key="frame" x="0.0" y="44" width="320" height="416"/>

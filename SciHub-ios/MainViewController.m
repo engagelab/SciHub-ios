@@ -96,16 +96,13 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 
 { 
-    if ([[segue identifier] isEqualToString:@"loginSegue"]) {
-        
-        //LoginViewController *targetViewController = segue.destinationViewController;
-        //targetViewController.delegate = self;
-        
-       
-    } else if([[segue identifier] isEqualToString:@"loginSegue"]) {
-        
-    }
-    
+//    if ([[segue identifier] isEqualToString:@"loginSegue"]) {
+//        
+//        LoginViewController *targetViewController = segue.destinationViewController;
+//        targetViewController.self = self.appDelegate.sciHubOnlineDelegate;
+//        
+//       
+//    }
 }
 
 #pragma mark - YouTube uploader methods

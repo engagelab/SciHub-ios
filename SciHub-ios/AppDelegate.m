@@ -26,25 +26,26 @@
 
 @synthesize window = _window;
 
-NSString * const serverName = @"imediamac28.uio.no";
+//NSString * const serverName = @"imediamac28.uio.no";
+NSString * const serverName = @"proto.encorelab.org";
 
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //temp
-    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
+//    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
+//    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
 
     // Configure logging framework
 	
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
     
     [self setupStream];
-    [self connect];
-    [self goOnline];
+    //[self connect];
+    //[self goOnline];
     return YES;
 }
 							
@@ -424,10 +425,16 @@ NSString * const serverName = @"imediamac28.uio.no";
 		return YES;
 	}
     
-	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
+	NSString *myJID = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
 	NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPassword"];
     
 //    
+    
+
+
+    myJID = [NSString stringWithFormat:@"%@@%@",myJID,serverName];
+    [[NSUserDefaults standardUserDefaults] setObject:myJID forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     //NSString *myJID = @"obama@ime.mo";
 	//NSString *myPassword = @"obama";
     
