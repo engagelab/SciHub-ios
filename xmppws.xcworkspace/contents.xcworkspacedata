@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../SciHub-ios/SciHub-ios.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../Building-a-Jabber-client-for-iOS/JabberClient.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../xmpp-ios/xmpp-ios.xcodeproj">
+   </FileRef>
+</Workspace>

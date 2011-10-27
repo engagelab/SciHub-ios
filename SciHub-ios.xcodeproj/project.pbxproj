@@ -953,9 +953,9 @@
 		AEE0CCBF1419577B0085DA61 = {
 			isa = PBXGroup;
 			children = (
+				AEE0CCCB1419577B0085DA61 /* Products */,
 				AEE0CCD41419577B0085DA61 /* SciHub-ios */,
 				AEE0CCCD1419577B0085DA61 /* Frameworks */,
-				AEE0CCCB1419577B0085DA61 /* Products */,
 			);
 			sourceTree = "<group>";
 		};

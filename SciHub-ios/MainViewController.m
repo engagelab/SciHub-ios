@@ -455,4 +455,22 @@ ofTotalByteCount:(unsigned long long)dataLength {
 - (IBAction)hideSwipeView:(id)sender {
     swipeView.hidden = YES;
 }
+- (IBAction)checkInWithQR:(id)sender {
+    NSString *event = @"{
+payload: {
+station: 1
+},
+eventType: 'check_in',
+timestamp: '2011-10-26T13:49:09Z',
+origin: 'mzukowski',
+run: {
+name: "something",
+    id: 123
+}
+}";
+    
+    [[[self appDelegate] xmppRoom ]sendMessage:event];
+    DDLogVerbose(@"checking in");
+
+}
 @end

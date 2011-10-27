@@ -28,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
 @property (nonatomic, retain) NSString *savedTitle;
 
+- (IBAction)checkInWithQR:(id)sender;
 
 //camera methods
 - (IBAction)showCamera:(id)sender;
