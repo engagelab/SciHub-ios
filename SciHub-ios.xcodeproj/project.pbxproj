@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE29C83C145ED8F50012E16A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE29C83B145ED8F50012E16A /* libiconv.dylib */; };
+		AE29C83E145ED91A0012E16A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE29C83D145ED91A0012E16A /* CoreMedia.framework */; };
+		AE29C840145ED92C0012E16A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE29C83F145ED92C0012E16A /* AudioToolbox.framework */; };
+		AE29C842145ED9380012E16A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE29C841145ED9380012E16A /* AddressBook.framework */; };
+		AE29C849145EDA770012E16A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE29C848145EDA770012E16A /* CoreVideo.framework */; };
+		AE29C855145EE9050012E16A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE29C854145EE9050012E16A /* AddressBookUI.framework */; };
+		AE29C85B145EF66B0012E16A /* beep-beep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AE29C85A145EF66B0012E16A /* beep-beep.aiff */; };
 		AE45C4BB14320D9A00E17ADB /* VideoMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE45C4BA14320D9A00E17ADB /* VideoMessageViewController.m */; };
 		AE46EA9E142B66800034788B /* icon-status-available.png in Resources */ = {isa = PBXBuildFile; fileRef = AE46EA9C142B66800034788B /* icon-status-available.png */; };
 		AE46EA9F142B66800034788B /* icon-status-cancelled.png in Resources */ = {isa = PBXBuildFile; fileRef = AE46EA9D142B66800034788B /* icon-status-cancelled.png */; };
@@ -28,6 +35,12 @@
 		AE508685145658EA00A428F3 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = AE508684145658EA00A428F3 /* CDataScanner.m */; };
 		AE50868B1456592300A428F3 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5086881456592300A428F3 /* CDataScanner_Extensions.m */; };
 		AE50868C1456592300A428F3 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE50868A1456592300A428F3 /* NSDictionary_JSONExtensions.m */; };
+		AE5BD0B7146016CE009B1038 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5BD0B1146016CD009B1038 /* libzbar.a */; };
+		AE5BD0B8146016CE009B1038 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B3146016CD009B1038 /* zbar-back.png */; };
+		AE5BD0B9146016CE009B1038 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B4146016CD009B1038 /* zbar-help.html */; };
+		AE5BD0BA146016CE009B1038 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B5146016CD009B1038 /* zbar-helpicons.png */; };
+		AE5BD0BB146016CE009B1038 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B6146016CD009B1038 /* zbar-samples.png */; };
+		AE5BD0BD14601CD6009B1038 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5BD0BC14601CD6009B1038 /* QuartzCore.framework */; };
 		AE7C126514346A75009DC8F9 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7C126414346A75009DC8F9 /* URLParser.m */; };
 		AE7CD485142D2C3A00B6BF5C /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */; };
 		AE83A48514277FE800EB7010 /* arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83A48314277FE800EB7010 /* arrow-down.png */; };
@@ -35,6 +48,7 @@
 		AE9821831427841D00AE3760 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821821427841D00AE3760 /* UploadViewController.m */; };
 		AE9821861427884000AE3760 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821851427884000AE3760 /* LoginViewController.m */; };
 		AE98218D1428A06300AE3760 /* ichat black.png in Resources */ = {isa = PBXBuildFile; fileRef = AE98218C1428A06300AE3760 /* ichat black.png */; };
+		AEB1C07E145F51AE00A2EECD /* libxmpp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB1C07D145F51AE00A2EECD /* libxmpp-ios.a */; };
 		AEB5BD2E14330E6D000831BC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB5BD2D14330E6D000831BC /* MainStoryboard_iPhone.storyboard */; };
 		AEB5BD3014331D1C000831BC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB5BD2F14331D1C000831BC /* MainStoryboard_iPad.storyboard */; };
 		AEC5C5F01428A62C00B92BED /* atom_icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC5C5EF1428A62C00B92BED /* atom_icon57.png */; };
@@ -60,10 +74,16 @@
 		AEE7F5A91428D97D006FEBCC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */; };
 		AEFF77BE1429D8B80097DDD7 /* upload white icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFF77BD1429D8B80097DDD7 /* upload white icon.png */; };
 		AEFF77C01429DAA00097DDD7 /* swipe gesture.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */; };
-		AEFF77C2142A1DCD0097DDD7 /* libxmpp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFF77C1142A1DCD0097DDD7 /* libxmpp-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE29C83B145ED8F50012E16A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		AE29C83D145ED91A0012E16A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AE29C83F145ED92C0012E16A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AE29C841145ED9380012E16A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		AE29C848145EDA770012E16A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		AE29C854145EE9050012E16A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		AE29C85A145EF66B0012E16A /* beep-beep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "beep-beep.aiff"; sourceTree = "<group>"; };
 		AE45C4B914320D9A00E17ADB /* VideoMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMessageViewController.h; sourceTree = "<group>"; };
 		AE45C4BA14320D9A00E17ADB /* VideoMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMessageViewController.m; sourceTree = "<group>"; };
 		AE46EA9C142B66800034788B /* icon-status-available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-available.png"; sourceTree = "<group>"; };
@@ -109,6 +129,32 @@
 		AE5086881456592300A428F3 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
 		AE5086891456592300A428F3 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
 		AE50868A1456592300A428F3 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		AE5BD09D146016CD009B1038 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		AE5BD09E146016CD009B1038 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		AE5BD09F146016CD009B1038 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		AE5BD0A0146016CD009B1038 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		AE5BD0A1146016CD009B1038 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		AE5BD0A2146016CD009B1038 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		AE5BD0A3146016CD009B1038 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		AE5BD0A4146016CD009B1038 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		AE5BD0A5146016CD009B1038 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		AE5BD0A6146016CD009B1038 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		AE5BD0A7146016CD009B1038 /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		AE5BD0A8146016CD009B1038 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		AE5BD0A9146016CD009B1038 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		AE5BD0AA146016CD009B1038 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		AE5BD0AB146016CD009B1038 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		AE5BD0AC146016CD009B1038 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		AE5BD0AD146016CD009B1038 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		AE5BD0AE146016CD009B1038 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		AE5BD0AF146016CD009B1038 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		AE5BD0B0146016CD009B1038 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		AE5BD0B1146016CD009B1038 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = "SciHub-ios/ZBarSDK/libzbar.a"; sourceTree = "<group>"; };
+		AE5BD0B3146016CD009B1038 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		AE5BD0B4146016CD009B1038 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		AE5BD0B5146016CD009B1038 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		AE5BD0B6146016CD009B1038 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		AE5BD0BC14601CD6009B1038 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AE7C126314346A75009DC8F9 /* URLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLParser.h; sourceTree = "<group>"; };
 		AE7C126414346A75009DC8F9 /* URLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLParser.m; sourceTree = "<group>"; };
 		AE7CD476142CC02C00B6BF5C /* SciHubOnlineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SciHubOnlineDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +167,8 @@
 		AE9821841427884000AE3760 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		AE9821851427884000AE3760 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AE98218C1428A06300AE3760 /* ichat black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ichat black.png"; sourceTree = "<group>"; };
+		AEB1C07D145F51AE00A2EECD /* libxmpp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libxmpp-ios.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos/libxmpp-ios.a"; sourceTree = "<group>"; };
+		AEB1C07F145F59E000A2EECD /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = "../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos/libZXingWidget.a"; sourceTree = "<group>"; };
 		AEB5BD2D14330E6D000831BC /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		AEB5BD2F14331D1C000831BC /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		AEC5C5EF1428A62C00B92BED /* atom_icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atom_icon57.png; path = ../atom_icon57.png; sourceTree = "<group>"; };
@@ -475,7 +523,6 @@
 		AEE7F5A81428D97D006FEBCC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AEFF77BD1429D8B80097DDD7 /* upload white icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload white icon.png"; sourceTree = "<group>"; };
 		AEFF77BF1429DAA00097DDD7 /* swipe gesture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe gesture.png"; sourceTree = "<group>"; };
-		AEFF77C1142A1DCD0097DDD7 /* libxmpp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libxmpp-ios.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos/libxmpp-ios.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +530,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5BD0BD14601CD6009B1038 /* QuartzCore.framework in Frameworks */,
+				AE29C855145EE9050012E16A /* AddressBookUI.framework in Frameworks */,
+				AE29C849145EDA770012E16A /* CoreVideo.framework in Frameworks */,
+				AE29C842145ED9380012E16A /* AddressBook.framework in Frameworks */,
+				AE29C840145ED92C0012E16A /* AudioToolbox.framework in Frameworks */,
+				AE29C83E145ED91A0012E16A /* CoreMedia.framework in Frameworks */,
 				AEE0CCFB141958D70085DA61 /* CoreGraphics.framework in Frameworks */,
 				AEE7F5A91428D97D006FEBCC /* MobileCoreServices.framework in Frameworks */,
 				AEDA6DBF14311A0B0090D0BE /* Security.framework in Frameworks */,
@@ -495,12 +548,14 @@
 				AE50867614560D3600A428F3 /* libz.dylib in Frameworks */,
 				AEE0CCFE141958D70085DA61 /* libresolv.dylib in Frameworks */,
 				AEE0CCFC141958D70085DA61 /* libxml2.dylib in Frameworks */,
-				AEFF77C2142A1DCD0097DDD7 /* libxmpp-ios.a in Frameworks */,
 				AEDA6F091431B6EA0090D0BE /* libGDataTouchStaticLib.a in Frameworks */,
 				AEE0CCFD141958D70085DA61 /* CFNetwork.framework in Frameworks */,
 				AEE0CCFF141958D70085DA61 /* CoreData.framework in Frameworks */,
 				AEE0CD00141958D70085DA61 /* CoreLocation.framework in Frameworks */,
 				AEE0CD01141958D70085DA61 /* SystemConfiguration.framework in Frameworks */,
+				AE29C83C145ED8F50012E16A /* libiconv.dylib in Frameworks */,
+				AEB1C07E145F51AE00A2EECD /* libxmpp-ios.a in Frameworks */,
+				AE5BD0B7146016CE009B1038 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +628,69 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AE5BD099146016CD009B1038 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AE5BD09A146016CD009B1038 /* Headers */,
+				AE5BD0B2146016CD009B1038 /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		AE5BD09A146016CD009B1038 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AE5BD09B146016CD009B1038 /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		AE5BD09B146016CD009B1038 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AE5BD09C146016CD009B1038 /* zbar */,
+				AE5BD0A6146016CD009B1038 /* zbar.h */,
+				AE5BD0A7146016CD009B1038 /* ZBarCameraSimulator.h */,
+				AE5BD0A8146016CD009B1038 /* ZBarCaptureReader.h */,
+				AE5BD0A9146016CD009B1038 /* ZBarHelpController.h */,
+				AE5BD0AA146016CD009B1038 /* ZBarImage.h */,
+				AE5BD0AB146016CD009B1038 /* ZBarImageScanner.h */,
+				AE5BD0AC146016CD009B1038 /* ZBarReaderController.h */,
+				AE5BD0AD146016CD009B1038 /* ZBarReaderView.h */,
+				AE5BD0AE146016CD009B1038 /* ZBarReaderViewController.h */,
+				AE5BD0AF146016CD009B1038 /* ZBarSDK.h */,
+				AE5BD0B0146016CD009B1038 /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		AE5BD09C146016CD009B1038 /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				AE5BD09D146016CD009B1038 /* Decoder.h */,
+				AE5BD09E146016CD009B1038 /* Exception.h */,
+				AE5BD09F146016CD009B1038 /* Image.h */,
+				AE5BD0A0146016CD009B1038 /* ImageScanner.h */,
+				AE5BD0A1146016CD009B1038 /* Processor.h */,
+				AE5BD0A2146016CD009B1038 /* Scanner.h */,
+				AE5BD0A3146016CD009B1038 /* Symbol.h */,
+				AE5BD0A4146016CD009B1038 /* Video.h */,
+				AE5BD0A5146016CD009B1038 /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		AE5BD0B2146016CD009B1038 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE5BD0B3146016CD009B1038 /* zbar-back.png */,
+				AE5BD0B4146016CD009B1038 /* zbar-help.html */,
+				AE5BD0B5146016CD009B1038 /* zbar-helpicons.png */,
+				AE5BD0B6146016CD009B1038 /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AE7C126714346C43009DC8F9 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +712,7 @@
 		AE98218714278E2900AE3760 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				AE29C85A145EF66B0012E16A /* beep-beep.aiff */,
 				AEDA6DC0143120250090D0BE /* YouTubeTest.m4v */,
 				AE46EAA0142BB3200034788B /* On.aif */,
 				AE46EA9C142B66800034788B /* icon-status-available.png */,
@@ -970,11 +1089,20 @@
 		AEE0CCCD1419577B0085DA61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE29C83B145ED8F50012E16A /* libiconv.dylib */,
 				AE50867514560D3600A428F3 /* libz.dylib */,
+				AEB1C07F145F59E000A2EECD /* libZXingWidget.a */,
 				AEDA6F081431B6EA0090D0BE /* libGDataTouchStaticLib.a */,
-				AEFF77C1142A1DCD0097DDD7 /* libxmpp-ios.a */,
+				AEB1C07D145F51AE00A2EECD /* libxmpp-ios.a */,
 				AEE0CCF3141958D70085DA61 /* libxml2.dylib */,
 				AEE0CCF5141958D70085DA61 /* libresolv.dylib */,
+				AE5BD0B1146016CD009B1038 /* libzbar.a */,
+				AE5BD0BC14601CD6009B1038 /* QuartzCore.framework */,
+				AE29C854145EE9050012E16A /* AddressBookUI.framework */,
+				AE29C848145EDA770012E16A /* CoreVideo.framework */,
+				AE29C841145ED9380012E16A /* AddressBook.framework */,
+				AE29C83F145ED92C0012E16A /* AudioToolbox.framework */,
+				AE29C83D145ED91A0012E16A /* CoreMedia.framework */,
 				AEDA6DBE14311A0B0090D0BE /* Security.framework */,
 				AE46EAA6142BBFB80034788B /* CoreAudio.framework */,
 				AE46EAA4142BBF7C0034788B /* CoreFoundation.framework */,
@@ -997,6 +1125,7 @@
 		AEE0CCD41419577B0085DA61 /* SciHub-ios */ = {
 			isa = PBXGroup;
 			children = (
+				AE5BD099146016CD009B1038 /* ZBarSDK */,
 				AE50864F14560B1200A428F3 /* webservices */,
 				AEE0CCDD1419577B0085DA61 /* AppDelegate.h */,
 				AEE0CCDE1419577B0085DA61 /* AppDelegate.m */,
@@ -1094,6 +1223,11 @@
 				AEDA6DC1143120250090D0BE /* YouTubeTest.m4v in Resources */,
 				AEB5BD2E14330E6D000831BC /* MainStoryboard_iPhone.storyboard in Resources */,
 				AEB5BD3014331D1C000831BC /* MainStoryboard_iPad.storyboard in Resources */,
+				AE29C85B145EF66B0012E16A /* beep-beep.aiff in Resources */,
+				AE5BD0B8146016CE009B1038 /* zbar-back.png in Resources */,
+				AE5BD0B9146016CE009B1038 /* zbar-help.html in Resources */,
+				AE5BD0BA146016CE009B1038 /* zbar-helpicons.png in Resources */,
+				AE5BD0BB146016CE009B1038 /* zbar-samples.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1155,6 +1289,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1165,16 +1300,22 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/anthonjp/Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Release-iphonesimulator/usr/local/include/**",
 					/usr/include/libxml2,
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos/usr/local/include\"/**",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/usr/local/include\"/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos/libZXingWidget.a\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/libZXingWidget.a\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -1187,15 +1328,21 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/anthonjp/Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Release-iphonesimulator/usr/local/include/**",
 					/usr/include/libxml2,
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos/usr/local/include\"/**",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/usr/local/include\"/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos/libZXingWidget.a\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/libZXingWidget.a\"",
+				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1204,6 +1351,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
@@ -1212,12 +1360,20 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/usr/local/include\"/**",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphonesimulator/usr/local/include\"/**",
+				);
 				INFOPLIST_FILE = "SciHub-ios/SciHub-ios-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../../../iOS/GData-iOS-Static-Library-1.12\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos\"",
+					"\"$(SRCROOT)/SciHub-ios/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1230,12 +1386,20 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/usr/local/include\"/**",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphonesimulator/usr/local/include\"/**",
+				);
 				INFOPLIST_FILE = "SciHub-ios/SciHub-ios-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../../../iOS/GData-iOS-Static-Library-1.12\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos\"",
+					"\"$(SRCROOT)/SciHub-ios/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../../iOS/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../SciHub-ios/SciHub-ios.xcodeproj">
    </FileRef>
    <FileRef

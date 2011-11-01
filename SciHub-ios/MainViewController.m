@@ -358,9 +358,42 @@ ofTotalByteCount:(unsigned long long)dataLength {
     // Access the uncropped image from info dictionary
     
     NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-    UISaveVideoAtPathToSavedPhotosAlbum([videoURL path], self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
     
-    
+    if( videoURL != nil ) {
+        UISaveVideoAtPathToSavedPhotosAlbum([videoURL path], self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
+    } else {
+        
+        // ADD: get the decode results
+        id<NSFastEnumeration> results =
+        [info objectForKey: ZBarReaderControllerResults];
+        ZBarSymbol *symbol = nil;
+        for(symbol in results)
+            // EXAMPLE: just grab the first barcode
+            break;
+        
+        // EXAMPLE: do something useful with the barcode data
+        
+        if( symbol.data != nil ) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                            message:symbol.data
+                                                           delegate:nil 
+                                                  cancelButtonTitle:@"Ok" 
+                                                  otherButtonTitles:nil];
+            
+            [alert show];
+        }
+        
+        
+        //resultText.text = symbol.data;
+        
+        // EXAMPLE: do something useful with the barcode image
+        //    resultImage.image =
+        //    [info objectForKey: UIImagePickerControllerOriginalImage];
+        
+        // ADD: dismiss the controller (NB dismiss from the *reader*!)
+        [picker dismissModalViewControllerAnimated: YES];
+    }
+
     
 }
 - (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo {
@@ -455,22 +488,32 @@ ofTotalByteCount:(unsigned long long)dataLength {
 - (IBAction)hideSwipeView:(id)sender {
     swipeView.hidden = YES;
 }
-- (IBAction)checkInWithQR:(id)sender {
-    NSString *event = @"{
-payload: {
-station: 1
-},
-eventType: 'check_in',
-timestamp: '2011-10-26T13:49:09Z',
-origin: 'mzukowski',
-run: {
-name: "something",
-    id: 123
-}
-}";
-    
-    [[[self appDelegate] xmppRoom ]sendMessage:event];
-    DDLogVerbose(@"checking in");
 
+#pragma mark -
+#pragma mark ZBarMethods
+
+
+
+- (IBAction)checkInWithQR:(id)sender {
+    
+    // ADD: present a barcode reader that scans from the camera feed
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    
+    ZBarImageScanner *scanner = reader.scanner;
+    // TODO: (optional) additional reader configuration here
+    
+    // EXAMPLE: disable rarely used I2/5 to improve performance
+    [scanner setSymbology: ZBAR_I25
+                   config: ZBAR_CFG_ENABLE
+                       to: 0];
+    
+    // present and release the controller
+    [self presentModalViewController: reader
+                            animated: YES];
+
+
+    
 }
 @end

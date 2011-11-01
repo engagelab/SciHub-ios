@@ -11,8 +11,9 @@
 #import "SciHubMessageDelegate.h"
 #import "SciHubOnlineDelegate.h"
 #import "AppDelegate.h"
+#import "ZBarSDK.h"
 
-@interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate>{
+@interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate, ZBarReaderDelegate>{
     
     AVAudioPlayer *player;
     UIActionSheet *baseSheet;
