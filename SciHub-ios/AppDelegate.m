@@ -26,26 +26,26 @@
 
 @synthesize window = _window;
 
-//NSString * const serverName = @"imediamac28.uio.no";
-NSString * const serverName = @"proto.encorelab.org";
+NSString * const serverName = @"imediamac28.uio.no";
+//NSString * const serverName = @"proto.encorelab.org";
 
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //temp
-//    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
-//    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
-//    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 
     // Configure logging framework
 	
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
     
     [self setupStream];
-    //[self connect];
-    //[self goOnline];
+    [self connect];
+    [self goOnline];
     return YES;
 }
 							
@@ -201,6 +201,11 @@ NSString * const serverName = @"proto.encorelab.org";
 }
 - (void)xmppRoom:(XMPPRoom *)sender didReceiveMessage:(XMPPMessage *)message fromNick:(NSString *)nick {
     
+     NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    NSString *from = [[message attributeForName:@"from"] stringValue];
+    
+    if( ![nick isEqualToString:username] ) {
+    
     NSString *msg = [[message elementForName:@"body"] stringValue];
     
     NSMutableDictionary *messageDictionary = [[NSMutableDictionary alloc] init];
@@ -208,6 +213,7 @@ NSString * const serverName = @"proto.encorelab.org";
     [messageDictionary setObject:nick forKey:@"sender"];
     [sciHubMessageDelegate newGroupMessageReceived:messageDictionary];
     DDLogVerbose(@"xmpp room did receiveMessage");
+    }
 }
 - (void)xmppRoom:(XMPPRoom *)sender didChangeOccupants:(NSDictionary *)occupants {
     DDLogVerbose(@"xmpp room did receiveMessage");

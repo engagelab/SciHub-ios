@@ -33,6 +33,7 @@ NSString *const uploadProgressTitleStart = @"Upload Progress";
 NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
 
+
 -(id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle {
     if ((self = [super initWithNibName:nibName bundle:bundle])) {
 
@@ -105,11 +106,71 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 //    }
 }
 
+#pragma mark - Random String
+
+
+NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+-(NSString *)genRandStringLength: (int) len {
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%c", [letters characterAtIndex: rand()%[letters length]]];
+    }
+    
+    return randomString;
+}
+
+#pragma mark - message event methods methods
+
+-(void) sendVideoTokenEvent {
+    
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    
+    NSString *eventType = @"\"eventType\": \"got_client_token\""; 
+    
+    
+    
+    videoToken = [self genRandStringLength:5];
+    
+    NSString *uuid = [[NSString alloc] initWithFormat:@"\"token\": \"%@\"",videoToken];
+    
+    NSString *event = [[NSString alloc] initWithFormat:@"{ %@, \"payload\": { %@ }, \"origin\":\"%@\"}",eventType, uuid, username]; 
+    
+    DDLogVerbose(event);
+    
+    [self sendGroupMessageWith: event];
+}
+
+-(void) sendVideoReadyEvent: (NSString*)url {
+    
+    //{ eventType: 'video_ready', payload: { token: 'upload token', url: 'http://youtube.com/lakjsdflkjsdfklj'}, origin: 'bob' }
+    
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    
+    NSString *eventType = @"\"eventType\": \"video_ready\""; 
+    
+    NSString *uuid = [[NSString alloc] initWithFormat:@"\"token\": \"%@\"",videoToken];
+    
+    NSString *vurl = [[NSString alloc] initWithFormat:@"\"url\": \"%@\"",url];
+    
+    NSString *event = [[NSString alloc] initWithFormat:@"{ %@, \"payload\": { %@,%@ }, \"origin\":\"%@\"}",eventType, uuid,vurl, username]; 
+    
+    DDLogVerbose(event);
+    
+    [self sendGroupMessageWith: event];
+    
+
+    
+}
+
+
 #pragma mark - YouTube uploader methods
 
 - (IBAction)doYouTube:(id)sender {
     
-
+    [self sendVideoTokenEvent];    
 
     NSString *videoTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"videoTitle"];
     NSString *videoPath = [[NSUserDefaults standardUserDefaults] objectForKey:@"videoPath"];
@@ -222,28 +283,14 @@ ofTotalByteCount:(unsigned long long)dataLength {
             
         } 
         
-        //{ eventType: 'video_ready', payload: { url: 'http://youtube.com/lakjsdflkjsdfklj'}, origin: 'bob' }
-
-         NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-        
               
-        NSString *eventType = @"eventType: 'video_ready'"; 
-        
         URLParser *parser = [[URLParser alloc] initWithURLString:videoUrl];
-
+        
         NSString *v = [parser valueForVariable:@"v"];
         
         NSString *yurl = [[NSString alloc] initWithFormat:@"url:'http://www.youtube.com/v/%@'",v];
         
-        NSString *event = [[NSString alloc] initWithFormat:@"{ %@, payload: { %@ }, origin:'%@'}",eventType, yurl, username]; 
-
-         
-        
-        DDLogVerbose(event);
-        
-        [self sendGroupMessageWith: event];
-        
-        //[videoEntry 
+        [self sendVideoReadyEvent:yurl];
         
          DDLogVerbose(@"WE WON!!!!");
         
@@ -493,25 +540,25 @@ ofTotalByteCount:(unsigned long long)dataLength {
 #pragma mark ZBarMethods
 
 
-
 - (IBAction)checkInWithQR:(id)sender {
-    
+    [self sendVideoTokenEvent];
+    [self sendVideoReadyEvent:@"http://www.youtube.com/v/YPb9eRNyIrQ"];
     // ADD: present a barcode reader that scans from the camera feed
-    ZBarReaderViewController *reader = [ZBarReaderViewController new];
-    reader.readerDelegate = self;
-    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-    
-    ZBarImageScanner *scanner = reader.scanner;
-    // TODO: (optional) additional reader configuration here
-    
-    // EXAMPLE: disable rarely used I2/5 to improve performance
-    [scanner setSymbology: ZBAR_I25
-                   config: ZBAR_CFG_ENABLE
-                       to: 0];
-    
-    // present and release the controller
-    [self presentModalViewController: reader
-                            animated: YES];
+//    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+//    reader.readerDelegate = self;
+//    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+//    
+//    ZBarImageScanner *scanner = reader.scanner;
+//    // TODO: (optional) additional reader configuration here
+//    
+//    // EXAMPLE: disable rarely used I2/5 to improve performance
+//    [scanner setSymbology: ZBAR_I25
+//                   config: ZBAR_CFG_ENABLE
+//                       to: 0];
+//    
+//    // present and release the controller
+//    [self presentModalViewController: reader
+//                            animated: YES];
 
 
     

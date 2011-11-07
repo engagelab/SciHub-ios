@@ -21,6 +21,7 @@
     UIImagePickerController *videoPickerController;
     NSString *savedVideoPath;
     NSString *savedTitle;
+    NSString *videoToken;
     IBOutlet UIView *swipeView;
 }
 - (IBAction)hideSwipeView:(id)sender;
