@@ -5,13 +5,14 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>KlimaY</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>atom_icon57.png</string>
-		<string>atom_icon114.png</string>
+		<string>icon.png</string>
+		<string>icon.png</string>
+		<string>icon2x.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -19,8 +20,9 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>atom_icon57.png</string>
-				<string>atom_icon114.png</string>
+				<string>icon.png</string>
+				<string>icon.png</string>
+				<string>icon2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<false/>

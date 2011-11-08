@@ -132,7 +132,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     
     
-    videoToken = [self genRandStringLength:5];
+    videoToken = [self genRandStringLength:arc4random() % 10 ];
     
     NSString *uuid = [[NSString alloc] initWithFormat:@"\"token\": \"%@\"",videoToken];
     
@@ -154,6 +154,8 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     NSString *uuid = [[NSString alloc] initWithFormat:@"\"token\": \"%@\"",videoToken];
     
     NSString *vurl = [[NSString alloc] initWithFormat:@"\"url\": \"%@\"",url];
+    
+      DDLogVerbose(@"YOU TUBE %@",vurl);
     
     NSString *event = [[NSString alloc] initWithFormat:@"{ %@, \"payload\": { %@,%@ }, \"origin\":\"%@\"}",eventType, uuid,vurl, username]; 
     
@@ -200,7 +202,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     if( videoTitle == nil ) {
         
         int value = (arc4random() % 600);
-        videoTitle = [[NSString alloc] initWithFormat:@"Vidoe %d",value];
+        videoTitle = [[NSString alloc] initWithFormat:@"Video %d",value];
     }
 
     GDataMediaTitle *title = [GDataMediaTitle textConstructWithString:videoTitle];
@@ -288,7 +290,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
         
         NSString *v = [parser valueForVariable:@"v"];
         
-        NSString *yurl = [[NSString alloc] initWithFormat:@"url:'http://www.youtube.com/v/%@'",v];
+        NSString *yurl = [[NSString alloc] initWithFormat:@"http://www.youtube.com/v/%@",v];
         
         [self sendVideoReadyEvent:yurl];
         
