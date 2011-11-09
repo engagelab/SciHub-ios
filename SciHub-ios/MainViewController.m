@@ -36,7 +36,6 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
 -(id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle {
     if ((self = [super initWithNibName:nibName bundle:bundle])) {
-
             DDLogVerbose(@"startup of bundle.....");
     }
     
@@ -55,6 +54,10 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     
     videoPickerController = [[UIImagePickerController alloc] init ];
 
+    NSString *username = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+
+    userNameLabel.text = username;
+    
     [GTMHTTPFetcher setLoggingEnabled:YES];
 }
 
@@ -63,6 +66,7 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
     [self setLoginButton:nil];
     swipeView = nil;
+    userNameLabel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -202,7 +206,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     if( videoTitle == nil ) {
         
         int value = (arc4random() % 600);
-        videoTitle = [[NSString alloc] initWithFormat:@"Video %d",value];
+        videoTitle = [[NSString alloc] initWithFormat:@"Video %d-%@",value,videoToken];
     }
 
     GDataMediaTitle *title = [GDataMediaTitle textConstructWithString:videoTitle];
@@ -222,6 +226,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     [mediaGroup setMediaDescription:desc];
     [mediaGroup addMediaCategory:category];
     [mediaGroup setMediaKeywords:keywords];
+
     [mediaGroup setIsPrivate:NO];
 
     NSString *mimeType = [GDataUtilities MIMETypeForFileAtPath:videoPath
@@ -233,8 +238,10 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
                                                       MIMEType:mimeType
                                                           slug:filename];
     
+    [entry addAccessControl:[GDataYouTubeAccessControl 
+                                  accessControlWithAction:@"list" permission:@"denied"]]; 
 
-    
+
     SEL progressSel = @selector(ticket:hasDeliveredByteCount:ofTotalByteCount:);
     [service setServiceUploadProgressSelector:progressSel];
     

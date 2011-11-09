@@ -23,6 +23,7 @@
     NSString *savedTitle;
     NSString *videoToken;
     IBOutlet UIView *swipeView;
+    IBOutlet UILabel *userNameLabel;
 }
 - (IBAction)hideSwipeView:(id)sender;
 

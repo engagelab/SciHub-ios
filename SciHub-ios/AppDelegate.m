@@ -34,9 +34,9 @@ NSString * const serverName = @"imediamac28.uio.no";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //temp
-    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"axelrod@imediamac28.uio.no" forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"axelrod" forKey:@"userPassword"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"axelrod" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     // Configure logging framework
@@ -46,6 +46,7 @@ NSString * const serverName = @"imediamac28.uio.no";
     [self setupStream];
     [self connect];
     [self goOnline];
+    
     return YES;
 }
 							
@@ -170,7 +171,8 @@ NSString * const serverName = @"imediamac28.uio.no";
             DDLogVerbose(t);
 			
             [sciHubOnlineDelegate isAvailable:YES];
-            [self joinChatRoom];
+           
+             [self joinChatRoom];
 			//[_chatDelegate newBuddyOnline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"jerry.local"]];
 			
 		} else if ([presenceType isEqualToString:@"unavailable"]) {
