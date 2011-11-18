@@ -394,9 +394,14 @@ ofTotalByteCount:(unsigned long long)dataLength {
         videoPickerController.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeMovie];
         videoPickerController.delegate = self;
         videoPickerController.sourceType = UIImagePickerControllerCameraCaptureModeVideo;
+        videoPickerController.startVideoCapture;
         videoPickerController.showsCameraControls = YES;
+    
+        [videoPickerController performSelector:@selector(startVideoCapture) withObject:nil afterDelay:5];
+    
         [self presentModalViewController:videoPickerController animated:YES];
     
+        
     
     
 }

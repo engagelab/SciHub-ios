@@ -63,4 +63,5 @@
 - (void)goOnline;
 - (void)goOffline;
 - (void)joinChatRoom;
+- (void)superConnect;
 @end

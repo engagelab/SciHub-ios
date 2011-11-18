@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "436"
-         endingLineNumber = "436"
+         startingLineNumber = "442"
+         endingLineNumber = "442"
          landmarkName = "-connect"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "438"
-         endingLineNumber = "438"
+         startingLineNumber = "444"
+         endingLineNumber = "444"
          landmarkName = "-connect"
          landmarkType = "5">
       </FileBreakpoint>
@@ -36,26 +36,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "SciHub-ios/LoginViewController.m"
-         timestampString = "341260668.671563"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
-         landmarkName = "-doLogin:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "439"
-         endingLineNumber = "439"
+         startingLineNumber = "445"
+         endingLineNumber = "445"
          landmarkName = "-connect"
          landmarkType = "5">
       </FileBreakpoint>
@@ -93,11 +79,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/LoginViewController.m"
-         timestampString = "341260668.671563"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "57"
+         endingLineNumber = "57"
          landmarkName = "-closeWindow:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -147,11 +133,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463468.20809"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "130"
-         endingLineNumber = "130"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
          landmarkName = "-xmppStream:didReceiveMessage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -175,11 +161,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "459"
-         endingLineNumber = "459"
+         startingLineNumber = "464"
+         endingLineNumber = "464"
          landmarkName = "-video:didFinishSavingWithError:contextInfo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -189,11 +175,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463468.20809"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
+         startingLineNumber = "172"
+         endingLineNumber = "172"
          landmarkName = "-xmppStream:didReceivePresence:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -283,11 +269,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "422"
-         endingLineNumber = "422"
+         startingLineNumber = "428"
+         endingLineNumber = "428"
          landmarkName = "-joinChatRoom"
          landmarkType = "5">
       </FileBreakpoint>
@@ -297,11 +283,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "221"
-         endingLineNumber = "221"
+         startingLineNumber = "227"
+         endingLineNumber = "227"
          landmarkName = "-xmppRoom:didChangeOccupants:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -311,11 +297,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "203"
-         endingLineNumber = "203"
+         startingLineNumber = "209"
+         endingLineNumber = "209"
          landmarkName = "-xmppRoomDidLeave:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -325,11 +311,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "202"
-         endingLineNumber = "202"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
          landmarkName = "-xmppRoomDidLeave:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -339,11 +325,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "199"
-         endingLineNumber = "199"
+         startingLineNumber = "205"
+         endingLineNumber = "205"
          landmarkName = "-xmppRoomDidEnter:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -353,11 +339,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "196"
-         endingLineNumber = "196"
+         startingLineNumber = "202"
+         endingLineNumber = "202"
          landmarkName = "-xmppRoomDidCreate:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -367,11 +353,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "195"
-         endingLineNumber = "195"
+         startingLineNumber = "201"
+         endingLineNumber = "201"
          landmarkName = "-xmppRoomDidCreate:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -381,11 +367,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "415"
-         endingLineNumber = "415"
+         startingLineNumber = "421"
+         endingLineNumber = "421"
          landmarkName = "-joinChatRoom"
          landmarkType = "5">
       </FileBreakpoint>
@@ -395,11 +381,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "213"
-         endingLineNumber = "213"
+         startingLineNumber = "219"
+         endingLineNumber = "219"
          landmarkName = "-xmppRoom:didReceiveMessage:fromNick:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -409,11 +395,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "524"
-         endingLineNumber = "524"
+         startingLineNumber = "529"
+         endingLineNumber = "529"
          landmarkName = "-isAvailable:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -423,11 +409,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "505"
-         endingLineNumber = "505"
+         startingLineNumber = "510"
+         endingLineNumber = "510"
          landmarkName = "-replyMessageTo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -437,11 +423,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463468.20809"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "173"
-         endingLineNumber = "173"
+         startingLineNumber = "179"
+         endingLineNumber = "179"
          landmarkName = "-xmppStream:didReceivePresence:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -493,11 +479,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "456"
-         endingLineNumber = "456"
+         startingLineNumber = "461"
+         endingLineNumber = "461"
          landmarkName = "-video:didFinishSavingWithError:contextInfo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -549,11 +535,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "461"
-         endingLineNumber = "461"
+         startingLineNumber = "466"
+         endingLineNumber = "466"
          landmarkName = "-video:didFinishSavingWithError:contextInfo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -647,11 +633,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "444"
-         endingLineNumber = "444"
+         startingLineNumber = "450"
+         endingLineNumber = "450"
          landmarkName = "-connect"
          landmarkType = "5">
       </FileBreakpoint>
@@ -661,11 +647,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "495"
-         endingLineNumber = "495"
+         startingLineNumber = "500"
+         endingLineNumber = "500"
          landmarkName = "-newMessageReceived:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -675,11 +661,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "420"
-         endingLineNumber = "420"
+         startingLineNumber = "425"
+         endingLineNumber = "425"
          landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -689,11 +675,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "536"
-         endingLineNumber = "536"
+         startingLineNumber = "541"
+         endingLineNumber = "541"
          landmarkName = "-newGroupMessageReceived:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -703,11 +689,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342475157.632308"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "537"
-         endingLineNumber = "537"
+         startingLineNumber = "542"
+         endingLineNumber = "542"
          landmarkName = "-newGroupMessageReceived:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -717,11 +703,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "211"
-         endingLineNumber = "211"
+         startingLineNumber = "217"
+         endingLineNumber = "217"
          landmarkName = "-xmppRoom:didReceiveMessage:fromNick:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -731,11 +717,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
+         startingLineNumber = "212"
+         endingLineNumber = "212"
          landmarkName = "-xmppRoom:didReceiveMessage:fromNick:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -745,11 +731,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463808.273977"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "410"
-         endingLineNumber = "410"
+         startingLineNumber = "416"
+         endingLineNumber = "416"
          landmarkName = "-joinChatRoom"
          landmarkType = "5">
       </FileBreakpoint>
@@ -759,11 +745,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/AppDelegate.m"
-         timestampString = "342463800.618166"
+         timestampString = "342543402.505037"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "175"
-         endingLineNumber = "175"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
          landmarkName = "-xmppStream:didReceivePresence:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -787,11 +773,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342523881.278441"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "514"
-         endingLineNumber = "514"
+         startingLineNumber = "519"
+         endingLineNumber = "519"
          landmarkName = "-isAvailable:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -801,12 +787,26 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SciHub-ios/MainViewController.m"
-         timestampString = "342524227.661311"
+         timestampString = "342713975.902998"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "515"
-         endingLineNumber = "515"
+         startingLineNumber = "520"
+         endingLineNumber = "520"
          landmarkName = "-isAvailable:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "SciHub-ios/MainViewController.m"
+         timestampString = "342713975.902998"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "404"
+         endingLineNumber = "404"
+         landmarkName = "-showCamera:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -19,6 +19,7 @@
 @synthesize errorLabel;
 @synthesize overlay;
 @synthesize activityIndicator;
+@synthesize loginButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if( [[self appDelegate] connect] ) {
+        loginButton.title = @"Logout";
+    } else {
+        loginButton.title = @"Login";
+    }
+
 
 }
 
@@ -58,22 +66,37 @@
 
 - (IBAction)doLogin:(id)sender {
     
-    [self.view bringSubviewToFront:overlay];
+//    
+//    if( [[self appDelegate] connect] ) {
+//        [[self appDelegate] disconnect ];
+//        loginButton.title = @"Login";
+//    } else {
+//        [[self appDelegate] superConnect ];
+//        loginButton.title = @"Logout";
+//    }
     
-    overlay.hidden = NO;
-    if( loginField.text == nil || passwordField.text == nil ) {
-        errorLabel.text = @"username or password is blank.";
-    } else {
-        [[NSUserDefaults standardUserDefaults] setObject:loginField.text forKey:@"userID"];
-//        [[NSUserDefaults standardUserDefaults] setObject:passwordField.text forKey:@"rollcallPassword"];
-        
-        NSString* username = [[loginField.text componentsSeparatedByString:@"@"] objectAtIndex:0];
-
-        [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"username"];
-
-        
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
+    
+    [self dismissModalViewControllerAnimated:YES];
+    
+    
+//    [self dismissModalViewControllerAnimated:YES];
+//    
+//    [self.view bringSubviewToFront:overlay];
+//    
+//    overlay.hidden = NO;
+//    if( loginField.text == nil || passwordField.text == nil ) {
+//        errorLabel.text = @"username or password is blank.";
+//    } else {
+//        [[NSUserDefaults standardUserDefaults] setObject:loginField.text forKey:@"userID"];
+////        [[NSUserDefaults standardUserDefaults] setObject:passwordField.text forKey:@"rollcallPassword"];
+//        
+//        NSString* username = [[loginField.text componentsSeparatedByString:@"@"] objectAtIndex:0];
+//
+//        [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"username"];
+//
+//        
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//        
         
 //        NSURL *url = [NSURL URLWithString:@"http://rollcall.proto.encorelab.org/login.json"];
 //        __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
@@ -121,7 +144,7 @@
 //        [activityIndicator startAnimating];
 //        [request startAsynchronous];
         
-        [self dismissModalViewControllerAnimated:YES];
+//        [self dismissModalViewControllerAnimated:YES];
         
 /*        
         BOOL connected = [[self appDelegate] connect]; 
@@ -147,7 +170,7 @@
 //        overlay.hidden = YES;
 //        [activityIndicator stopAnimating];
 //        [self dismissModalViewControllerAnimated:YES];
-    }
+//    }
     
 }
 
@@ -172,6 +195,7 @@
     activityIndicator = nil;
     [self setOverlay:nil];
     [self setActivityIndicator:nil];
+    [self setLoginButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -34,9 +34,9 @@ NSString * const serverName = @"imediamac28.uio.no";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //temp
-    [[NSUserDefaults standardUserDefaults] setObject:@"axelrod@imediamac28.uio.no" forKey:@"userID"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"axelrod" forKey:@"userPassword"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"axelrod" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     // Configure logging framework
@@ -99,6 +99,12 @@ NSString * const serverName = @"imediamac28.uio.no";
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+-(void)superConnect {
+    [self setupStream];
+    [self connect];
+    [self goOnline];
 }
 
 #pragma mark - XMPP delegates 

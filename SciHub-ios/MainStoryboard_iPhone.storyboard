@@ -179,32 +179,6 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="obama" borderStyle="roundedRect" placeholder="login" minimumFontSize="17" id="svH-yg-uwv">
-                                <rect key="frame" x="20" y="82" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="obama" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" id="qKZ-Xa-VgV">
-                                <rect key="frame" x="20" y="166" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Login:" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZFI-Lh-uGP">
-                                <rect key="frame" x="20" y="53" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password:" lineBreakMode="tailTruncation" minimumFontSize="10" id="vc5-Ey-fyf">
-                                <rect key="frame" x="23" y="137" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="jLq-M4-oo9">
                                 <rect key="frame" x="20" y="214" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -217,8 +191,7 @@
                     </view>
                     <connections>
                         <outlet property="errorLabel" destination="jLq-M4-oo9" id="3JN-HT-Eph"/>
-                        <outlet property="loginField" destination="svH-yg-uwv" id="Rgy-mU-14B"/>
-                        <outlet property="passwordField" destination="qKZ-Xa-VgV" id="hed-mm-g80"/>
+                        <outlet property="loginButton" destination="Xjx-Jy-Jct" id="Hev-bC-waG"/>
                     </connections>
                 </viewController>
             </objects>
@@ -309,6 +282,7 @@
                 <relationship kind="action" name="doLogin:"/>
                 <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="loginField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="overlay" candidateClass="UIView"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
