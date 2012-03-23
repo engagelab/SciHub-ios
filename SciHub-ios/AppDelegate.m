@@ -34,18 +34,18 @@ NSString * const serverName = @"imediamac28.uio.no";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //temp
-    [[NSUserDefaults standardUserDefaults] setObject:@"plouffe@imediamac28.uio.no" forKey:@"userID"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"plouffe" forKey:@"userPassword"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"plouffe" forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama@imediamac28.uio.no" forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"userPassword"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"obama" forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     // Configure logging framework
 	
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
     
-    [self setupStream];
-    [self connect];
-    [self goOnline];
+//    [self setupStream];
+//    [self connect];
+//    [self goOnline];
     
     return YES;
 }

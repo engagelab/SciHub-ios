@@ -54,7 +54,7 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     
     videoPickerController = [[UIImagePickerController alloc] init ];
 
-    NSString *username = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+    NSString *username = [[NSUserDefaults standardUserDefaults] valueForKey:@"group"];
 
     userNameLabel.text = username;
     
@@ -374,6 +374,8 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 - (IBAction)showVideoList:(id)sender {
     
+ 
+    
     if( videoPickerController == nil ) {
         videoPickerController = [[UIImagePickerController alloc] init ];
     }
@@ -386,6 +388,14 @@ ofTotalByteCount:(unsigned long long)dataLength {
 }
 
 - (IBAction)showCamera:(id)sender {
+    
+    if ([sender isKindOfClass:[UIButton class]]) {
+        NSString *title = [(UIButton *)sender currentTitle];
+        DDLogVerbose(title);
+    }
+    
+
+    
 
     if( videoPickerController == nil ) {
         videoPickerController = [[UIImagePickerController alloc] init ];
@@ -453,7 +463,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
                     [self presentModalViewController:promptViewController animated:YES];
                     
                     //Load web view data
-                    NSString *strWebsiteUlr = [NSString stringWithFormat:@"http://www.google.com"];
+                    NSString *strWebsiteUlr = [NSString stringWithFormat:symbol.data];
                     
                     // Load URL
                     
@@ -469,7 +479,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
                     
                     
                 } else {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"It Says"
                                                                     message:symbol.data
                                                                    delegate:nil 
                                                           cancelButtonTitle:@"Ok" 

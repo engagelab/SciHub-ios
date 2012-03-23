@@ -8,8 +8,8 @@
 
 #import "LoginViewController.h"
 #import "AppDelegate.h"
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
+//#import "ASIHTTPRequest.h"
+//#import "ASIFormDataRequest.h"
 #import "CJSONDeserializer.h"
 
 @implementation LoginViewController
