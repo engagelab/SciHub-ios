@@ -7,6 +7,8 @@
 //
 
 #import "LoginPickerViewController.h"
+#import "ASIHTTPRequest.h"
+#import "CJSONDeserializer.h"
 
 @implementation LoginPickerViewController
 @synthesize pickerView;
@@ -15,9 +17,49 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+        
     }
     return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    
+    if ((self = [super initWithCoder:aDecoder])) {
+        [self requestPickerData];
+        // initialize what you need here
+    }
+    
+    return self;
+    
+}
+
+-(void)requestPickerData {
+    NSString *runId = @"2";
+    
+    NSString * myURLString = [NSString stringWithFormat:@"http://scihub.uio.no:9000/groupnames/%@",runId];
+    
+    NSURL *url =[NSURL URLWithString:myURLString];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    request.didFinishSelector = @selector(parseObjects:);
+    //request.didFailSelector = @selector(resultCitiesError:);
+    
+    [request startAsynchronous];
+}
+
+-(void)parseObjects :(ASIHTTPRequest *)request {
+    arrStatus = [[NSMutableArray alloc] init];
+    NSString *responseData = [request responseString];
+    
+    NSError *error = nil;
+    NSDictionary *dictionary = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
+    NSDictionary *session = [dictionary objectForKey:@"session"];
+    
+    
+    // NSLog(@"%@",json);
+    
+    
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -53,7 +95,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    arrStatus = [[NSArray alloc] initWithObjects:@"Choose your Group.",@"one", @"two", @"three", @"four", @"five", @"six", @"seven", nil];
+    //arrStatus = [[NSArray alloc] initWithObjects:@"Choose your Group.",@"one", @"two", @"three", @"four", @"five", @"six", @"seven", nil];
     groupLabel.text = [arrStatus objectAtIndex:0];
     startButton.enabled = NO;
 }

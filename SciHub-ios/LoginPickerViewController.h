@@ -10,7 +10,7 @@
 
 @interface LoginPickerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
     
-    NSArray *arrStatus; 
+    NSMutableArray *arrStatus; 
     __weak IBOutlet UIButton *startButton;
     
     __weak IBOutlet UILabel *groupLabel;
