@@ -83,21 +83,6 @@
                                 <rect key="frame" x="0.0" y="358" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aha-e5-NKr">
-                                <rect key="frame" x="117" y="358" width="88" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="checkInWithQR:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="F2k-Wq-29T"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="52f-Tk-xCs">
                                 <rect key="frame" x="72" y="62" width="185" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -168,7 +153,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <navigationItem key="navigationItem" title="KlimaY" id="KLj-67-kYT">
+                    <navigationItem key="navigationItem" title="Film Opptak" id="KLj-67-kYT">
                         <barButtonItem key="rightBarButtonItem" image="upload white icon.png" id="EGJ-2y-eoC">
                             <connections>
                                 <action selector="showVideoList:" destination="UYE-Q7-bTJ" id="ZsM-4o-xCO"/>

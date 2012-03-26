@@ -36,7 +36,7 @@
 
 -(void)requestPickerData {
     NSString *runId = @"2";
-    
+    arrStatus = [[NSMutableArray alloc] init];
     NSString * myURLString = [NSString stringWithFormat:@"http://scihub.uio.no:9000/groupnames/%@",runId];
     
     NSURL *url =[NSURL URLWithString:myURLString];
@@ -49,15 +49,37 @@
 }
 
 -(void)parseObjects :(ASIHTTPRequest *)request {
-    arrStatus = [[NSMutableArray alloc] init];
+    
     NSString *responseData = [request responseString];
     
     NSError *error = nil;
-    NSDictionary *dictionary = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:&error];
-    NSDictionary *session = [dictionary objectForKey:@"session"];
+    
+    NSString *data = @"{'groups': [ 'group1','group2','group3','group4','group5','group6']}";
+    
+    NSData *jsonData = [responseData dataUsingEncoding:NSUTF8StringEncoding];
+
+     NSArray *array = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
     
     
-    // NSLog(@"%@",json);
+    
+    
+    for( NSDictionary* d in array ) { 
+        
+        NSString *s = [d objectForKey:@"name"];
+      
+        [arrStatus addObject:s];
+        
+
+    }
+    
+    [pickerView reloadAllComponents];
+    groupLabel.text = [arrStatus objectAtIndex:0];
+    startButton.enabled = YES;
+    //NSArray *dictionary = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
+    //NSDictionary *session = [dictionary objectForKey:@"session"];
+    
+    
+     NSLog(@"%@",jsonData);
     
     
 }
@@ -96,7 +118,7 @@
 {
     [super viewDidLoad];
     //arrStatus = [[NSArray alloc] initWithObjects:@"Choose your Group.",@"one", @"two", @"three", @"four", @"five", @"six", @"seven", nil];
-    groupLabel.text = [arrStatus objectAtIndex:0];
+   //groupLabel.text = [arrStatus objectAtIndex:0];
     startButton.enabled = NO;
 }
 
