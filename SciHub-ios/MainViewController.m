@@ -23,11 +23,16 @@
 #import "GTMHTTPFetcher.h"
 #import "PromptViewController.h"
 #import "URLParser.h"
+#import "ASIHTTPRequest.h"
+#import "CJSONSerializer.h"
 
 @implementation MainViewController
 @synthesize loginButton;
 @synthesize baseSheet;
 @synthesize savedTitle;
+@synthesize taskName;
+@synthesize taskImage;
+@synthesize taskImageView;
 
 NSString *const uploadProgressTitleStart = @"Upload Progress";
 NSString *const uploadProgressTitleEnd = @"Upload Done!";
@@ -54,11 +59,14 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     
     videoPickerController = [[UIImagePickerController alloc] init ];
 
-    NSString *username = [[NSUserDefaults standardUserDefaults] valueForKey:@"group"];
+    NSString *groupName = [[NSUserDefaults standardUserDefaults] valueForKey:@"group"];
 
-    userNameLabel.text = username;
+    userNameLabel.text = groupName;
     
     [GTMHTTPFetcher setLoggingEnabled:YES];
+    
+    [self taskImageView].image = taskImage;
+    
 }
 
 - (void)viewDidUnload
@@ -67,6 +75,7 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
     [self setLoginButton:nil];
     swipeView = nil;
     userNameLabel = nil;
+    [self setTaskImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -127,6 +136,39 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 }
 
 #pragma mark - message event methods methods
+
+-(void) sendJSON:(NSString*)url {
+    
+    NSURL *wurl =[NSURL URLWithString:@"http://scihub.uio.no:9000/youtube/"];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:wurl];
+    [request addRequestHeader:@"Accept" value:@"application/json"];
+    [request addRequestHeader:@"Content-Type" value:@"application/json"];
+    
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:url forKey:@"url"];
+    [dict setObject:taskName forKey:@"task_name"];
+    
+    
+    NSString *groupName = [[NSUserDefaults standardUserDefaults] valueForKey:@"group"];
+    
+    [dict setObject:groupName forKey:@"group_name"];
+    
+    
+    NSError *error = nil;
+    
+    NSData *jsonString = [[CJSONSerializer serializer] serializeDictionary:dict error:&error];
+    
+    NSString* newStr = [[NSString alloc] initWithData:jsonString
+                                             encoding:NSUTF8StringEncoding];
+    
+    [request appendPostData:[newStr dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setRequestMethod:@"POST"];
+    [request startAsynchronous];
+    
+}
+
 
 -(void) sendVideoTokenEvent {
     
@@ -299,7 +341,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
         
         NSString *yurl = [[NSString alloc] initWithFormat:@"http://www.youtube.com/v/%@",v];
         
-        [self sendVideoReadyEvent:yurl];
+        [self sendJSON:yurl];
         
          DDLogVerbose(@"WE WON!!!!");
         
@@ -389,13 +431,6 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 - (IBAction)showCamera:(id)sender {
     
-    if ([sender isKindOfClass:[UIButton class]]) {
-        NSString *title = [(UIButton *)sender currentTitle];
-        DDLogVerbose(title);
-    }
-    
-
-    
 
     if( videoPickerController == nil ) {
         videoPickerController = [[UIImagePickerController alloc] init ];
@@ -407,7 +442,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
         videoPickerController.startVideoCapture;
         videoPickerController.showsCameraControls = YES;
     
-        [videoPickerController performSelector:@selector(startVideoCapture) withObject:nil afterDelay:5];
+        [videoPickerController performSelector:@selector(startVideoCapture) withObject:nil afterDelay:2];
     
         [self presentModalViewController:videoPickerController animated:YES];
     
@@ -522,7 +557,9 @@ ofTotalByteCount:(unsigned long long)dataLength {
     
     [videoPickerController dismissModalViewControllerAnimated:YES];
     
-    swipeView.hidden = NO;
+    //swipeView.hidden = NO;
+    
+    [self doYouTube:nil];
     
 //    UIStoryboard *storyb = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil]; 
 //    //    

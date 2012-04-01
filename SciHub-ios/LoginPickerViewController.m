@@ -9,6 +9,8 @@
 #import "LoginPickerViewController.h"
 #import "ASIHTTPRequest.h"
 #import "CJSONDeserializer.h"
+#import "ASIHTTPRequest.h"
+#import "CJSONSerializer.h";
 
 @implementation LoginPickerViewController
 @synthesize pickerView;
@@ -105,7 +107,7 @@
     groupLabel.text = [arrStatus objectAtIndex:row];
     
     if( row == 0 ) {
-        startButton.enabled = NO;
+        startButton.enabled = YES;
     } else {
         startButton.enabled = YES;
         [[NSUserDefaults standardUserDefaults] setObject:groupLabel.text forKey:@"group"];
@@ -137,5 +139,16 @@
 }
 
 - (IBAction)startAction:(id)sender {
+    
+    
+
+//    
+//    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@"b" forKey:@"a"]; 
+//    NSString *jsonString = [[CJSONSerializer serializer] serializeObject:dictionary];
+//    
+    // Default becomes POST when you use appendPostData: / appendPostDataFromFile: / setPostBody:
+    //[request setRequestMethod:@"PUT"];
+    
+    
 }
 @end

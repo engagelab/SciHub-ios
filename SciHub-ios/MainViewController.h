@@ -22,14 +22,22 @@
     NSString *savedVideoPath;
     NSString *savedTitle;
     NSString *videoToken;
+    NSString *taskName;
+    UIImage *taskImage;
     IBOutlet UIView *swipeView;
     IBOutlet UILabel *userNameLabel;
+   
 }
 - (IBAction)hideSwipeView:(id)sender;
 
 @property (nonatomic, retain) UIActionSheet *baseSheet;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginButton;
 @property (nonatomic, retain) NSString *savedTitle;
+@property (nonatomic, retain) NSString *taskName;
+@property (nonatomic, retain) UIImage *taskImage;
+@property (weak, nonatomic) IBOutlet UIImageView *taskImageView;
+
+
 
 - (IBAction)checkInWithQR:(id)sender;
 

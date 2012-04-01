@@ -12,30 +12,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT7-rX-Wn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Login" id="AbA-KC-pDA" customClass="LoginPickerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wAm-fv-TSD">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" id="44B-q0-2ZD">
-                                <rect key="frame" x="0.0" y="200" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="202" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
                                 <connections>
                                     <outlet property="dataSource" destination="AbA-KC-pDA" id="gbk-LU-LoA"/>
                                     <outlet property="delegate" destination="AbA-KC-pDA" id="IgX-15-lKd"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose your group." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dTf-2d-Zu4">
-                                <rect key="frame" x="72" y="65" width="189" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velge gruppe." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dTf-2d-Zu4">
+                                <rect key="frame" x="66" y="81" width="189" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nYs-jo-3vC">
-                                <rect key="frame" x="124" y="130" width="72" height="37"/>
+                                <rect key="frame" x="124" y="126" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -43,9 +44,16 @@
                                 </state>
                                 <connections>
                                     <action selector="startAction:" destination="AbA-KC-pDA" eventType="touchUpInside" id="OHI-CL-PVV"/>
-                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="login" id="MDa-BA-Eqd"/>
+                                    <segue destination="afX-zf-giu" kind="push" id="IAn-JU-ItN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velge gruppe." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Chl-zQ-76H">
+                                <rect key="frame" x="66" y="46" width="189" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -57,7 +65,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-109" y="-515"/>
+            <point key="canvasLocation" x="-251" y="-515"/>
         </scene>
         <!--Main View Controller - SciHub-->
         <scene sceneID="d6B-gk-8Hq">
@@ -68,102 +76,39 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="blankwhitebg.png" id="10h-R4-SGN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="437"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="Den-cP-Itl">
-                                <rect key="frame" x="139" y="18" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="checkin.png" id="jl6-Y1-xGE">
-                                <rect key="frame" x="0.0" y="358" width="320" height="58"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="52f-Tk-xCs">
-                                <rect key="frame" x="72" y="62" width="185" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Pump">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showCamera:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="Zoh-T3-844"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ihY-54-tQ1">
-                                <rect key="frame" x="72" y="141" width="185" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Syringe">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showCamera:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="xhL-eC-dOR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GUa-fV-jVc">
-                                <rect key="frame" x="72" y="222" width="185" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Spray Can">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showCamera:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="xyp-CR-d7Q"/>
-                                </connections>
-                            </button>
-                            <view hidden="YES" contentMode="scaleToFill" id="HIU-CJ-y1r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" id="hqp-MX-t4y">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="blankwhitebg.png" id="zDA-TV-WpA">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="swipeup.png" id="LOu-n7-cNr">
-                                        <rect key="frame" x="32" y="49" width="256" height="325"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aB4-sB-PZ1">
+                                <rect key="frame" x="124" y="294" width="72" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.45098042490000001" green="0.81176477670000002" blue="0.23529413339999999" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="show" image="record_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1411764771" green="0.67450982329999998" blue="0.270588249" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <state key="highlighted" image="Record_active.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5pu-wD-dD3" appends="YES" id="j8b-i9-dvP"/>
-                                    <outletCollection property="gestureRecognizers" destination="Aod-Ed-jMu" appends="YES" id="eg7-dD-BGF"/>
-                                    <outletCollection property="gestureRecognizers" destination="5pu-wD-dD3" appends="YES" id="5VS-de-kIZ"/>
+                                    <action selector="showCamera:" destination="UYE-Q7-bTJ" eventType="touchUpInside" id="1ZW-md-YaK"/>
                                 </connections>
-                            </view>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="XmN-52-xPk">
+                                <rect key="frame" x="24" y="11" width="273" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <navigationItem key="navigationItem" title="Film Opptak" id="KLj-67-kYT">
-                        <barButtonItem key="rightBarButtonItem" image="upload white icon.png" id="EGJ-2y-eoC">
-                            <connections>
-                                <action selector="showVideoList:" destination="UYE-Q7-bTJ" id="ZsM-4o-xCO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Film Opptak" id="KLj-67-kYT"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
                         <outlet property="swipeView" destination="HIU-CJ-y1r" id="Fm5-J5-vIh"/>
-                        <outlet property="userNameLabel" destination="Den-cP-Itl" id="Q7k-YU-T4I"/>
+                        <outlet property="taskImageView" destination="XmN-52-xPk" id="s6u-Qt-8Nq"/>
                     </connections>
                 </viewController>
                 <swipeGestureRecognizer direction="down" id="5pu-wD-dD3">
@@ -177,7 +122,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="16" y="180"/>
+            <point key="canvasLocation" x="689" y="-515"/>
         </scene>
         <!--Message View Controller - messageController-->
         <scene sceneID="eN7-Aw-BOl">
@@ -271,6 +216,27 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" id="HIU-CJ-y1r">
+                                <rect key="frame" x="4" y="39" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="blankwhitebg.png" id="zDA-TV-WpA">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="swipeup.png" id="LOu-n7-cNr">
+                                        <rect key="frame" x="32" y="46" width="256" height="325"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5pu-wD-dD3" appends="YES" id="5VS-de-kIZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="5pu-wD-dD3" appends="YES" id="j8b-i9-dvP"/>
+                                    <outletCollection property="gestureRecognizers" destination="Aod-Ed-jMu" appends="YES" id="eg7-dD-BGF"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -280,7 +246,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="399" y="213"/>
+            <point key="canvasLocation" x="497" y="819"/>
         </scene>
         <!--Prompt View Controller - Prompt View Controller-->
         <scene sceneID="XXo-wX-B8n">
@@ -327,18 +293,145 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PrH-dW-V8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="T0V-Tm-i2i" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="OXM-ZW-ZN6">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="OXM-ZW-ZN6">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.45098042488098145" green="0.81176477670669556" blue="0.23529413342475891" alpha="1" colorSpace="deviceRGB"/>
-                        <color key="tintColor" red="0.1411764771" green="0.67450982329999998" blue="0.270588249" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.77428710460662842" green="0.29580814699509522" blue="0.28667929404495679" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.45098042490000001" green="0.81176477670000002" blue="0.23529413339999999" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="AbA-KC-pDA" kind="relationship" relationship="rootViewController" id="FiC-0Q-vil"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-479" y="203"/>
+            <point key="canvasLocation" x="-713" y="-515"/>
+        </scene>
+        <!--Intro View Controller - Oppgaver-->
+        <scene sceneID="cTl-2Q-I77">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7r-dV-jrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="afX-zf-giu" customClass="IntroViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fve-ET-x61">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MGZ-ss-Y7q">
+                                <rect key="frame" x="29" y="46" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="Sprayflaske_btn.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Sprayflaske_btn_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="Sprayflaske" id="X9I-Hk-4yz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LIa-oI-H5O">
+                                <rect key="frame" x="29" y="239" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="heatpump"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.77428710460000005" green="0.29580814700000002" blue="0.28667929399999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="Varmepumpe_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Varmepumpe_btn_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="Varmepumpe" id="X8O-dZ-cVh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gCs-tP-sDQ">
+                                <rect key="frame" x="29" y="288" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="energy transfer"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="Energioverføring_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Energioverføring_btn_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="Energioverføring" id="lpa-FE-J8C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U0G-5i-qoU">
+                                <rect key="frame" x="29" y="336" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="development"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="Bærekraftig_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Bærekraftig_btn_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="Bærekrafting utvikling" id="d5P-x1-FBb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P6o-Zc-Azw">
+                                <rect key="frame" x="29" y="93" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="syringe"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="Sprøyte_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Sprøyte_btn_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="Sprøyte" id="ut2-Gk-PcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hMw-6g-IJg">
+                                <rect key="frame" x="29" y="141" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="pump"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="Sykkelpumpe_btn.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="Sykkelpumpe_btn_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYE-Q7-bTJ" kind="push" identifier="Sykkelpumpe" id="Svx-4d-lA7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SKOLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vj6-3y-rwy">
+                                <rect key="frame" x="20" y="15" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="highlightedColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MUSEUM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wO4-qh-DTM">
+                                <rect key="frame" x="20" y="210" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="highlightedColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Oppgaver" id="H4u-1S-wg9"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="225" y="-515"/>
         </scene>
         <!--Video Message View Controller - videoMessageController-->
         <scene sceneID="8nj-Eg-uHH">
@@ -390,16 +483,32 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="858" y="-379"/>
+            <point key="canvasLocation" x="374" y="192"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Bærekraftig_btn.png" width="1250" height="249"/>
+        <image name="Bærekraftig_btn_a.png" width="1250" height="249"/>
+        <image name="Energioverføring_btn.png" width="1250" height="227"/>
+        <image name="Energioverføring_btn_a.png" width="1250" height="227"/>
+        <image name="Record_active.png" width="237" height="237"/>
+        <image name="Sprayflaske_btn.png" width="1250" height="242"/>
+        <image name="Sprayflaske_btn_a.png" width="1250" height="242"/>
+        <image name="Sprøyte_btn.png" width="1250" height="227"/>
+        <image name="Sprøyte_btn_a.png" width="1250" height="227"/>
+        <image name="Sykkelpumpe_btn.png" width="1250" height="249"/>
+        <image name="Sykkelpumpe_btn_a.png" width="1250" height="249"/>
+        <image name="Varmepumpe_btn.png" width="1250" height="242"/>
+        <image name="Varmepumpe_btn_a.png" width="1250" height="242"/>
+        <image name="bg.png" width="1449" height="1884"/>
         <image name="blankwhitebg.png" width="320" height="437"/>
-        <image name="checkin.png" width="320" height="58"/>
+        <image name="record_btn.png" width="211" height="213"/>
         <image name="swipeup.png" width="256" height="325"/>
-        <image name="upload white icon.png" width="20" height="20"/>
     </resources>
     <classes>
+        <class className="IntroViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntroViewController.h"/>
+        </class>
         <class className="LoginPickerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginPickerViewController.h"/>
             <relationships>
@@ -434,6 +543,7 @@
                 <relationship kind="action" name="testAgent:"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="swipeView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="taskImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="userNameLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -461,4 +571,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ut2-Gk-PcI"/>
+    </inferredMetricsTieBreakers>
 </document>
