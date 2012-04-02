@@ -76,6 +76,8 @@
     
     [pickerView reloadAllComponents];
     groupLabel.text = [arrStatus objectAtIndex:0];
+    [[NSUserDefaults standardUserDefaults] setObject:[arrStatus objectAtIndex:0]forKey:@"group"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     startButton.enabled = YES;
     //NSArray *dictionary = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
     //NSDictionary *session = [dictionary objectForKey:@"session"];
@@ -106,13 +108,11 @@
     
     groupLabel.text = [arrStatus objectAtIndex:row];
     
-    if( row == 0 ) {
-        startButton.enabled = YES;
-    } else {
-        startButton.enabled = YES;
-        [[NSUserDefaults standardUserDefaults] setObject:groupLabel.text forKey:@"group"];
+     NSLog(@"%@",[arrStatus objectAtIndex:row]);
+           startButton.enabled = YES;
+        [[NSUserDefaults standardUserDefaults] setObject:[arrStatus objectAtIndex:row]forKey:@"group"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+    
 
 }
 

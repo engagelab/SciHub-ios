@@ -139,7 +139,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 
 -(void) sendJSON:(NSString*)url {
     
-    NSURL *wurl =[NSURL URLWithString:@"http://scihub.uio.no:9000/youtube/"];
+    NSURL *wurl =[NSURL URLWithString:@"http://scihub.uio.no/youtube/"];
     
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:wurl];
     [request addRequestHeader:@"Accept" value:@"application/json"];
@@ -442,7 +442,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
         videoPickerController.startVideoCapture;
         videoPickerController.showsCameraControls = YES;
     
-        [videoPickerController performSelector:@selector(startVideoCapture) withObject:nil afterDelay:2];
+        [videoPickerController performSelector:@selector(startVideoCapture) withObject:nil afterDelay:3];
     
         [self presentModalViewController:videoPickerController animated:YES];
     
