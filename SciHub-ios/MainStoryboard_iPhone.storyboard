@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" id="a7g-Zj-EIh">
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="469"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <pickerView contentMode="scaleToFill" id="44B-q0-2ZD">
                                 <rect key="frame" x="0.0" y="202" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -36,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.58039215690000001" green="0.75294117650000003" blue="0.14117647059999999" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -297,7 +301,7 @@
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.77428710460662842" green="0.29580814699509522" blue="0.28667929404495679" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.45098042490000001" green="0.81176477670000002" blue="0.23529413339999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="AbA-KC-pDA" kind="relationship" relationship="rootViewController" id="FiC-0Q-vil"/>
@@ -412,18 +416,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SKOLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vj6-3y-rwy">
-                                <rect key="frame" x="20" y="15" width="57" height="21"/>
+                                <rect key="frame" x="34" y="15" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="highlightedColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.36470588235294116" green="0.69411764705882351" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="highlightedColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MUSEUM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wO4-qh-DTM">
-                                <rect key="frame" x="20" y="210" width="76" height="21"/>
+                                <rect key="frame" x="34" y="210" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="highlightedColor" red="0.55294120309999995" green="0.81960791349999995" blue="0.13725490870000001" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="highlightedColor" red="0.58039215690000001" green="0.75294117650000003" blue="0.14117647059999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -488,18 +492,18 @@
     </scenes>
     <resources>
         <image name="Bærekraftig_btn.png" width="1250" height="249"/>
-        <image name="Bærekraftig_btn_a.png" width="1250" height="249"/>
+        <image name="Bærekraftig_btn_a.png" width="1224" height="249"/>
         <image name="Energioverføring_btn.png" width="1250" height="227"/>
-        <image name="Energioverføring_btn_a.png" width="1250" height="227"/>
+        <image name="Energioverføring_btn_a.png" width="1224" height="227"/>
         <image name="Record_active.png" width="237" height="237"/>
         <image name="Sprayflaske_btn.png" width="1250" height="242"/>
-        <image name="Sprayflaske_btn_a.png" width="1250" height="242"/>
+        <image name="Sprayflaske_btn_a.png" width="1224" height="229"/>
         <image name="Sprøyte_btn.png" width="1250" height="227"/>
-        <image name="Sprøyte_btn_a.png" width="1250" height="227"/>
+        <image name="Sprøyte_btn_a.png" width="1224" height="227"/>
         <image name="Sykkelpumpe_btn.png" width="1250" height="249"/>
-        <image name="Sykkelpumpe_btn_a.png" width="1250" height="249"/>
+        <image name="Sykkelpumpe_btn_a.png" width="1224" height="249"/>
         <image name="Varmepumpe_btn.png" width="1250" height="242"/>
-        <image name="Varmepumpe_btn_a.png" width="1250" height="242"/>
+        <image name="Varmepumpe_btn_a.png" width="1224" height="231"/>
         <image name="bg.png" width="1449" height="1884"/>
         <image name="blankwhitebg.png" width="320" height="437"/>
         <image name="record_btn.png" width="211" height="213"/>

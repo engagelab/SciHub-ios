@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Reachability;
 @interface LoginPickerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
     
     NSMutableArray *arrStatus; 
     __weak IBOutlet UIButton *startButton;
     
     __weak IBOutlet UILabel *groupLabel;
+    Reachability *internetReachable;
+    Reachability *hostReachable;
 }
 - (IBAction)startAction:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+
+-(void) checkNetworkStatus:(NSNotification *)notice;
 
 @end

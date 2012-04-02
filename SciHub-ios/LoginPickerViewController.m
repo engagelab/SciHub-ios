@@ -11,7 +11,7 @@
 #import "CJSONDeserializer.h"
 #import "ASIHTTPRequest.h"
 #import "CJSONSerializer.h";
-
+#import "Reachability.h"
 @implementation LoginPickerViewController
 @synthesize pickerView;
 
@@ -150,5 +150,90 @@
     //[request setRequestMethod:@"PUT"];
     
     
+    
+    
+    
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    // check for internet connection
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
+    
+    internetReachable = [Reachability reachabilityForInternetConnection];
+    [internetReachable startNotifier];
+    
+    // check if a pathway to a random host exists
+    hostReachable = [Reachability reachabilityWithHostname: @"www.apple.com"];
+    [hostReachable startNotifier];
+    
+    // now patiently wait for the notification
+}
+
+-(void) checkNetworkStatus:(NSNotification *)notice
+{
+    // called after network status changes
+    NetworkStatus internetStatus = [internetReachable currentReachabilityStatus];
+    switch (internetStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"The internet is down.");
+            UIAlertView *alert =
+            [[UIAlertView alloc] initWithTitle: @"Connection Problem"
+                                       message: @"The internet is down."
+                                      delegate: self
+                             cancelButtonTitle: @"OK"
+                             otherButtonTitles: nil];
+            [alert show];
+            
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            NSLog(@"The internet is working via WIFI.");
+     
+            
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            NSLog(@"The internet is working via WWAN.");
+     
+            
+            break;
+        }
+    }
+    
+    NetworkStatus hostStatus = [hostReachable currentReachabilityStatus];
+    switch (hostStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"A gateway to the host server is down.");
+            UIAlertView *alert =
+            [[UIAlertView alloc] initWithTitle: @"Connection Problem"
+                                       message: @"The internet is down."
+                                      delegate: self
+                             cancelButtonTitle: @"OK"
+                             otherButtonTitles: nil];
+            [alert show];
+            
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            NSLog(@"A gateway to the host server is working via WIFI.");
+            
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            NSLog(@"A gateway to the host server is working via WWAN.");
+
+            
+            break;
+        }
+    }
 }
 @end
