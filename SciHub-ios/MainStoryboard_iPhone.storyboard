@@ -58,11 +58,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="DdF-hJ-YRX">
+                                <rect key="frame" x="155" y="173" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="f8Q-ew-4y0"/>
                     <connections>
+                        <outlet property="activityView" destination="DdF-hJ-YRX" id="zNv-9j-Teh"/>
                         <outlet property="groupLabel" destination="dTf-2d-Zu4" id="jTs-l5-4Fa"/>
                         <outlet property="pickerView" destination="44B-q0-2ZD" id="LuL-Ew-Oae"/>
                         <outlet property="startButton" destination="nYs-jo-3vC" id="WbW-Uh-dcJ"/>
@@ -320,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MGZ-ss-Y7q">
-                                <rect key="frame" x="29" y="46" width="263" height="50"/>
+                                <rect key="frame" x="25" y="46" width="270" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="Sprayflaske_btn.png">
@@ -335,7 +340,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LIa-oI-H5O">
-                                <rect key="frame" x="29" y="239" width="263" height="50"/>
+                                <rect key="frame" x="25" y="239" width="270" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="heatpump"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -352,7 +357,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gCs-tP-sDQ">
-                                <rect key="frame" x="29" y="288" width="263" height="50"/>
+                                <rect key="frame" x="25" y="290" width="270" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="energy transfer"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -368,7 +373,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U0G-5i-qoU">
-                                <rect key="frame" x="29" y="336" width="263" height="50"/>
+                                <rect key="frame" x="25" y="340" width="270" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="development"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -384,7 +389,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P6o-Zc-Azw">
-                                <rect key="frame" x="29" y="93" width="263" height="50"/>
+                                <rect key="frame" x="25" y="100" width="270" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="syringe"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -400,7 +405,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hMw-6g-IJg">
-                                <rect key="frame" x="29" y="141" width="263" height="50"/>
+                                <rect key="frame" x="25" y="152" width="270" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="pump"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -416,14 +421,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SKOLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vj6-3y-rwy">
-                                <rect key="frame" x="34" y="15" width="57" height="21"/>
+                                <rect key="frame" x="30" y="15" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.36470588235294116" green="0.69411764705882351" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="highlightedColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MUSEUM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wO4-qh-DTM">
-                                <rect key="frame" x="34" y="210" width="76" height="21"/>
+                                <rect key="frame" x="30" y="210" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
@@ -491,22 +496,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bærekraftig_btn.png" width="1250" height="249"/>
+        <image name="Bærekraftig_btn.png" width="1224" height="249"/>
         <image name="Bærekraftig_btn_a.png" width="1224" height="249"/>
-        <image name="Energioverføring_btn.png" width="1250" height="227"/>
+        <image name="Energioverføring_btn.png" width="1224" height="227"/>
         <image name="Energioverføring_btn_a.png" width="1224" height="227"/>
-        <image name="Record_active.png" width="237" height="237"/>
-        <image name="Sprayflaske_btn.png" width="1250" height="242"/>
+        <image name="Record_active.png" width="16" height="16"/>
+        <image name="Sprayflaske_btn.png" width="1224" height="229"/>
         <image name="Sprayflaske_btn_a.png" width="1224" height="229"/>
-        <image name="Sprøyte_btn.png" width="1250" height="227"/>
+        <image name="Sprøyte_btn.png" width="1224" height="227"/>
         <image name="Sprøyte_btn_a.png" width="1224" height="227"/>
-        <image name="Sykkelpumpe_btn.png" width="1250" height="249"/>
+        <image name="Sykkelpumpe_btn.png" width="1224" height="249"/>
         <image name="Sykkelpumpe_btn_a.png" width="1224" height="249"/>
-        <image name="Varmepumpe_btn.png" width="1250" height="242"/>
+        <image name="Varmepumpe_btn.png" width="1224" height="231"/>
         <image name="Varmepumpe_btn_a.png" width="1224" height="231"/>
         <image name="bg.png" width="1449" height="1884"/>
         <image name="blankwhitebg.png" width="320" height="437"/>
-        <image name="record_btn.png" width="211" height="213"/>
+        <image name="record_btn.png" width="16" height="16"/>
         <image name="swipeup.png" width="256" height="325"/>
     </resources>
     <classes>
@@ -517,6 +522,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginPickerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="startAction:"/>
+                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="groupLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
@@ -576,6 +582,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ut2-Gk-PcI"/>
+        <segue reference="X9I-Hk-4yz"/>
     </inferredMetricsTieBreakers>
 </document>

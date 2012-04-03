@@ -20,6 +20,7 @@
 - (IBAction)startAction:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 -(void) checkNetworkStatus:(NSNotification *)notice;
 

@@ -43,12 +43,18 @@
 		AE73D1851529BAD700682EB1 /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1831529BAD700682EB1 /* icon2x.png */; };
 		AE73D18A1529D10E00682EB1 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = AE73D1881529D0A400682EB1 /* Reachability.h */; };
 		AE73D18B1529D10E00682EB1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D1891529D0A400682EB1 /* Reachability.m */; };
-		AE73D1921529D14400682EB1 /* Bærekraftig_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D18C1529D14400682EB1 /* Bærekraftig_btn_a.png */; };
-		AE73D1931529D14400682EB1 /* Energioverføring_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D18D1529D14400682EB1 /* Energioverføring_btn_a.png */; };
-		AE73D1941529D14400682EB1 /* Sprayflaske_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D18E1529D14400682EB1 /* Sprayflaske_btn_a.png */; };
-		AE73D1951529D14400682EB1 /* Sprøyte_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D18F1529D14400682EB1 /* Sprøyte_btn_a.png */; };
-		AE73D1961529D14400682EB1 /* Sykkelpumpe_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1901529D14400682EB1 /* Sykkelpumpe_btn_a.png */; };
-		AE73D1971529D14400682EB1 /* Varmepumpe_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1911529D14400682EB1 /* Varmepumpe_btn_a.png */; };
+		AE73D1A41529E2CE00682EB1 /* Bærekraftig_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1981529E2CD00682EB1 /* Bærekraftig_btn_a.png */; };
+		AE73D1A51529E2CE00682EB1 /* Bærekraftig_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1991529E2CD00682EB1 /* Bærekraftig_btn.png */; };
+		AE73D1A61529E2CE00682EB1 /* Energioverføring_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D19A1529E2CD00682EB1 /* Energioverføring_btn_a.png */; };
+		AE73D1A71529E2CE00682EB1 /* Energioverføring_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D19B1529E2CD00682EB1 /* Energioverføring_btn.png */; };
+		AE73D1A81529E2CE00682EB1 /* Sprayflaske_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D19C1529E2CD00682EB1 /* Sprayflaske_btn_a.png */; };
+		AE73D1A91529E2CE00682EB1 /* Sprayflaske_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D19D1529E2CD00682EB1 /* Sprayflaske_btn.png */; };
+		AE73D1AA1529E2CE00682EB1 /* Sprøyte_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D19E1529E2CD00682EB1 /* Sprøyte_btn_a.png */; };
+		AE73D1AB1529E2CE00682EB1 /* Sprøyte_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D19F1529E2CD00682EB1 /* Sprøyte_btn.png */; };
+		AE73D1AC1529E2CE00682EB1 /* Sykkelpumpe_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1A01529E2CD00682EB1 /* Sykkelpumpe_btn_a.png */; };
+		AE73D1AD1529E2CE00682EB1 /* Sykkelpumpe_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1A11529E2CD00682EB1 /* Sykkelpumpe_btn.png */; };
+		AE73D1AE1529E2CE00682EB1 /* Varmepumpe_btn_a.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1A21529E2CD00682EB1 /* Varmepumpe_btn_a.png */; };
+		AE73D1AF1529E2CE00682EB1 /* Varmepumpe_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AE73D1A31529E2CE00682EB1 /* Varmepumpe_btn.png */; };
 		AE7C126514346A75009DC8F9 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7C126414346A75009DC8F9 /* URLParser.m */; };
 		AE7CD485142D2C3A00B6BF5C /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */; };
 		AE9821831427841D00AE3760 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821821427841D00AE3760 /* UploadViewController.m */; };
@@ -62,14 +68,6 @@
 		AED4654B15287F9700C0DC07 /* Sprøyte.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4654515287F9700C0DC07 /* Sprøyte.png */; };
 		AED4654C15287F9700C0DC07 /* Sykkelpumpe.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4654615287F9700C0DC07 /* Sykkelpumpe.png */; };
 		AED4654D15287F9700C0DC07 /* Varmepumpe.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4654715287F9700C0DC07 /* Varmepumpe.png */; };
-		AED4655C1528854600C0DC07 /* Bærekraftig_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4654F1528854600C0DC07 /* Bærekraftig_btn.png */; };
-		AED4655E1528854600C0DC07 /* Energioverføring_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED465511528854600C0DC07 /* Energioverføring_btn.png */; };
-		AED4655F1528854600C0DC07 /* Record_active.png in Resources */ = {isa = PBXBuildFile; fileRef = AED465521528854600C0DC07 /* Record_active.png */; };
-		AED465611528854600C0DC07 /* Sprayflaske_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED465541528854600C0DC07 /* Sprayflaske_btn.png */; };
-		AED465631528854600C0DC07 /* Sprøyte_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED465561528854600C0DC07 /* Sprøyte_btn.png */; };
-		AED465651528854600C0DC07 /* Sykkelpumpe_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED465581528854600C0DC07 /* Sykkelpumpe_btn.png */; };
-		AED465671528854600C0DC07 /* Varmepumpe_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4655A1528854600C0DC07 /* Varmepumpe_btn.png */; };
-		AED4656915288A9E00C0DC07 /* record_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4656815288A9E00C0DC07 /* record_btn.png */; };
 		AEDA6DBF14311A0B0090D0BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDA6DBE14311A0B0090D0BE /* Security.framework */; };
 		AEDA6F091431B6EA0090D0BE /* libGDataTouchStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDA6F081431B6EA0090D0BE /* libGDataTouchStaticLib.a */; };
 		AEDAFE9A1483AFAE00195D2E /* PromptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDAFE991483AFAE00195D2E /* PromptViewController.m */; };
@@ -183,12 +181,20 @@
 		AE73D1831529BAD700682EB1 /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
 		AE73D1881529D0A400682EB1 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		AE73D1891529D0A400682EB1 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		AE73D18C1529D14400682EB1 /* Bærekraftig_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bærekraftig_btn_a.png"; sourceTree = "<group>"; };
-		AE73D18D1529D14400682EB1 /* Energioverføring_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Energioverføring_btn_a.png"; sourceTree = "<group>"; };
-		AE73D18E1529D14400682EB1 /* Sprayflaske_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sprayflaske_btn_a.png; sourceTree = "<group>"; };
-		AE73D18F1529D14400682EB1 /* Sprøyte_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprøyte_btn_a.png"; sourceTree = "<group>"; };
-		AE73D1901529D14400682EB1 /* Sykkelpumpe_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sykkelpumpe_btn_a.png; sourceTree = "<group>"; };
-		AE73D1911529D14400682EB1 /* Varmepumpe_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Varmepumpe_btn_a.png; sourceTree = "<group>"; };
+		AE73D1981529E2CD00682EB1 /* Bærekraftig_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bærekraftig_btn_a.png"; sourceTree = "<group>"; };
+		AE73D1991529E2CD00682EB1 /* Bærekraftig_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bærekraftig_btn.png"; sourceTree = "<group>"; };
+		AE73D19A1529E2CD00682EB1 /* Energioverføring_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Energioverføring_btn_a.png"; sourceTree = "<group>"; };
+		AE73D19B1529E2CD00682EB1 /* Energioverføring_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Energioverføring_btn.png"; sourceTree = "<group>"; };
+		AE73D19C1529E2CD00682EB1 /* Sprayflaske_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sprayflaske_btn_a.png; sourceTree = "<group>"; };
+		AE73D19D1529E2CD00682EB1 /* Sprayflaske_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sprayflaske_btn.png; sourceTree = "<group>"; };
+		AE73D19E1529E2CD00682EB1 /* Sprøyte_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprøyte_btn_a.png"; sourceTree = "<group>"; };
+		AE73D19F1529E2CD00682EB1 /* Sprøyte_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprøyte_btn.png"; sourceTree = "<group>"; };
+		AE73D1A01529E2CD00682EB1 /* Sykkelpumpe_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sykkelpumpe_btn_a.png; sourceTree = "<group>"; };
+		AE73D1A11529E2CD00682EB1 /* Sykkelpumpe_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sykkelpumpe_btn.png; sourceTree = "<group>"; };
+		AE73D1A21529E2CD00682EB1 /* Varmepumpe_btn_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Varmepumpe_btn_a.png; sourceTree = "<group>"; };
+		AE73D1A31529E2CE00682EB1 /* Varmepumpe_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Varmepumpe_btn.png; sourceTree = "<group>"; };
+		AE73D1B01529E81200682EB1 /* HudDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HudDemoAppDelegate.h; sourceTree = "<group>"; };
+		AE73D1B11529E81200682EB1 /* HudDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HudDemoAppDelegate.m; sourceTree = "<group>"; };
 		AE7C126314346A75009DC8F9 /* URLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLParser.h; sourceTree = "<group>"; };
 		AE7C126414346A75009DC8F9 /* URLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLParser.m; sourceTree = "<group>"; };
 		AE7CD476142CC02C00B6BF5C /* SciHubOnlineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SciHubOnlineDelegate.h; sourceTree = "<group>"; };
@@ -208,14 +214,6 @@
 		AED4654515287F9700C0DC07 /* Sprøyte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprøyte.png"; sourceTree = "<group>"; };
 		AED4654615287F9700C0DC07 /* Sykkelpumpe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sykkelpumpe.png; sourceTree = "<group>"; };
 		AED4654715287F9700C0DC07 /* Varmepumpe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Varmepumpe.png; sourceTree = "<group>"; };
-		AED4654F1528854600C0DC07 /* Bærekraftig_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bærekraftig_btn.png"; sourceTree = "<group>"; };
-		AED465511528854600C0DC07 /* Energioverføring_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Energioverføring_btn.png"; sourceTree = "<group>"; };
-		AED465521528854600C0DC07 /* Record_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Record_active.png; sourceTree = "<group>"; };
-		AED465541528854600C0DC07 /* Sprayflaske_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sprayflaske_btn.png; sourceTree = "<group>"; };
-		AED465561528854600C0DC07 /* Sprøyte_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprøyte_btn.png"; sourceTree = "<group>"; };
-		AED465581528854600C0DC07 /* Sykkelpumpe_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sykkelpumpe_btn.png; sourceTree = "<group>"; };
-		AED4655A1528854600C0DC07 /* Varmepumpe_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Varmepumpe_btn.png; sourceTree = "<group>"; };
-		AED4656815288A9E00C0DC07 /* record_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_btn.png; sourceTree = "<group>"; };
 		AEDA6DBE14311A0B0090D0BE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AEDA6DC3143120980090D0BE /* GData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GData.h; sourceTree = "<group>"; };
 		AEDA6DC4143120980090D0BE /* GDataACL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACL.h; sourceTree = "<group>"; };
@@ -737,6 +735,8 @@
 			isa = PBXGroup;
 			children = (
 				AE7C126314346A75009DC8F9 /* URLParser.h */,
+				AE73D1B01529E81200682EB1 /* HudDemoAppDelegate.h */,
+				AE73D1B11529E81200682EB1 /* HudDemoAppDelegate.m */,
 				AE7C126414346A75009DC8F9 /* URLParser.m */,
 			);
 			name = Helpers;
@@ -754,22 +754,20 @@
 		AE98218714278E2900AE3760 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				AE73D18C1529D14400682EB1 /* Bærekraftig_btn_a.png */,
-				AE73D18D1529D14400682EB1 /* Energioverføring_btn_a.png */,
-				AE73D18E1529D14400682EB1 /* Sprayflaske_btn_a.png */,
-				AE73D18F1529D14400682EB1 /* Sprøyte_btn_a.png */,
-				AE73D1901529D14400682EB1 /* Sykkelpumpe_btn_a.png */,
-				AE73D1911529D14400682EB1 /* Varmepumpe_btn_a.png */,
+				AE73D1981529E2CD00682EB1 /* Bærekraftig_btn_a.png */,
+				AE73D1991529E2CD00682EB1 /* Bærekraftig_btn.png */,
+				AE73D19A1529E2CD00682EB1 /* Energioverføring_btn_a.png */,
+				AE73D19B1529E2CD00682EB1 /* Energioverføring_btn.png */,
+				AE73D19C1529E2CD00682EB1 /* Sprayflaske_btn_a.png */,
+				AE73D19D1529E2CD00682EB1 /* Sprayflaske_btn.png */,
+				AE73D19E1529E2CD00682EB1 /* Sprøyte_btn_a.png */,
+				AE73D19F1529E2CD00682EB1 /* Sprøyte_btn.png */,
+				AE73D1A01529E2CD00682EB1 /* Sykkelpumpe_btn_a.png */,
+				AE73D1A11529E2CD00682EB1 /* Sykkelpumpe_btn.png */,
+				AE73D1A21529E2CD00682EB1 /* Varmepumpe_btn_a.png */,
+				AE73D1A31529E2CE00682EB1 /* Varmepumpe_btn.png */,
 				AE73D1821529BAD700682EB1 /* icon.png */,
 				AE73D1831529BAD700682EB1 /* icon2x.png */,
-				AED4654F1528854600C0DC07 /* Bærekraftig_btn.png */,
-				AED465511528854600C0DC07 /* Energioverføring_btn.png */,
-				AED465521528854600C0DC07 /* Record_active.png */,
-				AED4656815288A9E00C0DC07 /* record_btn.png */,
-				AED465541528854600C0DC07 /* Sprayflaske_btn.png */,
-				AED465561528854600C0DC07 /* Sprøyte_btn.png */,
-				AED465581528854600C0DC07 /* Sykkelpumpe_btn.png */,
-				AED4655A1528854600C0DC07 /* Varmepumpe_btn.png */,
 				AED4654215287F9700C0DC07 /* Bærekraftig utvikling.png */,
 				AED4654315287F9700C0DC07 /* Energioverføring.png */,
 				AED4654415287F9700C0DC07 /* Sprayflaske.png */,
@@ -1339,22 +1337,20 @@
 				AED4654B15287F9700C0DC07 /* Sprøyte.png in Resources */,
 				AED4654C15287F9700C0DC07 /* Sykkelpumpe.png in Resources */,
 				AED4654D15287F9700C0DC07 /* Varmepumpe.png in Resources */,
-				AED4655C1528854600C0DC07 /* Bærekraftig_btn.png in Resources */,
-				AED4655E1528854600C0DC07 /* Energioverføring_btn.png in Resources */,
-				AED4655F1528854600C0DC07 /* Record_active.png in Resources */,
-				AED465611528854600C0DC07 /* Sprayflaske_btn.png in Resources */,
-				AED465631528854600C0DC07 /* Sprøyte_btn.png in Resources */,
-				AED465651528854600C0DC07 /* Sykkelpumpe_btn.png in Resources */,
-				AED465671528854600C0DC07 /* Varmepumpe_btn.png in Resources */,
-				AED4656915288A9E00C0DC07 /* record_btn.png in Resources */,
 				AE73D1841529BAD700682EB1 /* icon.png in Resources */,
 				AE73D1851529BAD700682EB1 /* icon2x.png in Resources */,
-				AE73D1921529D14400682EB1 /* Bærekraftig_btn_a.png in Resources */,
-				AE73D1931529D14400682EB1 /* Energioverføring_btn_a.png in Resources */,
-				AE73D1941529D14400682EB1 /* Sprayflaske_btn_a.png in Resources */,
-				AE73D1951529D14400682EB1 /* Sprøyte_btn_a.png in Resources */,
-				AE73D1961529D14400682EB1 /* Sykkelpumpe_btn_a.png in Resources */,
-				AE73D1971529D14400682EB1 /* Varmepumpe_btn_a.png in Resources */,
+				AE73D1A41529E2CE00682EB1 /* Bærekraftig_btn_a.png in Resources */,
+				AE73D1A51529E2CE00682EB1 /* Bærekraftig_btn.png in Resources */,
+				AE73D1A61529E2CE00682EB1 /* Energioverføring_btn_a.png in Resources */,
+				AE73D1A71529E2CE00682EB1 /* Energioverføring_btn.png in Resources */,
+				AE73D1A81529E2CE00682EB1 /* Sprayflaske_btn_a.png in Resources */,
+				AE73D1A91529E2CE00682EB1 /* Sprayflaske_btn.png in Resources */,
+				AE73D1AA1529E2CE00682EB1 /* Sprøyte_btn_a.png in Resources */,
+				AE73D1AB1529E2CE00682EB1 /* Sprøyte_btn.png in Resources */,
+				AE73D1AC1529E2CE00682EB1 /* Sykkelpumpe_btn_a.png in Resources */,
+				AE73D1AD1529E2CE00682EB1 /* Sykkelpumpe_btn.png in Resources */,
+				AE73D1AE1529E2CE00682EB1 /* Varmepumpe_btn_a.png in Resources */,
+				AE73D1AF1529E2CE00682EB1 /* Varmepumpe_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

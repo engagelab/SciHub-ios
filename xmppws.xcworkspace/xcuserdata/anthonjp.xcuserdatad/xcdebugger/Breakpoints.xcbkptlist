@@ -804,85 +804,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
-         landmarkName = "-parseObjects:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "20"
-         endingLineNumber = "20"
-         landmarkName = "-initWithNibName:bundle:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
-         landmarkName = "-initWithCoder:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "41"
-         endingLineNumber = "41"
-         landmarkName = "-requestPickerData"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
-         landmarkName = "-requestPickerData"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "355051923.679823"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
-         landmarkName = "-parseObjects:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "59"
@@ -891,15 +813,67 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SciHub-ios/LoginPickerViewController.m"
+         timestampString = "355068466.115862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "-initWithNibName:bundle:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "355051923.679823"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "-initWithCoder:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SciHub-ios/LoginPickerViewController.m"
+         timestampString = "355068466.115862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "-requestPickerData"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SciHub-ios/LoginPickerViewController.m"
+         timestampString = "355068466.115862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
+         landmarkName = "-requestPickerData"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SciHub-ios/LoginPickerViewController.m"
+         timestampString = "355068466.115862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
          landmarkName = "-parseObjects:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -908,11 +882,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-parseObjects:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -921,11 +895,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "-parseObjects:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -934,11 +908,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "355051923.679823"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "122"
-         endingLineNumber = "122"
+         startingLineNumber = "76"
+         endingLineNumber = "76"
+         landmarkName = "-parseObjects:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SciHub-ios/LoginPickerViewController.m"
+         timestampString = "355068466.115862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
+         landmarkName = "-parseObjects:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SciHub-ios/LoginPickerViewController.m"
+         timestampString = "355068466.115862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -947,11 +947,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "354456772.515102"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
          landmarkName = "-parseObjects:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1012,11 +1012,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "355051923.679823"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
          landmarkName = "-pickerView:didSelectRow:inComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1025,11 +1025,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "355051923.679823"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "113"
-         endingLineNumber = "113"
+         startingLineNumber = "119"
+         endingLineNumber = "119"
          landmarkName = "-pickerView:didSelectRow:inComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1064,11 +1064,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SciHub-ios/LoginPickerViewController.m"
-         timestampString = "355052713.676313"
+         timestampString = "355068466.115862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "78"
-         endingLineNumber = "78"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
          landmarkName = "-parseObjects:"
          landmarkType = "5">
       </FileBreakpoint>

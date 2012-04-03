@@ -14,6 +14,7 @@
 #import "Reachability.h"
 @implementation LoginPickerViewController
 @synthesize pickerView;
+@synthesize activityView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +45,10 @@
     NSURL *url =[NSURL URLWithString:myURLString];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setDelegate:self];
+    
+    [activityView startAnimating];
+    
+    //request.didReceiveDataSelector = @selector(parseObjects:);
     request.didFinishSelector = @selector(parseObjects:);
     //request.didFailSelector = @selector(resultCitiesError:);
     
@@ -85,7 +90,8 @@
     
      NSLog(@"%@",jsonData);
     
-    
+    [activityView stopAnimating];
+
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -129,6 +135,7 @@
     [self setPickerView:nil];
     groupLabel = nil;
     startButton = nil;
+    [self setActivityView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
