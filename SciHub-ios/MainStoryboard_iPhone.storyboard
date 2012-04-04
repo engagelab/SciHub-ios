@@ -48,7 +48,6 @@
                                 </state>
                                 <connections>
                                     <action selector="startAction:" destination="AbA-KC-pDA" eventType="touchUpInside" id="OHI-CL-PVV"/>
-                                    <segue destination="afX-zf-giu" kind="push" id="IAn-JU-ItN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velge gruppe." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Chl-zQ-76H">
@@ -74,7 +73,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-251" y="-515"/>
+            <point key="canvasLocation" x="-303" y="54"/>
         </scene>
         <!--Main View Controller - SciHub-->
         <scene sceneID="d6B-gk-8Hq">
@@ -82,19 +81,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGQ-oZ-L8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="SciHub" id="UYE-Q7-bTJ" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eyk-l9-k0G">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" id="hqp-MX-t4y">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aB4-sB-PZ1">
-                                <rect key="frame" x="124" y="294" width="72" height="67"/>
+                                <rect key="frame" x="138" y="327" width="45" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.45098042490000001" green="0.81176477670000002" blue="0.23529413339999999" alpha="1" colorSpace="deviceRGB"/>
-                                <state key="normal" title="show" image="record_btn.png">
+                                <state key="normal" image="record_btn.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.1411764771" green="0.67450982329999998" blue="0.270588249" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
@@ -106,7 +105,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="XmN-52-xPk">
-                                <rect key="frame" x="24" y="11" width="273" height="275"/>
+                                <rect key="frame" x="24" y="44" width="273" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -114,7 +113,6 @@
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Film Opptak" id="KLj-67-kYT"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
                         <outlet property="swipeView" destination="HIU-CJ-y1r" id="Fm5-J5-vIh"/>
                         <outlet property="taskImageView" destination="XmN-52-xPk" id="s6u-Qt-8Nq"/>
@@ -301,7 +299,6 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PrH-dW-V8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="T0V-Tm-i2i" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="OXM-ZW-ZN6">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -309,11 +306,122 @@
                         <color key="tintColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AbA-KC-pDA" kind="relationship" relationship="rootViewController" id="FiC-0Q-vil"/>
+                        <segue destination="7BN-sX-fq9" kind="relationship" relationship="rootViewController" id="MEh-ji-SVc"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="-713" y="-515"/>
+        </scene>
+        <!--Login Picker View Controller - Velge Gruppe-->
+        <scene sceneID="Lnb-J3-l4U">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYV-XQ-2zr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="7BN-sX-fq9" customClass="LoginPickerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0Y-d1-hSK">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" id="M60-CT-TOP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BN2-8f-n6L">
+                                <rect key="frame" x="25" y="44" width="270" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SORT" image="sort.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="sort_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afX-zf-giu" kind="push" identifier="SORT" id="dyv-k3-7Nn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tIE-2g-hPV">
+                                <rect key="frame" x="25" y="97" width="270" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LILLA" image="lilla.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="lilla_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afX-zf-giu" kind="push" identifier="LILLA" id="2p9-yG-LEn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BkN-V5-1eK">
+                                <rect key="frame" x="25" y="146" width="270" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GUL" image="gul.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="gul_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afX-zf-giu" kind="push" identifier="GUL" id="zsc-66-Ypi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="me3-Lq-t9f">
+                                <rect key="frame" x="25" y="196" width="270" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="BLÅ" image="blå.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="blå_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afX-zf-giu" kind="push" identifier="BLÅ" id="b8F-4W-0Hu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NmU-ob-24h">
+                                <rect key="frame" x="25" y="246" width="270" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ORANGE" image="orange.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="orange_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afX-zf-giu" kind="push" identifier="ORANGE" id="vf7-YP-a5g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="58O-0j-eCy">
+                                <rect key="frame" x="25" y="295" width="270" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ROSA" image="rosa.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="rosa_a.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afX-zf-giu" kind="push" identifier="ROSA" id="AD8-8X-QUL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Velge Gruppe" id="LjT-FU-kg0"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-147" y="-515"/>
         </scene>
         <!--Intro View Controller - Oppgaver-->
         <scene sceneID="cTl-2Q-I77">
@@ -324,8 +432,12 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" id="aKN-nr-Hhs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MGZ-ss-Y7q">
-                                <rect key="frame" x="25" y="46" width="270" height="54"/>
+                                <rect key="frame" x="25" y="44" width="270" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="Sprayflaske_btn.png">
@@ -340,12 +452,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LIa-oI-H5O">
-                                <rect key="frame" x="25" y="239" width="270" height="51"/>
+                                <rect key="frame" x="25" y="240" width="270" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="heatpump"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.77428710460000005" green="0.29580814700000002" blue="0.28667929399999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="Varmepumpe_btn.png">
+                                <state key="normal" image="Varmepumpe_btn.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -357,7 +469,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gCs-tP-sDQ">
-                                <rect key="frame" x="25" y="290" width="270" height="50"/>
+                                <rect key="frame" x="25" y="291" width="270" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="energy transfer"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -373,7 +485,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U0G-5i-qoU">
-                                <rect key="frame" x="25" y="340" width="270" height="56"/>
+                                <rect key="frame" x="25" y="341" width="270" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="development"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -389,7 +501,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P6o-Zc-Azw">
-                                <rect key="frame" x="25" y="100" width="270" height="52"/>
+                                <rect key="frame" x="25" y="96" width="270" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="syringe"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -405,11 +517,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hMw-6g-IJg">
-                                <rect key="frame" x="25" y="152" width="270" height="55"/>
+                                <rect key="frame" x="25" y="148" width="270" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="pump"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Sykkelpumpe_btn.png">
+                                <state key="normal" image="Sykkelpumpe_btn.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -421,14 +533,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SKOLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vj6-3y-rwy">
-                                <rect key="frame" x="30" y="15" width="57" height="21"/>
+                                <rect key="frame" x="25" y="20" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.36470588235294116" green="0.69411764705882351" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="highlightedColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MUSEUM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wO4-qh-DTM">
-                                <rect key="frame" x="30" y="210" width="76" height="21"/>
+                                <rect key="frame" x="25" y="219" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.36470588240000001" green="0.69411764710000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
@@ -500,7 +612,7 @@
         <image name="Bærekraftig_btn_a.png" width="1224" height="249"/>
         <image name="Energioverføring_btn.png" width="1224" height="227"/>
         <image name="Energioverføring_btn_a.png" width="1224" height="227"/>
-        <image name="Record_active.png" width="16" height="16"/>
+        <image name="Record_active.png" width="237" height="237"/>
         <image name="Sprayflaske_btn.png" width="1224" height="229"/>
         <image name="Sprayflaske_btn_a.png" width="1224" height="229"/>
         <image name="Sprøyte_btn.png" width="1224" height="227"/>
@@ -511,7 +623,19 @@
         <image name="Varmepumpe_btn_a.png" width="1224" height="231"/>
         <image name="bg.png" width="1449" height="1884"/>
         <image name="blankwhitebg.png" width="320" height="437"/>
-        <image name="record_btn.png" width="16" height="16"/>
+        <image name="blå.png" width="1224" height="227"/>
+        <image name="blå_a.png" width="1224" height="227"/>
+        <image name="gul.png" width="1224" height="227"/>
+        <image name="gul_a.png" width="1224" height="227"/>
+        <image name="lilla.png" width="1224" height="227"/>
+        <image name="lilla_a.png" width="1224" height="227"/>
+        <image name="orange.png" width="1224" height="227"/>
+        <image name="orange_a.png" width="1224" height="227"/>
+        <image name="record_btn.png" width="211" height="213"/>
+        <image name="rosa.png" width="1224" height="249"/>
+        <image name="rosa_a.png" width="1224" height="249"/>
+        <image name="sort.png" width="1224" height="229"/>
+        <image name="sort_a.png" width="1224" height="229"/>
         <image name="swipeup.png" width="256" height="325"/>
     </resources>
     <classes>
@@ -522,10 +646,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginPickerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="startAction:"/>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="groupLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
@@ -582,6 +702,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="AD8-8X-QUL"/>
         <segue reference="X9I-Hk-4yz"/>
     </inferredMetricsTieBreakers>
 </document>
