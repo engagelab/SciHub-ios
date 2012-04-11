@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppStoreFileSize</key>
+	<integer>0</integer>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2012-04-10T09:27:00Z</date>
+	<key>Name</key>
+	<string>SciHub-ios Ad-Hoc</string>
+	<key>SchemeName</key>
+	<string>SciHub-ios Ad-Hoc</string>
+</dict>
+</plist>

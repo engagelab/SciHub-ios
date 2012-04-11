@@ -32,7 +32,6 @@
 		AE508685145658EA00A428F3 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = AE508684145658EA00A428F3 /* CDataScanner.m */; };
 		AE50868B1456592300A428F3 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5086881456592300A428F3 /* CDataScanner_Extensions.m */; };
 		AE50868C1456592300A428F3 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE50868A1456592300A428F3 /* NSDictionary_JSONExtensions.m */; };
-		AE5BD0B7146016CE009B1038 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5BD0B1146016CD009B1038 /* libzbar.a */; };
 		AE5BD0B8146016CE009B1038 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B3146016CD009B1038 /* zbar-back.png */; };
 		AE5BD0B9146016CE009B1038 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B4146016CD009B1038 /* zbar-help.html */; };
 		AE5BD0BA146016CE009B1038 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5BD0B5146016CD009B1038 /* zbar-helpicons.png */; };
@@ -103,7 +102,7 @@
 		AEE0CCE81419577C0085DA61 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE0CCE71419577C0085DA61 /* MainViewController.m */; };
 		AEE0CCFC141958D70085DA61 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF3141958D70085DA61 /* libxml2.dylib */; };
 		AEE0CCFD141958D70085DA61 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF4141958D70085DA61 /* CFNetwork.framework */; };
-		AEE0CCFE141958D70085DA61 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF5141958D70085DA61 /* libresolv.dylib */; };
+		AEE0CCFE141958D70085DA61 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF5141958D70085DA61 /* libresolv.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		AEE0CCFF141958D70085DA61 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF6141958D70085DA61 /* CoreData.framework */; };
 		AEE0CD00141958D70085DA61 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF7141958D70085DA61 /* CoreLocation.framework */; };
 		AEE0CD01141958D70085DA61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE0CCF8141958D70085DA61 /* SystemConfiguration.framework */; };
@@ -254,7 +253,6 @@
 		AE9821841427884000AE3760 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		AE9821851427884000AE3760 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AEB1C07D145F51AE00A2EECD /* libxmpp-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libxmpp-ios.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos/libxmpp-ios.a"; sourceTree = "<group>"; };
-		AEB1C07F145F59E000A2EECD /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = "../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos/libZXingWidget.a"; sourceTree = "<group>"; };
 		AEB5BD2D14330E6D000831BC /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		AEB5BD2F14331D1C000831BC /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		AED4654215287F9700C0DC07 /* Bærekraftig utvikling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bærekraftig utvikling.png"; sourceTree = "<group>"; };
@@ -671,7 +669,6 @@
 				AEE0CD01141958D70085DA61 /* SystemConfiguration.framework in Frameworks */,
 				AE29C83C145ED8F50012E16A /* libiconv.dylib in Frameworks */,
 				AEB1C07E145F51AE00A2EECD /* libxmpp-ios.a in Frameworks */,
-				AE5BD0B7146016CE009B1038 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,7 +1237,6 @@
 			children = (
 				AE29C83B145ED8F50012E16A /* libiconv.dylib */,
 				AE50867514560D3600A428F3 /* libz.dylib */,
-				AEB1C07F145F59E000A2EECD /* libZXingWidget.a */,
 				AEDA6F081431B6EA0090D0BE /* libGDataTouchStaticLib.a */,
 				AEB1C07D145F51AE00A2EECD /* libxmpp-ios.a */,
 				AEE0CCF3141958D70085DA61 /* libxml2.dylib */,
@@ -1523,6 +1519,83 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE8B10E5153433F0006E99C7 /* Ad-hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anthony Perritano";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anthony Perritano";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos/usr/local/include\"/**",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/usr/local/include\"/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos/libZXingWidget.a\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/libZXingWidget.a\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+				);
+				PROVISIONING_PROFILE = "6D86E6E7-61C2-49D6-B24A-1A308FA407D8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6D86E6E7-61C2-49D6-B24A-1A308FA407D8";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "";
+			};
+			name = "Ad-hoc";
+		};
+		AE8B10E6153433F0006E99C7 /* Ad-hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anthony Perritano";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anthony Perritano";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphonesimulator/usr/local/include\"/**",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphonesimulator/usr/local/include\"/**",
+				);
+				INFOPLIST_FILE = "SciHub-ios/SciHub-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-drhgjkiwuucwuseedtmewrwezaqt/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../../iOS/GData-iOS-Static-Library-1.12\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/xmppws-cnnsxiphcsfanuapzmliljwaegqr/Build/Products/Release-iphoneos\"",
+					"\"$(SRCROOT)/SciHub-ios/ZBarSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BCDF6409-898A-462B-8AD7-864506C173FC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BCDF6409-898A-462B-8AD7-864506C173FC";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad-hoc";
+		};
 		AEE0CCE91419577C0085DA61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1563,6 +1636,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "";
 			};
@@ -1602,6 +1676,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WARNING_CFLAGS = "";
@@ -1611,7 +1686,7 @@
 		AEE0CCEC1419577C0085DA61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Perritano (8GZ36N9TKL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
@@ -1636,9 +1711,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5159D072-BC67-401E-9088-306BA3725413";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1647,8 +1722,8 @@
 		AEE0CCED1419577C0085DA61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anthony Perritano";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anthony Perritano";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SciHub-ios/SciHub-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1672,9 +1747,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SKIP_INSTALL = YES;
+				PROVISIONING_PROFILE = "BCDF6409-898A-462B-8AD7-864506C173FC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BCDF6409-898A-462B-8AD7-864506C173FC";
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1688,6 +1763,7 @@
 			buildConfigurations = (
 				AEE0CCE91419577C0085DA61 /* Debug */,
 				AEE0CCEA1419577C0085DA61 /* Release */,
+				AE8B10E5153433F0006E99C7 /* Ad-hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1697,6 +1773,7 @@
 			buildConfigurations = (
 				AEE0CCEC1419577C0085DA61 /* Debug */,
 				AEE0CCED1419577C0085DA61 /* Release */,
+				AE8B10E6153433F0006E99C7 /* Ad-hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

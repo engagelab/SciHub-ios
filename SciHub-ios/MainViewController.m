@@ -34,7 +34,7 @@
 @synthesize taskImage;
 @synthesize taskImageView;
 
-NSString *const uploadProgressTitleStart = @"Upload Progress";
+NSString *const uploadProgressTitleStart = @"Laster opp";
 NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
 
@@ -345,8 +345,8 @@ ofTotalByteCount:(unsigned long long)dataLength {
         
          DDLogVerbose(@"WE WON!!!!");
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations!"
-                                                        message:@"Video Successfully Uploaded"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gratulerer!"
+                                                        message:@"videoen er nå lastet opp"
                                                        delegate:nil 
                                               cancelButtonTitle:@"Ok" 
                                               otherButtonTitles:nil];
@@ -469,64 +469,64 @@ ofTotalByteCount:(unsigned long long)dataLength {
         UISaveVideoAtPathToSavedPhotosAlbum([videoURL path], self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
     } else {
         
-        [picker dismissViewControllerAnimated:YES completion:^{
+       // [picker dismissViewControllerAnimated:YES completion:^{
             
-            // ADD: get the decode results
-            id<NSFastEnumeration> results =
-            [info objectForKey: ZBarReaderControllerResults];
-            ZBarSymbol *symbol = nil;
-            for(symbol in results)
-                // EXAMPLE: just grab the first barcode
-                break;
-            
-            // EXAMPLE: do something useful with the barcode data
-            
-            
-            if( symbol.data != nil ) {
-                
-                
-                
-                NSRange range = [symbol.data rangeOfString:@"http://"
-                                                   options:NSCaseInsensitiveSearch];
-                if(range.location != NSNotFound) {
-                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-                    
-                    PromptViewController *promptViewController = (PromptViewController *)  [storyboard instantiateViewControllerWithIdentifier:@"promptViewController"];
-                    
-                    
-                    
-                    [self presentModalViewController:promptViewController animated:YES];
-                    
-                    //Load web view data
-                    NSString *strWebsiteUlr = [NSString stringWithFormat:symbol.data];
-                    
-                    // Load URL
-                    
-                    //Create a URL object.
-                    NSURL *url = [NSURL URLWithString:strWebsiteUlr];
-                    
-                    //URL Requst Object
-                    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-                    
-                    
-                    promptViewController.webView.scalesPageToFit = YES;
-                    [promptViewController.webView loadRequest:requestObj];
-                    
-                    
-                } else {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"It Says"
-                                                                    message:symbol.data
-                                                                   delegate:nil 
-                                                          cancelButtonTitle:@"Ok" 
-                                                          otherButtonTitles:nil];
-                    
-                    [alert show];
-                }
-                
-            }
-
-
-        }];
+//            // ADD: get the decode results
+//            id<NSFastEnumeration> results =
+//            [info objectForKey: ZBarReaderControllerResults];
+//            ZBarSymbol *symbol = nil;
+//            for(symbol in results)
+//                // EXAMPLE: just grab the first barcode
+//                break;
+//            
+//            // EXAMPLE: do something useful with the barcode data
+//            
+//            
+//            if( symbol.data != nil ) {
+//                
+//                
+//                
+//                NSRange range = [symbol.data rangeOfString:@"http://"
+//                                                   options:NSCaseInsensitiveSearch];
+//                if(range.location != NSNotFound) {
+//                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+//                    
+//                    PromptViewController *promptViewController = (PromptViewController *)  [storyboard instantiateViewControllerWithIdentifier:@"promptViewController"];
+//                    
+//                    
+//                    
+//                    [self presentModalViewController:promptViewController animated:YES];
+//                    
+//                    //Load web view data
+//                    NSString *strWebsiteUlr = [NSString stringWithFormat:symbol.data];
+//                    
+//                    // Load URL
+//                    
+//                    //Create a URL object.
+//                    NSURL *url = [NSURL URLWithString:strWebsiteUlr];
+//                    
+//                    //URL Requst Object
+//                    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+//                    
+//                    
+//                    promptViewController.webView.scalesPageToFit = YES;
+//                    [promptViewController.webView loadRequest:requestObj];
+//                    
+//                    
+//                } else {
+//                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"It Says"
+//                                                                    message:symbol.data
+//                                                                   delegate:nil 
+//                                                          cancelButtonTitle:@"Ok" 
+//                                                          otherButtonTitles:nil];
+//                    
+//                    [alert show];
+//                }
+//                
+//            }
+//
+//
+//        }];
 
        
         
@@ -642,27 +642,27 @@ ofTotalByteCount:(unsigned long long)dataLength {
 #pragma mark -
 #pragma mark ZBarMethods
 
-
-- (IBAction)checkInWithQR:(id)sender {
-    
-    // ADD: present a barcode reader that scans from the camera feed
-    ZBarReaderViewController *reader = [ZBarReaderViewController new];
-    reader.readerDelegate = self;
-    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-    
-    ZBarImageScanner *scanner = reader.scanner;
-    // TODO: (optional) additional reader configuration here
-    
-    // EXAMPLE: disable rarely used I2/5 to improve performance
-    [scanner setSymbology: ZBAR_I25
-                   config: ZBAR_CFG_ENABLE
-                       to: 0];
-    
-    // present and release the controller
-    [self presentModalViewController: reader
-                            animated: YES];
-
-
-    
-}
+//
+//- (IBAction)checkInWithQR:(id)sender {
+//    
+//    // ADD: present a barcode reader that scans from the camera feed
+//    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+//    reader.readerDelegate = self;
+//    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+//    
+//    ZBarImageScanner *scanner = reader.scanner;
+//    // TODO: (optional) additional reader configuration here
+//    
+//    // EXAMPLE: disable rarely used I2/5 to improve performance
+//    [scanner setSymbology: ZBAR_I25
+//                   config: ZBAR_CFG_ENABLE
+//                       to: 0];
+//    
+//    // present and release the controller
+//    [self presentModalViewController: reader
+//                            animated: YES];
+//
+//
+//    
+//}
 @end

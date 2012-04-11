@@ -2,13 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../iOS/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:../SciHub-ios/SciHub-ios.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Building-a-Jabber-client-for-iOS/JabberClient.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../xmpp-ios/xmpp-ios.xcodeproj">
