@@ -5,6 +5,7 @@
 //  Created by Anthony Perritano on 4/3/12.
 //  Copyright (c) 2012 .t. All rights reserved.
 //
+// Login using a tableview and a webservice.
 
 #import <UIKit/UIKit.h>
 

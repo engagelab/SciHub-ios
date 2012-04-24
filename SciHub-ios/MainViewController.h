@@ -12,7 +12,7 @@
 #import "SciHubOnlineDelegate.h"
 #import "AppDelegate.h"
 
-
+//This where much of the work is done. Showing the camera and uploading the video. 
 @interface MainViewController : UIViewController<UIImagePickerControllerDelegate, AVAudioPlayerDelegate, SciHubMessageDelegate, SciHubOnlineDelegate>{
     
     AVAudioPlayer *player;
