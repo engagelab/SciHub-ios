@@ -13,7 +13,7 @@
 
 
 @implementation AppDelegate
-
+/*
 @synthesize xmppStream;
 @synthesize xmppReconnect;
 @synthesize xmppRoster;
@@ -21,6 +21,7 @@
 @synthesize xmppCapabilities;
 @synthesize xmppCapabilitiesStorage;
 @synthesize xmppRoom;
+ */
 @synthesize sciHubMessageDelegate;
 @synthesize sciHubOnlineDelegate;
 
@@ -41,7 +42,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 
     // Configure logging framework
 	
-	[DDLog addLogger:[DDTTYLogger sharedInstance]];
+	//[//[DDLog a//[DDLogger:[DDTTYLogger sharedInstance]];
     
 //    [self setupStream];
 //    [self connect];
@@ -56,7 +57,7 @@ NSString * const serverName = @"imediamac28.uio.no";
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
 }
-
+/*
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store
 	// enough application state information to restore your application to its current state in case
@@ -65,10 +66,10 @@ NSString * const serverName = @"imediamac28.uio.no";
 	// If your application supports background execution,
 	// called instead of applicationWillTerminate: when the user quits.
 	
-	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+	//[DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
     
     #if TARGET_IPHONE_SIMULATOR
-        DDLogError(@"The iPhone simulator does not process background network traffic. "
+        //[DDLogError(@"The iPhone simulator does not process background network traffic. "
 			   @"Inbound traffic is queued until the keepAliveTimeout:handler: fires.");
     #endif
     
@@ -76,16 +77,18 @@ NSString * const serverName = @"imediamac28.uio.no";
 	{
 		[application setKeepAliveTimeout:600 handler:^{
 			
-			DDLogVerbose(@"KeepAliveHandler");
+			//[DDLogVerbose(@"KeepAliveHandler");
 			
 			// Do other keep alive stuff here.
 		}];
 	}
 }
-
+*/
+/*
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+    //[DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
 }
+ */
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     /*
@@ -108,7 +111,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 }
 
 #pragma mark - XMPP delegates 
-
+/*
 - (void)xmppStreamDidConnect:(XMPPStream *)sender {
 	
 	isOpen = YES;
@@ -144,7 +147,7 @@ NSString * const serverName = @"imediamac28.uio.no";
      
         //if it is one on one chat pop up
         if ([from rangeOfString:@"conference"].location == NSNotFound) {
-            DDLogVerbose(@"string does not contain bla");
+            //[DDLogVerbose(@"string does not contain bla");
             
             NSString* username = [[from componentsSeparatedByString:@"@"] objectAtIndex:0];
             
@@ -174,7 +177,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 		if ([presenceType isEqualToString:@"available"]) {
             
             NSString *t = [NSString stringWithFormat:@"%@@%@", presenceFromUser, @"jerry.local"];
-            DDLogVerbose(t);
+            //[DDLogVerbose(t);
 			
             [sciHubOnlineDelegate isAvailable:YES];
            
@@ -184,7 +187,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 		} else if ([presenceType isEqualToString:@"unavailable"]) {
 			
             NSString *t = [NSString stringWithFormat:@"%@@%@", presenceFromUser, @"jerry.local"];
-            DDLogVerbose(t);
+            //[DDLogVerbose(t);
 
             [sciHubOnlineDelegate isAvailable:NO];
 			//[_chatDelegate buddyWentOffline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"jerry.local"]];
@@ -198,14 +201,14 @@ NSString * const serverName = @"imediamac28.uio.no";
 #pragma mark - XMPP Room Delegate
 
 - (void)xmppRoomDidCreate:(XMPPRoom *)sender {
-    DDLogVerbose(@"xmpp room did create");
+    //[DDLogVerbose(@"xmpp room did create");
 
 }
 - (void)xmppRoomDidEnter:(XMPPRoom *)sender {
-        DDLogVerbose(@"xmpp room did enter");
+        //[DDLogVerbose(@"xmpp room did enter");
 }
 - (void)xmppRoomDidLeave:(XMPPRoom *)sender {
-        DDLogVerbose(@"xmpp room did leave");
+        //[DDLogVerbose(@"xmpp room did leave");
 }
 - (void)xmppRoom:(XMPPRoom *)sender didReceiveMessage:(XMPPMessage *)message fromNick:(NSString *)nick {
     
@@ -220,11 +223,11 @@ NSString * const serverName = @"imediamac28.uio.no";
     [messageDictionary setObject:msg forKey:@"body"];
     [messageDictionary setObject:nick forKey:@"sender"];
     [sciHubMessageDelegate newGroupMessageReceived:messageDictionary];
-    DDLogVerbose(@"xmpp room did receiveMessage");
+    //[DDLogVerbose(@"xmpp room did receiveMessage");
     }
 }
 - (void)xmppRoom:(XMPPRoom *)sender didChangeOccupants:(NSDictionary *)occupants {
-    DDLogVerbose(@"xmpp room did receiveMessage");
+    //[DDLogVerbose(@"xmpp room did receiveMessage");
 }
 
 
@@ -461,7 +464,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 	//	myPassword = @"";
     
 	if (myJID == nil || myPassword == nil) {
-		DDLogWarn(@"JID and password must be set before connecting!");
+		//[DDLogWarn(@"JID and password must be set before connecting!");
         
 		return NO;
 	}
@@ -480,7 +483,7 @@ NSString * const serverName = @"imediamac28.uio.no";
 		[alertView show];
 	
         
-		DDLogError(@"Error connecting: %@", error);
+		//[DDLogError(@"Error connecting: %@", error);
         
 		return NO;
 	}
@@ -495,12 +498,14 @@ NSString * const serverName = @"imediamac28.uio.no";
     
     [xmppStream disconnect];
 }
+ 
+ */
 
 #pragma mark - Alert view delegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     
-       DDLogVerbose(@"%d",buttonIndex);
+       //[DDLogVerbose(@"%d",buttonIndex);
     
     if (buttonIndex == 1) {
         NSString *from = [lastMessageDict objectForKey:@"sender"];

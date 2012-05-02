@@ -51,7 +51,7 @@
     NSString *event = [[NSString alloc] initWithFormat:@"{ %@, %@, origin:'%@'}",eventType, payload, username]; 
     
     
-    [[[self appDelegate] xmppRoom ]sendMessage:event];
+//[[[self appDelegate] xmppRoom ]sendMessage:event];
  
     
     [self dismissModalViewControllerAnimated:YES];

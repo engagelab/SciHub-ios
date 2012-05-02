@@ -90,7 +90,7 @@
     if ([text isEqualToString:@"\n"]) {
         // Be sure to test for equality using the "isEqualToString" message
         
-          DDLogVerbose(@"replying.....");
+          //[DDLogVerbose(@"replying.....");
         [self doReply];
         [self dismissModalViewControllerAnimated:YES];
         // Return FALSE so that the final '\n' character doesn't get added
@@ -104,7 +104,7 @@
 
 - (IBAction)reply:(id)sender {
     
-    DDLogVerbose(@"replying.....");
+    //[DDLogVerbose(@"replying.....");
 
    [self doReply];
    [self dismissModalViewControllerAnimated:YES];

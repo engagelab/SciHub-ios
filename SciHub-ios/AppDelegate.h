@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+/*
 #import "XMPP.h"
 #import "XMPPFramework.h"
 #import "XMPPRosterCoreDataStorage.h"
@@ -14,13 +15,14 @@
 #import "XMPPCapabilitiesCoreDataStorage.h"
 #import "XMPPRoom.h"
 #import <CoreData/CoreData.h>
+ */
 #import "SciHubMessageDelegate.h"
 #import "SciHubOnlineDelegate.h"
 
 @class MainViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, XMPPRosterDelegate, XMPPRoomDelegate, UIAlertViewDelegate> {
-    
+@interface AppDelegate : UIResponder <UIApplicationDelegate,/* XMPPRosterDelegate, XMPPRoomDelegate,*/ UIAlertViewDelegate> {
+    /*
     XMPPStream *xmppStream;
     XMPPReconnect *xmppReconnect;
     XMPPRoster *xmppRoster;
@@ -29,7 +31,7 @@
 	XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 	
     XMPPRoom *xmppRoom;
-    
+    */
     BOOL allowSelfSignedCertificates;
 	BOOL allowSSLHostNameMismatch;
 
@@ -45,6 +47,7 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
+/*
 @property (nonatomic, readonly) XMPPStream *xmppStream;
 @property (nonatomic, readonly) XMPPReconnect *xmppReconnect;
 @property (nonatomic, readonly) XMPPRoster *xmppRoster;
@@ -52,6 +55,7 @@
 @property (nonatomic, readonly) XMPPCapabilities *xmppCapabilities;
 @property (nonatomic, readonly) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 @property (nonatomic, readonly) XMPPRoom *xmppRoom;
+ */
 @property (nonatomic, weak) id <SciHubMessageDelegate> sciHubMessageDelegate;
 @property (nonatomic, weak) id <SciHubOnlineDelegate> sciHubOnlineDelegate;
 

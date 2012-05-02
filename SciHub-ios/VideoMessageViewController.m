@@ -63,7 +63,7 @@
     if ([text isEqualToString:@"\n"]) {
         // Be sure to test for equality using the "isEqualToString" message
         
-        DDLogVerbose(@"replying.....");
+        //[DDLogVerbose(@"replying.....");
         [self reply:nil];
         [self dismissModalViewControllerAnimated:YES];
         // Return FALSE so that the final '\n' character doesn't get added
@@ -77,7 +77,7 @@
     
         
     
-    DDLogVerbose(@"messaging.....");
+    //[DDLogVerbose(@"messaging.....");
     
     NSString *videoTitle = self.textView.text;
     

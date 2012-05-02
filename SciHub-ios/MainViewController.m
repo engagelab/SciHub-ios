@@ -41,7 +41,7 @@ NSString *const uploadProgressTitleEnd = @"Upload Done!";
 
 -(id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle {
     if ((self = [super initWithNibName:nibName bundle:bundle])) {
-            DDLogVerbose(@"startup of bundle.....");
+            //[DDLogVerbose(@"startup of bundle.....");
     }
     
     return self;
@@ -184,7 +184,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     NSString *event = [[NSString alloc] initWithFormat:@"{ %@, \"payload\": { %@ }, \"origin\":\"%@\"}",eventType, uuid, username]; 
     
-    DDLogVerbose(event);
+    //[DDLogVerbose(event);
     
     [self sendGroupMessageWith: event];
 }
@@ -201,11 +201,11 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     
     NSString *vurl = [[NSString alloc] initWithFormat:@"\"url\": \"%@\"",url];
     
-      DDLogVerbose(@"YOU TUBE %@",vurl);
+      //[DDLogVerbose(@"YOU TUBE %@",vurl);
     
     NSString *event = [[NSString alloc] initWithFormat:@"{ %@, \"payload\": { %@,%@ }, \"origin\":\"%@\"}",eventType, uuid,vurl, username]; 
     
-    DDLogVerbose(event);
+    //[DDLogVerbose(event);
     
     [self sendGroupMessageWith: event];
     
@@ -301,7 +301,7 @@ hasDeliveredByteCount:(unsigned long long)numberOfBytesRead
 ofTotalByteCount:(unsigned long long)dataLength {
     
     double p = (double)numberOfBytesRead / (double)dataLength;
-     DDLogVerbose(@"progress %d",p);
+     //[DDLogVerbose(@"progress %d",p);
     
     [uploadProgress setProgress:p animated:YES];
     
@@ -343,7 +343,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
         
         [self sendJSON:yurl];
         
-         DDLogVerbose(@"WE WON!!!!");
+         //[DDLogVerbose(@"WE WON!!!!");
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gratulerer!"
                                                         message:@"videoen er nå lastet opp"
@@ -402,13 +402,13 @@ ofTotalByteCount:(unsigned long long)dataLength {
     
     NSString *event = @"{'eventType':'hello', 'payload': {}, 'origin':'obama'}";
     
-    [[[self appDelegate] xmppRoom ]sendMessage:event];
+   // [[[self appDelegate] xmppRoom ]sendMessage:event];
     
 }
 
 - (void)sendGroupMessageWith:(NSString *)event {
-    if( event != nil )
-        [[[self appDelegate] xmppRoom ]sendMessage:event];
+//    if( event != nil )
+     //   [[[self appDelegate] xmppRoom ]sendMessage:event];
 }
 
 
@@ -455,7 +455,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
 
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-      DDLogVerbose(@"did finish playing sound");
+      //[DDLogVerbose(@"did finish playing sound");
 }
 
 #pragma mark - UIImagePickerControllerDelegate delegate methods
@@ -585,7 +585,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
 #pragma mark - sciHubMessageDelegate delegate methods
 
 - (void)newMessageReceived:(NSDictionary *)messageContent {
-    DDLogVerbose(@"new Message received!");
+    //[DDLogVerbose(@"new Message received!");
 }
 
 - (void)replyMessageTo:(NSString *)from {
@@ -603,7 +603,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
 #pragma mark - sciHubOnlineDelegate delegate methods
 
 - (void)isAvailable:(BOOL)available {
-    DDLogVerbose(@"Your available!!");
+    //[DDLogVerbose(@"Your available!!");
     
     UIImage *image;
     if( available ) {
@@ -629,7 +629,7 @@ ofTotalByteCount:(unsigned long long)dataLength {
     
     NSString *message = [messageContent objectForKey:@"body"];
     NSString *sender = [messageContent objectForKey:@"sender"];
-    DDLogVerbose(@"message %@,%@", message, sender);
+    //[//[DDLogVerbose(@"message %@,%@", message, sender);
 }
 
 

@@ -82,7 +82,6 @@
 		AE7CD485142D2C3A00B6BF5C /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD484142D2C3A00B6BF5C /* MessageViewController.m */; };
 		AE9821831427841D00AE3760 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821821427841D00AE3760 /* UploadViewController.m */; };
 		AE9821861427884000AE3760 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9821851427884000AE3760 /* LoginViewController.m */; };
-		AEB1C07E145F51AE00A2EECD /* libxmpp-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB1C07D145F51AE00A2EECD /* libxmpp-ios.a */; };
 		AEB5BD2E14330E6D000831BC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB5BD2D14330E6D000831BC /* MainStoryboard_iPhone.storyboard */; };
 		AEB5BD3014331D1C000831BC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB5BD2F14331D1C000831BC /* MainStoryboard_iPad.storyboard */; };
 		AED4654815287F9700C0DC07 /* Bærekraftig utvikling.png in Resources */ = {isa = PBXBuildFile; fileRef = AED4654215287F9700C0DC07 /* Bærekraftig utvikling.png */; };
@@ -143,6 +142,7 @@
 		AE0085DB1469BBC40025F198 /* upload white icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload white icon.png"; sourceTree = "<group>"; };
 		AE223181152457BF0072070A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AE223182152457BF0072070A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AE25527015496B230058428E /* SciHub-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SciHub-ios.entitlements"; sourceTree = "<group>"; };
 		AE29C83B145ED8F50012E16A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		AE29C83D145ED91A0012E16A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		AE29C83F145ED92C0012E16A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -597,7 +597,7 @@
 		AEE0CCDA1419577B0085DA61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEE0CCDC1419577B0085DA61 /* SciHub-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SciHub-ios-Prefix.pch"; sourceTree = "<group>"; };
 		AEE0CCDD1419577B0085DA61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AEE0CCDE1419577B0085DA61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEE0CCDE1419577B0085DA61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		AEE0CCE61419577C0085DA61 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		AEE0CCE71419577C0085DA61 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		AEE0CCF0141958D70085DA61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -668,7 +668,6 @@
 				AEE0CD00141958D70085DA61 /* CoreLocation.framework in Frameworks */,
 				AEE0CD01141958D70085DA61 /* SystemConfiguration.framework in Frameworks */,
 				AE29C83C145ED8F50012E16A /* libiconv.dylib in Frameworks */,
-				AEB1C07E145F51AE00A2EECD /* libxmpp-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,6 +1269,7 @@
 		AEE0CCD41419577B0085DA61 /* SciHub-ios */ = {
 			isa = PBXGroup;
 			children = (
+				AE25527015496B230058428E /* SciHub-ios.entitlements */,
 				AE73D1B6152AF78500682EB1 /* LoginTableViewController.h */,
 				AE73D1B7152AF78500682EB1 /* LoginTableViewController.m */,
 				AEECC0AD152486F600A8EA4C /* IntroViewController.h */,
@@ -1361,7 +1361,7 @@
 		AEE0CCC11419577B0085DA61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = .t;
 			};
 			buildConfigurationList = AEE0CCC41419577B0085DA61 /* Build configuration list for PBXProject "SciHub-ios" */;
@@ -1563,6 +1563,7 @@
 		AE8B10E6153433F0006E99C7 /* Ad-hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SciHub-ios/SciHub-ios.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1686,6 +1687,7 @@
 		AEE0CCEC1419577C0085DA61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SciHub-ios/SciHub-ios.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1722,6 +1724,7 @@
 		AEE0CCED1419577C0085DA61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SciHub-ios/SciHub-ios.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
