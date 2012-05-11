@@ -232,7 +232,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     [service setServiceShouldFollowNextLinks:YES]; 
     [service setIsServiceRetryEnabled:YES]; 
 
-    [service setUserCredentialsWithUsername:@"encoresignup@gmail.com" password:@"enc0relab"];
+    [service setUserCredentialsWithUsername:@"" password:@""];
     [service setYouTubeDeveloperKey:@"AI39si5ks7j5bAJYbTpdjCDECT3m7r_wx5ZV7vM8ZY0wCayYqpajmWwVgHkscRtMvkfbvM1GgAkigqMPyXNi-0PAHvr_BmdPAQ"];
     
     NSURL *url = [GDataServiceGoogleYouTube youTubeUploadURLForUserID:kGDataServiceDefaultUser];
